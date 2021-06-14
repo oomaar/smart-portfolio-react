@@ -1,3 +1,98 @@
 import styled from "styled-components/macro";
 
-export const Nav = styled.nav``;
+export const Nav = styled.nav`
+  max-width: 968px;
+  height: ${({ theme }) => theme.HeaderHeight};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav__icon {
+    font-size: 1.2rem;
+  }
+
+  /* show menu */
+  .show-menu {
+    /* bottom: 0; */
+  }
+  /* Active link */
+  .active-link {
+    ${({ theme }) => theme.colors.firstColor};
+  }
+  
+  /* Change background header */
+  .scroll-header {
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+  }
+`;
+
+export const Logo = styled.a`
+  color: ${({ theme }) => theme.colors.titleColor};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.firstColor};
+  }
+`;
+
+export const NavMenu = styled.div`
+
+  .nav__close {
+    position: absolute;
+    right: 1.3rem;
+    bottom: 0.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--first-color);
+    transition: 0.3s ease;
+  }
+
+  @media screen and (max-width: 767px) {
+      position: fixed;
+      /* bottom: -100%; */
+      bottom: ${({ toggleShow }) => toggleShow ? '0' : '-100%'};
+      left: 0;
+      width: 100%;
+      background-color: ${({ theme }) => theme.colors.bodyColor};
+      padding: 2rem 1.5rem 4rem;
+      box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 1.5rem 1.5rem 0 0;
+      transition: 0.3s;
+  }
+`;
+
+export const NavList = styled.ul`
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+`;
+
+export const ListItem = styled.li``;
+
+export const NavLink = styled.a`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: ${({ theme }) => theme.colors.bodyColor};
+  color: ${({ theme }) => theme.colors.titleColor};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
+
+  :hover {
+    color: ${({ theme }) => theme.colors.firstColor};
+  }
+`;
+
+export const NavBtns = styled.div`
+  display: flex;
+`;
+
+export const NavToggle = styled.div`
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.titleColor};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
+  margin-left: 1rem;
+
+  :hover {
+    color: ${({ theme }) => theme.colors.firstColor};
+  }
+`;
