@@ -1,4 +1,5 @@
 import { Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
+import { Skill } from "..";
 import {
     SkillsContainer,
 } from "./styledSkills";
