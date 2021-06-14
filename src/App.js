@@ -1,7 +1,9 @@
+import { Header } from "./Components";
+
 const App = () => {
   return (
     <div>
-      <p>TEST Render</p>
+      <Header />
     </div>
   );
 };
