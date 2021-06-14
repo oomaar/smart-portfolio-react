@@ -1,8 +1,8 @@
 const App = () => {
   return (
-    <h1>
-      Application Initial Point
-    </h1>
+    <div>
+      <p>TEST Render</p>
+    </div>
   );
 };
 
