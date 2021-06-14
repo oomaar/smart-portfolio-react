@@ -40,6 +40,17 @@ export const GlobalStyle = createGlobalStyle`
   img {
     max-width: 100%;
   }
+
+// Layout
+  .container {
+    max-width: 768px;
+    margin: 0 ${({ theme }) => theme.marginBottom.mb_1_5} 0 ${({ theme }) => theme.marginBottom.mb_1_5};
+  }
+
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+  }
 `;
 
 // Reusbale classes
@@ -57,19 +68,6 @@ export const SectionSubtitle = styled.span`
   font-size: ${({ theme }) => theme.typography.smallFontSize};
   margin-bottom: ${({ theme }) => theme.marginBottom.mb_3};
   text-align: center;
-`;
-
-// Layout
-export const Layout = styled.div`
-  .container {
-    max-width: 768px;
-    margin: 0 ${({ theme }) => theme.marginBottom.mb_1_5} 0 ${({ theme }) => theme.marginBottom.mb_1_5};
-  }
-
-  .grid {
-    display: grid;
-    gap: 1.5rem;
-  }
 `;
 
 export const HeaderTag = styled.header`
