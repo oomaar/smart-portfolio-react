@@ -43,7 +43,7 @@ export const NavMenu = styled.div`
     bottom: 0.5rem;
     font-size: 1.8rem;
     cursor: pointer;
-    color: var(--first-color);
+    color: ${({ theme }) => theme.colors.firstColor};
     transition: 0.3s ease;
   }
 
