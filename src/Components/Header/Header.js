@@ -35,37 +35,37 @@ const Header = () => {
                 <NavMenu toggleShow={toggleShow}>
                     <NavList className="grid">
                         <ListItem>
-                            <NavLink href="#home" className="active-link">
+                            <NavLink href="#home" className="active-link" onClick={toggleHeaderClose}>
                                 <UilEstate className="nav__icon" />
                                 Home
                             </NavLink>
                         </ListItem>
                         <ListItem>
-                            <NavLink href="#about">
+                            <NavLink href="#about" onClick={toggleHeaderClose}>
                                 <UilUser className="nav__icon" />
                                 About
                             </NavLink>
                         </ListItem>
                         <ListItem>
-                            <NavLink href="#skills">
+                            <NavLink href="#skills" onClick={toggleHeaderClose}>
                                 <UilFileAlt className="nav__icon" />
                                 Skills
                             </NavLink>
                         </ListItem>
                         <ListItem>
-                            <NavLink href="#services">
+                            <NavLink href="#services" onClick={toggleHeaderClose}>
                                 <UilBriefcaseAlt className="nav__icon" />
                                 Services
                             </NavLink>
                         </ListItem>
                         <ListItem>
-                            <NavLink href="#portfolio">
+                            <NavLink href="#portfolio" onClick={toggleHeaderClose}>
                                 <UilScenery className="nav__icon" />
                                 Portfolio
                             </NavLink>
                         </ListItem>
                         <ListItem>
-                            <NavLink href="#contact">
+                            <NavLink href="#contact" onClick={toggleHeaderClose}>
                                 <UilMessage className="nav__icon" />
                                 Contact ME
                             </NavLink>
