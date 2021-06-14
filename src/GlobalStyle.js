@@ -70,13 +70,13 @@ export const Layout = styled.div`
     display: grid;
     gap: 1.5rem;
   }
+`;
 
-  .header {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: ${({ theme }) => theme.zIndex.zFixed};
-    background-color: ${({ theme }) => theme.colors.bodyColor};
-  }
+export const HeaderTag = styled.header`
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: ${({ theme }) => theme.zIndex.zFixed};
+  background-color: ${({ theme }) => theme.colors.bodyColor};
 `;
