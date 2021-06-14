@@ -1335,13 +1335,6 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@iconscout/react-unicons-thinline@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@iconscout/react-unicons-thinline/-/react-unicons-thinline-0.0.1.tgz#408993ac18b331906f6d702b36825ea8de70ba29"
-  integrity sha512-TESh9ITs1ttieik1han05W1vkco33M9dunU6qtY4oCHJZDqAwnL6OnarYcd85HkyU5taFEC8izBtXocN91h59Q==
-  dependencies:
-    react ">=15.0.0 <17.0.0"
-
 "@iconscout/react-unicons@^1.1.6":
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/@iconscout/react-unicons/-/react-unicons-1.1.6.tgz#4137afb831666f9c6d3b45a410610b9db9507f3a"
