@@ -51,6 +51,41 @@ export const GlobalStyle = createGlobalStyle`
     display: grid;
     gap: 1.5rem;
   }
+
+  /* Buttons */
+  .button__icon {
+    font-size: 1.25rem;
+    margin-left: ${({ theme }) => theme.marginBottom.mb_1_5};
+    transition: 0.3s;
+  }
+  
+  .button--white {
+    background-color: #fff;
+    color: ${({ theme }) => theme.colors.firstColor};
+
+    :hover {
+      background-color: #fff;
+    }
+  }
+  
+  .button--flex {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .button--small {
+    padding: 0.75rem 1rem;
+  }
+  
+  .button--link {
+    padding: 0;
+    background-color: transparent;
+    color: ${({ theme }) => theme.colors.firstColor};
+  }
+  
+  .button--link:hover {
+    background-color: transparent;
+  }
 `;
 
 // Reusbale classes
@@ -77,4 +112,18 @@ export const HeaderTag = styled.header`
   left: 0;
   z-index: ${({ theme }) => theme.zIndex.zFixed};
   background-color: ${({ theme }) => theme.colors.bodyColor};
+`;
+
+/*==================== BUTTONS ====================*/
+export const Button = styled.button`
+    display: inline-block;
+    background-color: ${({ theme }) => theme.colors.firstColor};
+    color: #eee;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
+
+    :hover {
+       background-color: ${({ theme }) => theme.colors.firstColorAlt};
+    }
 `;
