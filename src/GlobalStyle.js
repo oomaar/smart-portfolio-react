@@ -1,6 +1,46 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components/macro";
 
+/*==================== BUTTONS ====================*/
+export const Button = styled.a`
+    display: inline-block;
+    background-color: ${({ theme }) => theme.colors.firstColor};
+    color: #eee;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
+
+    :hover {
+       background-color: ${({ theme }) => theme.colors.firstColorAlt};
+    }
+`;
+
+// Reusbale classes
+export const Section = styled.section`
+  padding: 2rem 0 4rem;
+`;
+
+export const SectionTitle = styled.h1`
+  font-size: ${({ theme }) => theme.h1FontSize};
+  text-align: center;
+`;
+
+export const SectionSubtitle = styled.span`
+  display: block;
+  font-size: ${({ theme }) => theme.typography.smallFontSize};
+  margin-bottom: ${({ theme }) => theme.marginBottom.mb_3};
+  text-align: center;
+`;
+
+export const HeaderTag = styled.header`
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: ${({ theme }) => theme.zIndex.zFixed};
+  background-color: ${({ theme }) => theme.colors.bodyColor};
+`;
+
 export const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
       box-sizing: border-box;
@@ -86,44 +126,4 @@ export const GlobalStyle = createGlobalStyle`
   .button--link:hover {
     background-color: transparent;
   }
-`;
-
-// Reusbale classes
-export const Section = styled.section`
-  padding: 2rem 0 4rem;
-`;
-
-export const SectionTitle = styled.h1`
-  font-size: ${({ theme }) => theme.h1FontSize};
-  text-align: center;
-`;
-
-export const SectionSubtitle = styled.span`
-  display: block;
-  font-size: ${({ theme }) => theme.typography.smallFontSize};
-  margin-bottom: ${({ theme }) => theme.marginBottom.mb_3};
-  text-align: center;
-`;
-
-export const HeaderTag = styled.header`
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: ${({ theme }) => theme.zIndex.zFixed};
-  background-color: ${({ theme }) => theme.colors.bodyColor};
-`;
-
-/*==================== BUTTONS ====================*/
-export const Button = styled.button`
-    display: inline-block;
-    background-color: ${({ theme }) => theme.colors.firstColor};
-    color: #eee;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
-
-    :hover {
-       background-color: ${({ theme }) => theme.colors.firstColorAlt};
-    }
 `;
