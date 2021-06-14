@@ -7,22 +7,26 @@
       {
         "id": "1.1",
         "name": "HTML",
-        "number": "90%"
+        "number": "90%",
+        "width": 90
       },
       {
         "id": "1.2",
         "name": "CSS",
-        "number": "80%"
+        "number": "80%",
+        "width": 80
       },
       {
         "id": "1.3",
         "name": "JavaScript",
-        "number": "70%"
+        "number": "70%",
+        "width": 70
       },
       {
         "id": "1.4",
         "name": "React",
-        "number": "85%"
+        "number": "85%",
+        "width": 85
       }
     ]
   },
@@ -34,22 +38,26 @@
       {
         "id": "2.1",
         "name": "NodeJS",
-        "number": "80%"
+        "number": "80%",
+        "width": 80
       },
       {
         "id": "2.2",
         "name": "MongoDB",
-        "number": "70%"
+        "number": "70%",
+        "width": 70
       },
       {
         "id": "2.3",
         "name": "Firebase",
-        "number": "75%"
+        "number": "75%",
+        "width": 75
       },
       {
         "id": "2.4",
         "name": "Heroku",
-        "number": "65%"
+        "number": "65%",
+        "width": 65
       }
     ]
   },
@@ -61,17 +69,20 @@
       {
         "id": "3.1",
         "name": "Figma",
-        "number": "90%"
+        "number": "90%",
+        "width": 90
       },
       {
         "id": "3.2",
         "name": "Sketch",
-        "number": "85%"
+        "number": "85%",
+        "width": 85
       },
       {
         "id": "3.3",
         "name": "Photoshop",
-        "number": "85%"
+        "number": "85%",
+        "width": 85
       }
     ]
   }
