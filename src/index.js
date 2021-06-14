@@ -2,11 +2,15 @@ import React from 'react';
 import { render } from 'react-dom';
 import App from './App';
 import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './GlobalStyle';
 
 // Favorite Color
 const hueColor = '230';
 
+
 const theme = {
+  // Header Height
+  HeaderHeight: '3rem',
   // Colors
   colors: {
     firstColor: `hsl(${hueColor}, 69%, 61%)`,
@@ -60,6 +64,7 @@ const theme = {
 
 render(
   <ThemeProvider theme={theme}>
+    <GlobalStyle />
     <App />
   </ThemeProvider>,
   document.getElementById('Life')
