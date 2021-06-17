@@ -1,8 +1,9 @@
-import UilBracketsCurly from "@iconscout/react-unicons/icons/uil-brackets-curly";
 import UilAngleDown from "@iconscout/react-unicons/icons/uil-angle-down";
 import {
+    SkillContainer,
     SkillContent,
     SkillHeader,
+    SkillIcon,
     SkillTitle,
     SkillSubTitle,
     SkillList,
@@ -13,39 +14,60 @@ import {
     SkillBar,
     SkillPercentage,
 } from "./styledSkill";
-import skillsData from "../../data/skillsData.json";
+import skillsData from "../../data/skillsData";
+import { useState } from "react";
 
 const Skill = () => {
+    const [toggleShow, setToggleShow] = useState(false);
+
+    const handleToggleShow = index => {
+        if (toggleShow === index) {
+            return setToggleShow(null);
+        };
+
+        setToggleShow(index);
+    };
+
     return (
-        <div>
+        <SkillContainer>
             {skillsData.map(skill => (
-                <SkillContent key={skill.id}>
+                <SkillContent
+                    key={skill.id}
+                    onClick={() => handleToggleShow(skill.id)}>
                     <SkillHeader>
-                        <UilBracketsCurly className=" skills__icon" />
+                        <SkillIcon>
+                            {skill.icon}
+                        </SkillIcon>
 
                         <div>
                             <SkillTitle>{skill.title}</SkillTitle>
                             <SkillSubTitle>{skill.subTitle}</SkillSubTitle>
                         </div>
 
-                        <UilAngleDown className="skills__arrow" />
+                        <UilAngleDown
+                            className={`skill__arrow ${toggleShow === skill.id && 'skill__arrow-open'}`}
+                        />
                     </SkillHeader>
-                    {skill.skills.map(item => (
-                        <SkillList className="grid" key={item.id}>
-                            <SkillData>
-                                <SkillTitles>
-                                    <SkillName>{item.name}</SkillName>
-                                    <SkillNumber>{item.number}</SkillNumber>
-                                </SkillTitles>
-                                <SkillBar>
-                                    <SkillPercentage className="skills__html"></SkillPercentage>
-                                </SkillBar>
-                            </SkillData>
-                        </SkillList>
-                    ))}
+                    <SkillList className="grid">
+                        {toggleShow === skill.id ? (
+                            skill.skills.map(item => (
+                                // <SkillList className="grid">
+                                <SkillData key={item.id}>
+                                    <SkillTitles>
+                                        <SkillName>{item.name}</SkillName>
+                                        <SkillNumber>{item.number}</SkillNumber>
+                                    </SkillTitles>
+                                    <SkillBar>
+                                        <SkillPercentage width={item.width}></SkillPercentage>
+                                    </SkillBar>
+                                </SkillData>
+                                // </SkillList>
+                            ))
+                        ) : null}
+                    </SkillList>
                 </SkillContent>
             ))}
-        </div>
+        </SkillContainer>
     );
 };
 
