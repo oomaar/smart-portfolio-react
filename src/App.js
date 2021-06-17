@@ -1,4 +1,4 @@
-import { About, Header, Home, Qualification, Skills } from "./Components";
+import { About, Header, Home, Qualification, Services, Skills } from "./Components";
 
 
 
@@ -10,6 +10,7 @@ const App = () => {
       <About />
       <Skills />
       <Qualification />
+      <Services />
     </div>
   );
 };
