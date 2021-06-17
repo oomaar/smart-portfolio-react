@@ -5,3 +5,4 @@ export { default as Skills } from "./Skills/Skills";
 export { default as Skill } from "./Skill/Skill";
 export { default as Qualification } from "./Qualification/Qualification";
 export { default as Services } from "./Services/Services";
+export { default as Portfolio } from "./Portfolio/Portfolio";
