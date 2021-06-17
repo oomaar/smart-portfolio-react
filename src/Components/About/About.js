@@ -48,7 +48,7 @@ const About = () => {
                     </AboutInfo>
                 </AboutData>
 
-                <AboutBtns class="about__buttons">
+                <AboutBtns className="about__buttons">
                     <Button
                         download=""
                         // href="assets/pdf/Alexa-Cv.pdf"

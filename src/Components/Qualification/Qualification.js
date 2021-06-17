@@ -29,7 +29,7 @@ const Qualification = () => {
                 <QualificationTabs>
                     <QualificationButton
                         onClick={() => setDataTarget('education')}
-                        class="button--flex"
+                        className="button--flex"
                         data-target="#education"
                     >
                         <UilGraduationCap className="qualification__icon" />
@@ -38,7 +38,7 @@ const Qualification = () => {
 
                     <QualificationButton
                         onClick={() => setDataTarget('work')}
-                        class="button--flex"
+                        className="button--flex"
                         data-target="#work"
                     >
                         <UilBriefcaseAlt className="qualification__icon" />
