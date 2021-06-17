@@ -6,7 +6,7 @@ const skillsData = [
   {
     id: "1",
     title: "Frontend developer",
-    subTitle: "More than 4 years",
+    subTitle: "More than 3 years",
     icon: <UilBracketsCurly />,
     skills: [
       {
@@ -38,7 +38,7 @@ const skillsData = [
   {
     id: "2",
     title: "Backend developer",
-    subTitle: "More than 2 years",
+    subTitle: "More than 1 year",
     icon: <UilServerNetwork />,
     skills: [
       {
@@ -70,7 +70,7 @@ const skillsData = [
   {
     id: "3",
     title: "Designer",
-    subTitle: "More than 5 years",
+    subTitle: "More than 4 years",
     icon: <UilSwatchbook />,
     skills: [
       {
