@@ -25,15 +25,17 @@ export const SocialIcon = styled.a`
   }
 `;
 
-export const HomeImage = styled.div``;
+export const HomeImage = styled.div`
+  position: relative;
 
-export const HomeBlob = styled.svg`
-  width: 200px;
-  fill: ${({ theme }) => theme.colors.firstColor};
-`;
+  .home__blob {
+    width: 200px;
+    fill: ${({ theme }) => theme.colors.firstColor};
+  }
 
-export const BlobImage = styled.img`
-  width: 170px;
+  .home__blob-img {
+    width: 170px;
+  }
 `;
 
 export const HomeData = styled.div`
