@@ -9,6 +9,7 @@ export const Button = styled.a`
     padding: 1rem;
     border-radius: 0.5rem;
     font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
+    cursor: pointer;
 
     :hover {
        background-color: ${({ theme }) => theme.colors.firstColorAlt};
