@@ -2,7 +2,7 @@ import UilDownloadAlt from "@iconscout/react-unicons/icons/uil-download-alt";
 import { Button, Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
 import {
     AboutContainer,
-    // AboutImage,
+    AboutImage,
     AboutData,
     AboutDescription,
     AboutInfo,
@@ -18,7 +18,7 @@ const About = () => {
             <SectionSubtitle>My introduction</SectionSubtitle>
 
             <AboutContainer className="container grid">
-                {/* <AboutImage src="assets/img/about.jpg" alt="About Me" /> */}
+                <AboutImage src="/img/about.jpg" alt="About Me" />
                 <AboutData>
                     <AboutDescription>
                         Web developer, with extensive knowledge and years of experience,
