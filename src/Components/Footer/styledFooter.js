@@ -5,7 +5,7 @@ export const FooterContainer = styled.footer`
 `;
 
 export const FooterBackground = styled.div`
-  background-color: ${({ theme }) => theme.colors.firstColor};
+  background-color: ${({ theme }) => theme.colors.firstColorSecond};
   padding: 2rem 0 3rem;
 `;
 
@@ -51,7 +51,6 @@ export const FooterSocial = styled.a`
 `;
 
 export const FooterCopy = styled.p`
-  color: #fff;
   font-size: ${({ theme }) => theme.typography.smallerFontSize};
   text-align: center;
   color: ${({ theme }) => theme.colors.textColorLight};
