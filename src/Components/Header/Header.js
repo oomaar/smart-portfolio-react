@@ -28,7 +28,7 @@ const Header = () => {
     const toggleHeaderClose = () => setToggleShow(false);
 
     return (
-        <HeaderTag>
+        <HeaderTag id="header">
             <Nav className="container">
                 <Logo href="#">Omar</Logo>
 

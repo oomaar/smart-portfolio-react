@@ -24,7 +24,7 @@ const Contact = () => {
     };
 
     return (
-        <Section>
+        <Section id="contact">
             <ContactContainer className="container grid">
                 <div>
                     <ContactInformarion>

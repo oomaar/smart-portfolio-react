@@ -23,7 +23,7 @@ import {
 
 const Home = () => {
     return (
-        <Section>
+        <Section id="home">
             <HomeContaier className="container grid">
                 <HomeContent className="grid">
                     <HomeSocial>

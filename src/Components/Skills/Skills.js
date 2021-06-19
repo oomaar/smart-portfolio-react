@@ -6,7 +6,7 @@ import {
 
 const Skills = () => {
     return (
-        <Section>
+        <Section id="skills">
             <SectionTitle>Skills</SectionTitle>
             <SectionSubtitle>My technical level</SectionSubtitle>
 

@@ -25,7 +25,7 @@ const Portfolio = () => {
     const navigationNextRef = useRef(null);
 
     return (
-        <Section>
+        <Section id="portfolio">
             <SectionTitle>Portfolio</SectionTitle>
             <SectionSubtitle>Most recent work</SectionSubtitle>
 
