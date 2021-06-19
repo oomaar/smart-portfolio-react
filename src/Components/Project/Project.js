@@ -1,12 +1,32 @@
+import UilMessage from "@iconscout/react-unicons/icons/uil-message";
+import { Button, Section } from "../../GlobalStyle";
 import {
+    ProjectBackground,
     ProjectContainer,
+    ProjectTitle,
+    ProjectSubtitle,
+    ProjectImage,
 } from "./styledProject";
 
 const Project = () => {
     return (
-        <ProjectContainer>
-            Project
-        </ProjectContainer>
+        <Section>
+            <ProjectBackground>
+                <ProjectContainer className="container grid">
+                    <ProjectTitle>You have a new project !</ProjectTitle>
+                    <ProjectSubtitle>
+                        Contact me now and get a 30% discount on your new project.
+                    </ProjectSubtitle>
+                    <Button
+                        href="#contact"
+                        className="button--flex button--white">
+                        Contact Me
+                        <UilMessage className="project__icon button__icon" />
+                    </Button>
+                    <ProjectImage src="/img/project.png" alt="Project img" />
+                </ProjectContainer>
+            </ProjectBackground>
+        </Section>
     );
 };
 
