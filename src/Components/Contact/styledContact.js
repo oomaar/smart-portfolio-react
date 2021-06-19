@@ -1,9 +1,79 @@
 import styled from "styled-components/macro";
 
-export const ContactContainer = styled.div``;
+export const ContactContainer = styled.div`
+  row-gap: 3rem;
+`;
 
-export const ContactInformarion = styled.div``;
+export const ContactInformarion = styled.div`
+  display: flex;
+  margin-bottom: ${({ theme }) => theme.marginBottom.mb_2};
 
-export const ContactTitle = styled.h3``;
+  .contact__icon {
+    font-size: 2rem;
+    color: ${({ theme }) => theme.colors.firstColor};
+    margin-right: ${({ theme }) => theme.marginBottom.mb_0_75};
+  }
+`;
 
-export const ContactSubtitle = styled.span``;
+export const ContactTitle = styled.h3`
+  font-size: ${({ theme }) => theme.typography.h3FontSize};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
+`;
+
+export const ContactSubtitle = styled.span`
+  font-size: ${({ theme }) => theme.typography.smallerFontSize};
+  color: ${({ theme }) => theme.colors.textColorLight};
+`;
+
+export const ContactForm = styled.form``;
+
+export const ContactInputs = styled.div``;
+
+export const ContactInputBox = styled.div`
+  background-color: ${({ theme }) => theme.colors.inputColor};
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 0.25rem;
+`;
+
+export const ContactLabel = styled.label`
+  font-size: ${({ theme }) => theme.typography.smallerFontSize};
+  color: ${({ theme }) => theme.colors.titleColor};
+`;
+
+export const ContactInput = styled.input`
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.inputColor};
+  color: ${({ theme }) => theme.colors.textColor};
+  font-family: ${({ theme }) => theme.typography.bodyFont};
+  font-size: ${({ theme }) => theme.typography.normalFontSize};
+  border: 0;
+  outline: 0;
+  padding: 0.25rem 0.5rem 0.5rem 0;
+`;
+
+export const ContactTextArea = styled.textarea`
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.inputColor};
+  color: ${({ theme }) => theme.colors.textColor};
+  font-family: ${({ theme }) => theme.typography.bodyFont};
+  font-size: ${({ theme }) => theme.typography.normalFontSize};
+  border: 0;
+  outline: 0;
+  padding: 0.25rem 0.5rem 0.5rem 0;
+`;
+
+export const SubmitForm = styled.button`
+    background-color: ${({ theme }) => theme.colors.firstColor};
+    color: #eee;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    margin: 20px 0;
+
+    :hover {
+       background-color: ${({ theme }) => theme.colors.firstColorAlt};
+    }
+`;
