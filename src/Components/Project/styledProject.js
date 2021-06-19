@@ -6,7 +6,12 @@ export const ProjectBackground = styled.div`
   padding-top: 3rem;
 `;
 
-export const ProjectContainer = styled.div``;
+export const ProjectContainer = styled.div`
+  .project__btn {
+    width: fit-content;
+    justify-self: center;
+  }
+`;
 
 export const ProjectTitle = styled.h2`
   color: #fff;
