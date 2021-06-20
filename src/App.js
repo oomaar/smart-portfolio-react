@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { ThemeProvider } from 'styled-components';
 import styled from "styled-components/macro";
 import UilArrowUp from "@iconscout/react-unicons/icons/uil-arrow-up";
+import { GlobalStyle, darkTheme, lightTheme, theme } from "./GlobalStyle";
 import {
   About,
   Contact,
@@ -17,6 +19,7 @@ import {
 
 const App = () => {
   const [show, setShow] = useState(false);
+  const [toggleTheme, setToggleTheme] = useState("");
 
   const showScrollUpLink = () => {
     window.scrollY > 100 ? setShow(true) : setShow(false);
@@ -29,26 +32,31 @@ const App = () => {
   }, []);
 
   return (
-    <Application>
-      <Header />
-      <Home />
-      <About />
-      <Skills />
-      <Qualification />
-      <Services />
-      <Portfolio />
-      <Project />
-      <Testimonial />
-      <Contact />
-      <Footer />
-      <ScrollUpLink
-        href="#"
-        id="scroll-up"
-        className={`${show && 'show-scroll'}`}
-      >
-        <UilArrowUp className="scrollup__icon" />
-      </ScrollUpLink>
-    </Application>
+    <ThemeProvider theme={theme}>
+      <ThemeProvider theme={toggleTheme === 'light' ? lightTheme : darkTheme}>
+        <GlobalStyle />
+        <Application>
+          <Header toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
+          <Home />
+          <About />
+          <Skills />
+          <Qualification />
+          <Services />
+          <Portfolio />
+          <Project />
+          <Testimonial />
+          <Contact />
+          <Footer />
+          <ScrollUpLink
+            href="#"
+            id="scroll-up"
+            className={`${show && 'show-scroll'}`}
+          >
+            <UilArrowUp className="scrollup__icon" />
+          </ScrollUpLink>
+        </Application>
+      </ThemeProvider>
+    </ThemeProvider>
   );
 };
 
