@@ -58,6 +58,12 @@ const Application = styled.main`
   .show-scroll {
     bottom: 5rem;
   }
+
+  /* Change background header */
+  /* HeaderTag box-shadow when scroll */
+    .scroll-header {
+      box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    }
 `;
 
 const ScrollUpLink = styled.a`
