@@ -33,15 +33,6 @@ export const SectionSubtitle = styled.span`
   text-align: center;
 `;
 
-export const HeaderTag = styled.header`
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: ${({ theme }) => theme.zIndex.zFixed};
-  background-color: ${({ theme }) => theme.colors.bodyColor};
-`;
-
 export const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
       box-sizing: border-box;
@@ -64,7 +55,6 @@ export const GlobalStyle = createGlobalStyle`
   h2,
   h3,
   h4 {
-    color: var(--title-color);
     color: ${({ theme }) => theme.colors.titleColor};
     font-weight: ${({ theme }) => theme.typography.fontWeight.fontSemiBold};
   }

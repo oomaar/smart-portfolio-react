@@ -1,4 +1,3 @@
-import { HeaderTag } from "../../GlobalStyle";
 import UilEstate from "@iconscout/react-unicons/icons/uil-estate";
 import UilUser from "@iconscout/react-unicons/icons/uil-user";
 import UilFileAlt from "@iconscout/react-unicons/icons/uil-file-alt";
@@ -8,7 +7,9 @@ import UilMessage from "@iconscout/react-unicons/icons/uil-message";
 import UilTimes from "@iconscout/react-unicons/icons/uil-times";
 import UilApps from "@iconscout/react-unicons/icons/uil-apps";
 import UilMoon from "@iconscout/react-unicons/icons/uil-moon";
+import { useEffect, useState } from "react";
 import {
+    HeaderTag,
     Nav,
     Logo,
     NavList,
@@ -18,17 +19,26 @@ import {
     NavBtns,
     NavToggle,
 } from "./styledHeader";
-import { useState } from "react";
 
 const Header = () => {
     const [toggleShow, setToggleShow] = useState(false);
+    const [shadow, setShadow] = useState(false);
 
     const toggleHeaderOpen = () => setToggleShow(true);
 
     const toggleHeaderClose = () => setToggleShow(false);
 
+    const showShadow = () => window.scrollY > 100 ? setShadow(true) : setShadow(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", showShadow);
+    }, []);
+
     return (
-        <HeaderTag id="header">
+        <HeaderTag
+            className={`${shadow && 'scroll-header'}`}
+            id="header"
+        >
             <Nav className="container">
                 <Logo href="#">Omar</Logo>
 

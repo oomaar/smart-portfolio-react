@@ -1,5 +1,14 @@
 import styled from "styled-components/macro";
 
+export const HeaderTag = styled.header`
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: ${({ theme }) => theme.zIndex.zFixed};
+  background-color: ${({ theme }) => theme.colors.bodyColor};
+`;
+
 export const Nav = styled.nav`
   max-width: 968px;
   height: ${({ theme }) => theme.HeaderHeight};
@@ -18,11 +27,6 @@ export const Nav = styled.nav`
   /* Active link */
   .active-link {
     ${({ theme }) => theme.colors.firstColor};
-  }
-  
-  /* Change background header */
-  .scroll-header {
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
   }
 `;
 
@@ -49,7 +53,6 @@ export const NavMenu = styled.div`
 
   @media screen and (max-width: 767px) {
       position: fixed;
-      /* bottom: -100%; */
       bottom: ${({ toggleShow }) => toggleShow ? '0' : '-100%'};
       left: 0;
       width: 100%;
