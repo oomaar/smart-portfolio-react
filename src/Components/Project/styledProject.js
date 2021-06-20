@@ -8,7 +8,7 @@ export const ProjectBackground = styled.div`
   @media screen and (min-width: 768px) {
     background: none;
   }
-  `;
+`;
 
 export const ProjectData = styled.div`
   @media screen and (min-width: 768px) {

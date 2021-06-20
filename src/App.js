@@ -76,6 +76,10 @@ const Application = styled.main`
     @media screen and (min-width: 768px) {
       padding: 0 1rem;
     }
+
+    @media screen and (min-width: 1024px) {
+      padding: 0;
+    }
 `;
 
 const ScrollUpLink = styled.a`

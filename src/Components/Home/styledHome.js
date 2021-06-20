@@ -31,7 +31,11 @@ export const HomeSocial = styled.div`
   display: grid;
   grid-template-columns: max-content;
   row-gap: 1rem;
-  `;
+
+  @media screen and (min-width: 1024px) {
+    transform: translateX(-6rem);
+  } 
+`;
 
 export const SocialIcon = styled.a`
   font-size: 1.25rem;
@@ -55,6 +59,10 @@ export const HomeImage = styled.div`
 
     @media screen and (min-width: 768px) {
       width: 270px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 320px;
     }
   }
   

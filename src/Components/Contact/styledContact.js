@@ -29,9 +29,17 @@ export const ContactSubtitle = styled.span`
   color: ${({ theme }) => theme.colors.textColorLight};
 `;
 
-export const ContactForm = styled.form``;
+export const ContactForm = styled.form`
+    @media screen and (min-width: 1024px) {
+      width: 460px;
+    }
+`;
 
-export const ContactInputs = styled.div``;
+export const ContactInputs = styled.div`
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
 
 export const ContactInputBox = styled.div`
   background-color: ${({ theme }) => theme.colors.inputColor};

@@ -13,6 +13,10 @@ export const HeaderTag = styled.header`
     bottom: initial;
     padding: 0 1rem;
   }
+
+  @media screen and (min-width: 1024px) {
+    padding: 0;
+  }
 `;
 
 export const Nav = styled.nav`

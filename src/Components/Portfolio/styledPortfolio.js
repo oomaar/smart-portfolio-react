@@ -31,6 +31,10 @@ export const PortfolioContent = styled.div`
   @media screen and (min-width: 768px) {
     align-items: center;
   }
+
+  @media screen and (min-width: 1024px) {
+    column-gap: 5rem;
+  }
 `;
 
 export const PortfolioImage = styled.img`
@@ -64,16 +68,24 @@ export const PortfolioDesc = styled.p`
 
 export const ArrowNext = styled.div`
   right: -0.5rem;
-
+  
   .swiper-portfolio-icon {
     font-size: 2rem;
     color: ${({ theme }) => theme.colors.firstColor};
     cursor: pointer;
-  }
-
-    ::after {
-      content: '';
+    
+    @media screen and (min-width: 1024px) {
+      font-size: 3.5rem;
     }
+  }
+  
+  ::after {
+    content: '';
+  }
+  
+  @media screen and (min-width: 1024px) {
+    right: -3.5rem;
+  }
 `;
 
 export const ArrowPrev = styled.div`
@@ -83,9 +95,17 @@ export const ArrowPrev = styled.div`
     font-size: 2rem;
     color: ${({ theme }) => theme.colors.firstColor};
     cursor: pointer;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 3.5rem;
+    }
   }
 
   ::after {
     content: '';
+  }
+
+  @media screen and (min-width: 1024px) {
+    left: -3.5rem;
   }
 `;

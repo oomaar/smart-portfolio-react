@@ -23,7 +23,11 @@ export const FooterSubContainer = styled.div`
   @media screen and (min-width: 768px) {
     padding: 0 1rem;
     grid-template-columns: repeat(3, 1fr);
-  } 
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 0;
+  }
 `;
 
 export const FooterTitle = styled.h1`

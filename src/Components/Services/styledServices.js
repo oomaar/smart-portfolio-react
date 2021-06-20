@@ -13,6 +13,10 @@ export const ServicesContainer = styled.div`
       grid-template-columns: repeat(3, 218px);
       justify-content: center;
     }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(3, 238px);
+    }
 `;
 
 export const ServicesContent = styled.div`
