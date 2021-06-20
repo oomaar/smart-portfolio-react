@@ -41,6 +41,10 @@ export const QualificationData = styled.div`
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   column-gap: 1.5rem;
+
+  @media screen and (max-width: 350px) {
+    gap: 0.5rem;
+  }
 `;
 
 export const QualificationTitle = styled.h3`

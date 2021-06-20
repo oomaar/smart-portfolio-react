@@ -14,10 +14,21 @@ export const TestimonialData = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: ${({ theme }) => theme.marginBottom.mb_1};
+  
+  @media screen and (max-width: 350px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 export const TestimonialHeader = styled.div`
   display: flex;
+
+  @media screen and (max-width: 350px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const TestimonialImage = styled.img`
@@ -25,6 +36,11 @@ export const TestimonialImage = styled.img`
   height: 60px;
   border-radius: 50%;
   margin-right: ${({ theme }) => theme.marginBottom.mb_0_75};
+
+  @media screen and (max-width: 350px) {
+    margin-right: 0;
+    margin-bottom: ${({ theme }) => theme.marginBottom.mb_0_25};
+  }
 `;
 
 export const TestimonialName = styled.h3`
@@ -40,4 +56,7 @@ export const TestimonialClient = styled.span`
 export const TestimonialDesc = styled.p`
   margin-bottom: ${({ theme }) => theme.marginBottom.mb_2_5};
 
+  @media screen and (max-width: 350px) {
+    text-align: center;
+  }
 `;

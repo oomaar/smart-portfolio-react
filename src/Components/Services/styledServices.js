@@ -3,7 +3,12 @@ import styled from "styled-components/macro";
 export const ServicesContainer = styled.div`
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
-`;
+    
+    @media screen and (max-width: 350px) {
+      grid-template-columns: max-content;
+      justify-content: center;
+    }
+    `;
 
 export const ServicesContent = styled.div`
     position: relative;
@@ -12,38 +17,41 @@ export const ServicesContent = styled.div`
     border-radius: 0.25rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
-
+    
     :hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     }
-
+    
     .services__icon {
       display: block;
       font-size: 1.5rem;
       color: ${({ theme }) => theme.colors.firstColor};
       margin-bottom: ${({ theme }) => theme.marginBottom.mb_1};
     }
-
+    
     .services__button {
       cursor: pointer;
       font-size: ${({ theme }) => theme.typography.smallFontSize};
-
+      
       :hover {
         transform: translateX(0.25rem);
       }
     }
-
+    
     .active-modal {
       opacity: 1;
       visibility: visible;
     }
-`;
+    @media screen and (max-width: 350px) {
+      padding-right: 3.5rem;
+    }
+    `;
 
 export const ServicesTitle = styled.h3`
     font-size: ${({ theme }) => theme.typography.h3FontSize};
     margin-bottom: ${({ theme }) => theme.marginBottom.mb_1};
     font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
-`;
+    `;
 
 export const ServicesModal = styled.div`
     position: fixed;
@@ -60,6 +68,10 @@ export const ServicesModal = styled.div`
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
+
+    @media screen and (max-width: 350px) {
+      padding: 0 0.5rem;
+    }
 `;
 
 export const ServicesModalContent = styled.div`

@@ -62,11 +62,19 @@ export const NavMenu = styled.div`
       border-radius: 1.5rem 1.5rem 0 0;
       transition: 0.3s;
   }
-`;
+
+  @media screen and (max-width: 350px) {
+    padding: 2rem 0.25rem 4rem;
+  }
+  `;
 
 export const NavList = styled.ul`
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+
+  @media screen and (max-width: 350px) {
+    column-gap: 0;
+  }
 `;
 
 export const ListItem = styled.li``;

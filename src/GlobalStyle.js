@@ -153,6 +153,10 @@ export const GlobalStyle = createGlobalStyle`
   .container {
     max-width: 768px;
     margin: 0 ${({ theme }) => theme.marginBottom.mb_1_5} 0 ${({ theme }) => theme.marginBottom.mb_1_5};
+    
+    @media screen and (max-width: 350px) {
+      margin: 0 ${({ theme }) => theme.marginBottom.mb_1} 0 ${({ theme }) => theme.marginBottom.mb_1};
+    }
   }
 
   .grid {

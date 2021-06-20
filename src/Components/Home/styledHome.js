@@ -8,29 +8,37 @@ export const HomeContent = styled.div`
   grid-template-columns: 0.5fr 3fr;
   padding-top: 3.5rem;
   align-items: center;
-`;
+  
+  @media screen and (max-width: 350px) {
+    grid-template-columns: 0.25fr 3fr;
+  }
+  `;
 
 export const HomeSocial = styled.div`
   display: grid;
   grid-template-columns: max-content;
   row-gap: 1rem;
-`;
+  `;
 
 export const SocialIcon = styled.a`
   font-size: 1.25rem;
   color: ${({ theme }) => theme.colors.firstColor};
-
+  
   :hover {
     color: ${({ theme }) => theme.colors.firstColorAlt};
   }
-`;
+  `;
 
 export const HomeImage = styled.div`
   position: relative;
-
+  
   .home__blob {
     width: 200px;
     fill: ${({ theme }) => theme.colors.firstColor};
+    
+    @media screen and (max-width: 350px) {
+      width: 180px;
+    }
   }
 
   .home__blob-img {

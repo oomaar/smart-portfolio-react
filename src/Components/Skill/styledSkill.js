@@ -31,6 +31,10 @@ export const SkillIcon = styled.div`
 
 export const SkillTitle = styled.h3`
   font-size: ${({ theme }) => theme.typography.h3FontSize};
+  
+  @media screen and (max-width: 350px) {
+      font-size: ${({ theme }) => theme.typography.normalFontSize};
+    }
 `;
 
 export const SkillSubTitle = styled.span`
