@@ -86,6 +86,18 @@ export const NavLink = styled.a`
 
 export const NavBtns = styled.div`
   display: flex;
+  align-items: center;
+
+  .change-theme {
+    font-size: 1.25rem;
+    color: ${({ theme }) => theme.colors.titleColor};
+    margin-right: ${({ theme }) => theme.marginBottom.mb_1};
+    cursor: pointer;
+  }
+
+  .change-theme:hover {
+    color: ${({ theme }) => theme.colors.firstColor};
+  }
 `;
 
 export const NavToggle = styled.div`

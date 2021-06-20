@@ -7,6 +7,7 @@ import UilMessage from "@iconscout/react-unicons/icons/uil-message";
 import UilTimes from "@iconscout/react-unicons/icons/uil-times";
 import UilApps from "@iconscout/react-unicons/icons/uil-apps";
 import UilMoon from "@iconscout/react-unicons/icons/uil-moon";
+import UilSun from "@iconscout/react-unicons/icons/uil-sun";
 import { useEffect, useState } from "react";
 import {
     HeaderTag,
@@ -20,7 +21,7 @@ import {
     NavToggle,
 } from "./styledHeader";
 
-const Header = () => {
+const Header = ({ toggleTheme, setToggleTheme }) => {
     const [toggleShow, setToggleShow] = useState(false);
     const [shadow, setShadow] = useState(false);
 
@@ -32,6 +33,34 @@ const Header = () => {
 
     useEffect(() => {
         window.addEventListener("scroll", showShadow);
+    }, []);
+
+    const checkTheme = () => {
+        switch (toggleTheme) {
+            case "light":
+                setToggleTheme("dark");
+                localStorage.setItem("toggleTheme", "dark")
+                return document.documentElement.setAttribute("data-theme", "dark");
+
+            case "dark":
+                setToggleTheme("light");
+                localStorage.setItem("toggleTheme", "light")
+                return document.documentElement.setAttribute("data-theme", "light");
+
+            default:
+                setToggleTheme("light");
+                localStorage.setItem("toggleTheme", "light")
+                return document.documentElement.setAttribute("data-theme", "light");
+        }
+    };
+
+    useEffect(() => {
+        if (localStorage.getItem("toggleTheme")) {
+            setToggleTheme(localStorage.getItem("toggleTheme"));
+            document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
+        } else {
+            checkTheme(null);
+        };
     }, []);
 
     return (
@@ -85,7 +114,11 @@ const Header = () => {
                 </NavMenu>
 
                 <NavBtns>
-                    <UilMoon className="change-theme" />
+                    {toggleTheme === 'light' ? (
+                        <UilMoon className="change-theme" onClick={checkTheme} id="theme-button" />
+                    ) : (
+                        <UilSun className="change-theme" onClick={checkTheme} id="theme-button" />
+                    )}
                     <NavToggle id="nav-toggle">
                         <UilApps className="nav__icon" onClick={toggleHeaderOpen} />
                     </NavToggle>
