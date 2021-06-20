@@ -29,7 +29,7 @@ const Skill = () => {
     };
 
     return (
-        <SkillContainer>
+        <SkillContainer className="container grid">
             {skillsData.map(skill => (
                 <SkillContent
                     key={skill.id}

@@ -25,7 +25,13 @@ export const QualificationButton = styled.div`
   }
 `;
 
-export const QualificationSections = styled.div``;
+export const QualificationSections = styled.div`
+  @media screen and (min-width: 568px) {
+    display: grid;
+    grid-template-columns: 0.6fr;
+    justify-content: center;
+  }
+`;
 
 export const QualificationContent = styled.div`
   &[data-content] {

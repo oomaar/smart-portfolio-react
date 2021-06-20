@@ -46,16 +46,16 @@ const About = () => {
                             </InfoName>
                         </div>
                     </AboutInfo>
-                </AboutData>
 
-                <AboutBtns className="about__buttons">
-                    <Button
-                        download=""
-                        // href="assets/pdf/Alexa-Cv.pdf"
-                        className="button--flex">
-                        Download CV<UilDownloadAlt className="button__icon" />
-                    </Button>
-                </AboutBtns>
+                    <AboutBtns className="about__buttons">
+                        <Button
+                            download=""
+                            // href="assets/pdf/Alexa-Cv.pdf"
+                            className="button--flex">
+                            Download CV<UilDownloadAlt className="button__icon" />
+                        </Button>
+                    </AboutBtns>
+                </AboutData>
             </AboutContainer>
         </Section>
     );

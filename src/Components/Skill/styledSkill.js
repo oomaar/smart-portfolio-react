@@ -1,5 +1,11 @@
 import styled from "styled-components/macro";
-export const SkillContainer = styled.div``;
+export const SkillContainer = styled.div`
+  row-gap: 0;
+
+  @media screen and (min-width: 568px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
 
 export const SkillContent = styled.div`
   margin-bottom: ${({ theme }) => theme.marginBottom.mb_2_5};

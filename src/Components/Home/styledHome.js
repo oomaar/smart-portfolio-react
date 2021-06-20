@@ -12,6 +12,10 @@ export const HomeContent = styled.div`
   @media screen and (max-width: 350px) {
     grid-template-columns: 0.25fr 3fr;
   }
+
+  @media screen and (min-width: 568px) {
+    grid-template-columns: max-content 1fr 1fr;
+  }
   `;
 
 export const HomeSocial = styled.div`
@@ -40,29 +44,38 @@ export const HomeImage = styled.div`
       width: 180px;
     }
   }
-
+  
   .home__blob-img {
     width: 170px;
+  }
+
+  @media screen and (min-width: 568px) {
+    order: 1;
+    justify-self: center;
   }
 `;
 
 export const HomeData = styled.div`
   grid-column: 1/3;
+  
+  @media screen and (min-width: 568px) {
+    grid-column: initial;
+  }
 `;
 
 export const HomeTitle = styled.h1`
   font-size: ${({ theme }) => theme.typography.bigFontSize};
-`;
+  `;
 
 export const HomeSubtitle = styled.h3`
   font-size:  ${({ theme }) => theme.typography.h3FontSize};
   color: var(--text-color);
   margin-bottom:  ${({ theme }) => theme.marginBottom.mb_0_75};
-`;
+  `;
 
 export const HomeDescription = styled.p`
   margin-bottom:  ${({ theme }) => theme.marginBottom.mb_2};
-`
+  `
 
 export const HomeScroll = styled.div`
   /* display: none; */

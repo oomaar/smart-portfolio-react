@@ -2,6 +2,10 @@ import styled from "styled-components/macro";
 
 export const ContactContainer = styled.div`
   row-gap: 3rem;
+
+  @media screen and (min-width: 568px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const ContactInformarion = styled.div`

@@ -11,6 +11,10 @@ export const ProjectContainer = styled.div`
     width: fit-content;
     justify-self: center;
   }
+
+  @media screen and (min-width: 568px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const ProjectTitle = styled.h2`

@@ -11,6 +11,10 @@ export const FooterBackground = styled.div`
 
 export const FooterSubContainer = styled.div`
   row-gap: 3.5rem;
+
+  @media screen and (min-width: 568px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const FooterTitle = styled.h1`
