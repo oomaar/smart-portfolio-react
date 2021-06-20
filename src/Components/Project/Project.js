@@ -3,6 +3,7 @@ import { Button, Section } from "../../GlobalStyle";
 import {
     ProjectBackground,
     ProjectContainer,
+    ProjectData,
     ProjectTitle,
     ProjectSubtitle,
     ProjectImage,
@@ -13,7 +14,7 @@ const Project = () => {
         <Section>
             <ProjectBackground>
                 <ProjectContainer className="container grid">
-                    <div>
+                    <ProjectData>
                         <ProjectTitle>You have a new project !</ProjectTitle>
                         <ProjectSubtitle>
                             Contact me now and get a 30% discount on your new project.
@@ -24,7 +25,7 @@ const Project = () => {
                             Contact Me
                             <UilMessage className="project__icon button__icon" />
                         </Button>
-                    </div>
+                    </ProjectData>
                     <ProjectImage src="/img/project.png" alt="Project img" />
                 </ProjectContainer>
             </ProjectBackground>

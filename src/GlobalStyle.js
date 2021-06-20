@@ -96,18 +96,26 @@ export const Button = styled.a`
 // Reusbale classes
 export const Section = styled.section`
   padding: 2rem 0 4rem;
-`;
+
+  @media screen and (min-width: 768px) {
+    padding: 6rem 0 2rem;
+  }
+  `;
 
 export const SectionTitle = styled.h1`
   font-size: ${({ theme }) => theme.h1FontSize};
   text-align: center;
-`;
+  `;
 
 export const SectionSubtitle = styled.span`
   display: block;
   font-size: ${({ theme }) => theme.typography.smallFontSize};
   margin-bottom: ${({ theme }) => theme.marginBottom.mb_3};
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 4rem;
+  }
 `;
 
 export const GlobalStyle = createGlobalStyle`  
@@ -126,6 +134,10 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.typography.bodyFont};
     background-color: ${({ theme }) => theme.colors.bodyColor};
     color: ${({ theme }) => theme.colors.textColor};
+
+    @media screen and (min-width: 768px) {
+      margin: 0;
+    }
   }
 
   h1,
@@ -156,6 +168,11 @@ export const GlobalStyle = createGlobalStyle`
     
     @media screen and (max-width: 350px) {
       margin: 0 ${({ theme }) => theme.marginBottom.mb_1} 0 ${({ theme }) => theme.marginBottom.mb_1};
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 

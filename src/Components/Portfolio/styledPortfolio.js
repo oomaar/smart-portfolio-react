@@ -22,12 +22,25 @@ export const PortfolioContainer = styled.div`
 
 export const PortfolioContent = styled.div`
   padding: 0 1.5rem;
+
+  @media screen and (min-width: 568px) {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 50px;
+  }
+
+  @media screen and (min-width: 768px) {
+    align-items: center;
+  }
 `;
 
 export const PortfolioImage = styled.img`
   width: 265px;
   border-radius: 0.5rem;
   justify-self: center;
+
+  @media screen and (min-width: 768px) {
+    width: 320px;
+  }
 `;
 
 export const PortfolioData = styled.div`

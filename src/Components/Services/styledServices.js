@@ -8,7 +8,12 @@ export const ServicesContainer = styled.div`
       grid-template-columns: max-content;
       justify-content: center;
     }
-    `;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(3, 218px);
+      justify-content: center;
+    }
+`;
 
 export const ServicesContent = styled.div`
     position: relative;
@@ -27,6 +32,10 @@ export const ServicesContent = styled.div`
       font-size: 1.5rem;
       color: ${({ theme }) => theme.colors.firstColor};
       margin-bottom: ${({ theme }) => theme.marginBottom.mb_1};
+
+      @media screen and (min-width: 768px) {
+        font-size: 2rem;
+      }
     }
     
     .services__button {
@@ -42,10 +51,15 @@ export const ServicesContent = styled.div`
       opacity: 1;
       visibility: visible;
     }
+
     @media screen and (max-width: 350px) {
       padding-right: 3.5rem;
     }
-    `;
+
+    @media screen and (min-width: 768px) {
+      padding: 6rem 0 2rem 2.5rem;
+    }
+`;
 
 export const ServicesTitle = styled.h3`
     font-size: ${({ theme }) => theme.typography.h3FontSize};
@@ -87,6 +101,10 @@ export const ServicesModalContent = styled.div`
       font-size: 1.5rem;
       color: ${({ theme }) => theme.colors.firstColor};
       cursor: pointer;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 450px;
     }
 `;
 

@@ -4,6 +4,10 @@ export const AboutContainer = styled.div`
   @media screen and (min-width: 568px) {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media screen and (min-width: 768px) {
+    column-gap: 5rem;
+  }
 `;
 
 export const AboutImage = styled.img`
@@ -11,6 +15,10 @@ export const AboutImage = styled.img`
     border-radius: 0.5rem;
     justify-self: center;
     align-self: center;
+
+    @media screen and (min-width: 768px) {
+      width: 350px;
+    }
 `;
 
 export const AboutData = styled.div``;
@@ -18,11 +26,19 @@ export const AboutData = styled.div``;
 export const AboutDescription = styled.p`
     text-align: center;
     margin-bottom: ${({ theme }) => theme.marginBottom.mb_2_5};
+
+    @media screen and (min-width: 768px) {
+      text-align: initial;
+    }
 `;
 
 export const AboutInfo = styled.div`
   display: flex;
   justify-content: space-around;
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+  }
 `;
 
 export const InfoTitle = styled.span`
@@ -43,4 +59,8 @@ export const AboutBtns = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 30px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: initial;
+  }
 `;

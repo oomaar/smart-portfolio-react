@@ -7,6 +7,12 @@ export const HeaderTag = styled.header`
   left: 0;
   z-index: ${({ theme }) => theme.zIndex.zFixed};
   background-color: ${({ theme }) => theme.colors.bodyColor};
+
+  @media screen and (min-width: 768px) {
+    top: 0;
+    bottom: initial;
+    padding: 0 1rem;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -18,6 +24,10 @@ export const Nav = styled.nav`
 
   .nav__icon {
     font-size: 1.2rem;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
 
   /* show menu */
@@ -27,6 +37,11 @@ export const Nav = styled.nav`
   /* Active link */
   .active-link {
     ${({ theme }) => theme.colors.firstColor};
+  }
+
+  @media screen and (min-width: 768) {
+    height: calc(var(--header-height) + 1.5rem);
+    column-gap: 1rem;
   }
 `;
 
@@ -49,6 +64,10 @@ export const NavMenu = styled.div`
     cursor: pointer;
     color: ${({ theme }) => theme.colors.firstColor};
     transition: 0.3s ease;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 767px) {
@@ -66,7 +85,11 @@ export const NavMenu = styled.div`
   @media screen and (max-width: 350px) {
     padding: 2rem 0.25rem 4rem;
   }
-  `;
+
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
+`;
 
 export const NavList = styled.ul`
   grid-template-columns: repeat(3, 1fr);
@@ -74,6 +97,11 @@ export const NavList = styled.ul`
 
   @media screen and (max-width: 350px) {
     column-gap: 0;
+  }
+  
+  @media screen and (min-width: 768px) {
+    display: flex;
+    column-gap: 2rem;
   }
 `;
 
@@ -101,6 +129,11 @@ export const NavBtns = styled.div`
     color: ${({ theme }) => theme.colors.titleColor};
     margin-right: ${({ theme }) => theme.marginBottom.mb_1};
     cursor: pointer;
+    
+    @media screen and (min-width: 768px) {
+      margin: 0;
+      margin-left: ${({ theme }) => theme.marginBottom.mb_1};
+    }
   }
 
   .change-theme:hover {

@@ -4,6 +4,16 @@ export const ProjectBackground = styled.div`
   text-align: center;
   background-color: ${({ theme }) => theme.colors.firstColor};
   padding-top: 3rem;
+
+  @media screen and (min-width: 768px) {
+    background: none;
+  }
+  `;
+
+export const ProjectData = styled.div`
+  @media screen and (min-width: 768px) {
+    padding-top: 0.8rem;
+  } 
 `;
 
 export const ProjectContainer = styled.div`
@@ -11,9 +21,17 @@ export const ProjectContainer = styled.div`
     width: fit-content;
     justify-self: center;
   }
-
+  
   @media screen and (min-width: 568px) {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media screen and (min-width: 768px) {
+    background-color: ${({ theme }) => theme.colors.firstColorSecond};
+    border-radius: 1rem;
+    padding: 3rem 2.5rem 0;
+    grid-template-columns: 1fr max-content;
+    column-gap: 3rem;
   }
 `;
 

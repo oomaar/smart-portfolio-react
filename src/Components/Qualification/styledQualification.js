@@ -6,6 +6,10 @@ export const QualificationTabs = styled.div`
   display: flex;
   justify-content: space-evenly;
   margin-bottom: ${({ theme }) => theme.marginBottom.mb_2};
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 export const QualificationButton = styled.div`
@@ -23,6 +27,10 @@ export const QualificationButton = styled.div`
     margin-right: ${({ theme }) => theme.marginBottom.mb_0_25};
     margin-left: ${({ theme }) => theme.marginBottom.mb_0_25};
   }
+
+  @media screen and (min-width: 768px) {
+    margin: 0 ${({ theme }) => theme.marginBottom.mb_1};
+  }
 `;
 
 export const QualificationSections = styled.div`
@@ -30,6 +38,10 @@ export const QualificationSections = styled.div`
     display: grid;
     grid-template-columns: 0.6fr;
     justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 0.5fr;
   }
 `;
 

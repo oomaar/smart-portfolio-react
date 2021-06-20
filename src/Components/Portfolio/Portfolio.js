@@ -51,9 +51,10 @@ const Portfolio = () => {
                     }}
                     pagination={{ clickable: true }}
                 >
-                    <PortfolioContent>
-                        {portfolioData.map(slide => (
-                            <SwiperSlide className='grid' key={slide.id}>
+                    {portfolioData.map(slide => (
+                        <SwiperSlide key={slide.id}>
+                            <PortfolioContent className="grid swiper-slide">
+                                {/* <SwiperSlide className='grid' key={slide.id}> */}
                                 <PortfolioImage src={slide.src} alt={slide.alt} />
                                 <PortfolioData>
                                     <PortfolioTitle>{slide.title}</PortfolioTitle>
@@ -66,9 +67,10 @@ const Portfolio = () => {
                                         <UilArrowRight className="button__icon" />
                                     </Button>
                                 </PortfolioData>
-                            </SwiperSlide>
-                        ))}
-                    </PortfolioContent>
+                                {/* </SwiperSlide> */}
+                            </PortfolioContent>
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
 
                 <ArrowNext ref={navigationNextRef} className="swiper-button-next">

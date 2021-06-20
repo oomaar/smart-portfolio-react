@@ -46,7 +46,6 @@ const App = () => {
           <Project />
           <Testimonial />
           <Contact />
-          <Footer />
           <ScrollUpLink
             href="#"
             id="scroll-up"
@@ -55,6 +54,7 @@ const App = () => {
             <UilArrowUp className="scrollup__icon" />
           </ScrollUpLink>
         </Application>
+        <Footer />
       </ThemeProvider>
     </ThemeProvider>
   );
@@ -71,6 +71,10 @@ const Application = styled.main`
   /* HeaderTag box-shadow when scroll */
     .scroll-header {
       box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 0 1rem;
     }
 `;
 

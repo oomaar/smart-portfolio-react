@@ -2,6 +2,10 @@ import styled from "styled-components/macro";
 
 export const HomeContaier = styled.div`
   gap: 1rem;
+
+  @media screen and (min-width: 768px) {
+    row-gap: 5rem;
+  }
 `;
 
 export const HomeContent = styled.div`
@@ -15,6 +19,11 @@ export const HomeContent = styled.div`
 
   @media screen and (min-width: 568px) {
     grid-template-columns: max-content 1fr 1fr;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 5.5rem;
+    column-gap: 2rem;
   }
   `;
 
@@ -43,17 +52,21 @@ export const HomeImage = styled.div`
     @media screen and (max-width: 350px) {
       width: 180px;
     }
+
+    @media screen and (min-width: 768px) {
+      width: 270px;
+    }
   }
   
   .home__blob-img {
     width: 170px;
   }
-
+  
   @media screen and (min-width: 568px) {
     order: 1;
     justify-self: center;
   }
-`;
+  `;
 
 export const HomeData = styled.div`
   grid-column: 1/3;
@@ -78,23 +91,34 @@ export const HomeDescription = styled.p`
   `
 
 export const HomeScroll = styled.div`
-  /* display: none; */
-`;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  `;
 
 export const ScrollButton = styled.a`
   color: ${({ theme }) => theme.colors.firstColor};
   transition: 0.3s;
-
+  
   :hover {
     transform: translateY(0.25rem);
   }
-
+  
   .scroll__mouse {
     font-size: 2rem;
   }
-
+  
   .scroll__arrow {
     font-size: 1.25rem;
+  }
+  
+  @media screen and (min-width: 768px) {
+    margin-left: 3rem;
   }
 `;
 
