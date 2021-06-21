@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import styled from "styled-components/macro";
 import UilArrowUp from "@iconscout/react-unicons/icons/uil-arrow-up";
 import { GlobalStyle, darkTheme, lightTheme, theme } from "./GlobalStyle";
+import { resumeData } from "./data/resumeData";
 import {
   About,
   Contact,
@@ -37,14 +38,14 @@ const App = () => {
         <GlobalStyle />
         <Application>
           <Header toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
-          <Home />
-          <About />
-          <Skills />
-          <Qualification />
-          <Services />
-          <Portfolio />
+          <Home data={resumeData.main} />
+          <About data={resumeData.about} />
+          <Skills data={resumeData.skill} />
+          <Qualification data={resumeData.qualification} />
+          <Services data={resumeData.services} />
+          <Portfolio data={resumeData.portfolio} />
           <Project />
-          <Testimonial />
+          <Testimonial data={resumeData.testimonial} />
           <Contact />
           <ScrollUpLink
             href="#"
@@ -54,7 +55,7 @@ const App = () => {
             <UilArrowUp className="scrollup__icon" />
           </ScrollUpLink>
         </Application>
-        <Footer />
+        <Footer data={resumeData.main} />
       </ThemeProvider>
     </ThemeProvider>
   );
