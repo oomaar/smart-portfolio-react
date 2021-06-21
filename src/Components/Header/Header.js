@@ -61,7 +61,7 @@ const Header = ({ toggleTheme, setToggleTheme }) => {
         } else {
             checkTheme(null);
         };
-    }, []);
+    });
 
     return (
         <HeaderTag
