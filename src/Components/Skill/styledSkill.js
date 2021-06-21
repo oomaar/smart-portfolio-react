@@ -18,10 +18,10 @@ export const SkillHeader = styled.div`
   cursor: pointer;
 
   .skill__arrow {
-      font-size: 2rem;
-      color: ${({ theme }) => theme.colors.firstColor};
-      margin: 0 ${({ theme }) => theme.marginBottom.mb_0_75} 0 ${({ theme }) => theme.marginBottom.mb_0_75};
-      transition: 0.3s;
+    font-size: 2rem;
+    color: ${({ theme }) => theme.colors.firstColor};
+    margin: 0 ${({ theme }) => theme.marginBottom.mb_0_75} 0 ${({ theme }) => theme.marginBottom.mb_0_75};
+    transition: 0.3s;
   }
 
   .skill__arrow-open {
@@ -30,17 +30,17 @@ export const SkillHeader = styled.div`
 `;
 
 export const SkillIcon = styled.div`
-    font-size: 2rem;
-    color: ${({ theme }) => theme.colors.firstColor};
-    margin: 0 ${({ theme }) => theme.marginBottom.mb_0_75} 0 ${({ theme }) => theme.marginBottom.mb_0_75};
+  font-size: 2rem;
+  color: ${({ theme }) => theme.colors.firstColor};
+  margin: 0 ${({ theme }) => theme.marginBottom.mb_0_75} 0 ${({ theme }) => theme.marginBottom.mb_0_75};
 `;
 
 export const SkillTitle = styled.h3`
   font-size: ${({ theme }) => theme.typography.h3FontSize};
   
   @media screen and (max-width: 350px) {
-      font-size: ${({ theme }) => theme.typography.normalFontSize};
-    }
+    font-size: ${({ theme }) => theme.typography.normalFontSize};
+  }
 `;
 
 export const SkillSubTitle = styled.span`
@@ -52,7 +52,6 @@ export const SkillList = styled.div`
   row-gap: 1.5rem;
   padding-left: 2.7rem;
 `;
-
 
 export const SkillData = styled.div`
   display: flex;
@@ -70,8 +69,6 @@ export const SkillName = styled.h3`
   font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
 `;
 
-export const SkillNumber = styled.span``;
-
 export const SkillBar = styled.span`
   height: 5px;
   border-radius: 0.25rem;
@@ -84,4 +81,3 @@ export const SkillPercentage = styled.div`
   width: ${({ width }) => `${width}%`};
   height: 5px;
 `;
-
