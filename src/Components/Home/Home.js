@@ -1,10 +1,6 @@
-import UilLinkedinAlt from "@iconscout/react-unicons/icons/uil-linkedin-alt";
-import UilGithubAlt from "@iconscout/react-unicons/icons/uil-github-alt";
-import UilFacebookF from "@iconscout/react-unicons/icons/uil-facebook-f";
 import UilMessage from "@iconscout/react-unicons/icons/uil-message";
 import UilMouseAlt from "@iconscout/react-unicons/icons/uil-mouse-alt";
 import UilArrowDown from "@iconscout/react-unicons/icons/uil-arrow-down";
-
 import { Button, Section } from "../../GlobalStyle";
 import {
     HomeContaier,
@@ -21,21 +17,21 @@ import {
     ScrollButtonText,
 } from "./styledHome";
 
-const Home = () => {
+const Home = ({ data }) => {
+    const network = data.social.map((network) => {
+        return (
+            <SocialIcon key={network.name} href={network.url} target="_blank">
+                <i className={network.class}></i>
+            </SocialIcon>
+        )
+    });
+
     return (
         <Section id="home">
             <HomeContaier className="container grid">
                 <HomeContent className="grid">
                     <HomeSocial>
-                        <SocialIcon href="https://www.linkedin.com" target="_blank">
-                            <UilLinkedinAlt />
-                        </SocialIcon>
-                        <SocialIcon href="https://www.github.com" target="_blank">
-                            <UilGithubAlt />
-                        </SocialIcon>
-                        <SocialIcon href="https://www.facebook.com" target="_blank">
-                            <UilFacebookF />
-                        </SocialIcon>
+                        {network}
                     </HomeSocial>
 
                     <HomeImage>
@@ -62,7 +58,7 @@ const Home = () => {
                                 />
                                 <image
                                     className="home__blob-img"
-                                    xlinkHref="/img/perfil.png"
+                                    xlinkHref={data.image}
                                     x="12"
                                     y="18"
                                 />
@@ -72,12 +68,9 @@ const Home = () => {
                     </HomeImage>
 
                     <HomeData>
-                        <HomeTitle>Hi, I'am Omar</HomeTitle>
-                        <HomeSubtitle>Frontend developer</HomeSubtitle>
-                        <HomeDescription>
-                            High level experience in web design and development knowledge,
-                            producing quality work.
-                        </HomeDescription>
+                        <HomeTitle>Hi, I'm {data.name}</HomeTitle>
+                        <HomeSubtitle>{data.title}</HomeSubtitle>
+                        <HomeDescription>{data.description}</HomeDescription>
                         <Button href="#contact" className="button--flex">
                             Contact Me <UilMessage className="button__icon" />
                         </Button>

@@ -25,7 +25,7 @@ export const HomeContent = styled.div`
     padding-top: 5.5rem;
     column-gap: 2rem;
   }
-  `;
+`;
 
 export const HomeSocial = styled.div`
   display: grid;
@@ -44,7 +44,7 @@ export const SocialIcon = styled.a`
   :hover {
     color: ${({ theme }) => theme.colors.firstColorAlt};
   }
-  `;
+`;
 
 export const HomeImage = styled.div`
   position: relative;
@@ -74,7 +74,7 @@ export const HomeImage = styled.div`
     order: 1;
     justify-self: center;
   }
-  `;
+`;
 
 export const HomeData = styled.div`
   grid-column: 1/3;
@@ -86,17 +86,17 @@ export const HomeData = styled.div`
 
 export const HomeTitle = styled.h1`
   font-size: ${({ theme }) => theme.typography.bigFontSize};
-  `;
+`;
 
 export const HomeSubtitle = styled.h3`
   font-size:  ${({ theme }) => theme.typography.h3FontSize};
-  color: var(--text-color);
+  color: ${({ theme }) => theme.colors.textColor};
   margin-bottom:  ${({ theme }) => theme.marginBottom.mb_0_75};
-  `;
+`;
 
 export const HomeDescription = styled.p`
   margin-bottom:  ${({ theme }) => theme.marginBottom.mb_2};
-  `
+`;
 
 export const HomeScroll = styled.div`
   display: none;
@@ -107,7 +107,7 @@ export const HomeScroll = styled.div`
   @media screen and (min-width: 768px) {
     display: block;
   }
-  `;
+`;
 
 export const ScrollButton = styled.a`
   color: ${({ theme }) => theme.colors.firstColor};
@@ -119,6 +119,7 @@ export const ScrollButton = styled.a`
   
   .scroll__mouse {
     font-size: 2rem;
+    margin: 0 0.5rem 0 0;
   }
   
   .scroll__arrow {
