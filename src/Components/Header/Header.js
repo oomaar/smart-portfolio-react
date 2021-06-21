@@ -19,7 +19,6 @@ const Header = ({ toggleTheme, setToggleTheme, data, mainData }) => {
     const [toggleShow, setToggleShow] = useState(false);
     const [shadow, setShadow] = useState(false);
     const [active, setActive] = useState("");
-    console.log("🚀 ~ file: Header.js ~ line 31 ~ Header ~ active", active)
 
     const toggleHeaderOpen = () => setToggleShow(true);
     const toggleHeaderClose = () => setToggleShow(false);
