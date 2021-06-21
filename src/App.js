@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import styled from "styled-components/macro";
 import UilArrowUp from "@iconscout/react-unicons/icons/uil-arrow-up";
 import { GlobalStyle, darkTheme, lightTheme, theme } from "./GlobalStyle";
-import { resumeData } from "./data/resumeData";
+import resumeData from "./data/resumeData.json";
 import {
   About,
   Contact,
@@ -37,7 +37,7 @@ const App = () => {
       <ThemeProvider theme={toggleTheme === 'light' ? lightTheme : darkTheme}>
         <GlobalStyle />
         <Application>
-          <Header toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
+          <Header data={resumeData.header} toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
           <Home data={resumeData.main} />
           <About data={resumeData.about} />
           <Skills data={resumeData.skill} />
@@ -67,12 +67,6 @@ const Application = styled.main`
   .show-scroll {
     bottom: 5rem;
   }
-
-  /* Change background header */
-  /* HeaderTag box-shadow when scroll */
-    .scroll-header {
-      box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-    }
 
     @media screen and (min-width: 768px) {
       padding: 0 1rem;
