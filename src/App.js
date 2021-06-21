@@ -14,7 +14,7 @@ import {
   Project,
   Qualification,
   Services,
-  Skills,
+  Skill,
   Testimonial
 } from "./Components";
 
@@ -40,7 +40,7 @@ const App = () => {
           <Header data={resumeData.header} mainData={resumeData.main} toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
           <Home data={resumeData.main} />
           <About data={resumeData.about} />
-          <Skills data={resumeData.skill} />
+          <Skill data={resumeData.skill} />
           <Qualification data={resumeData.qualification} />
           <Services data={resumeData.services} />
           <Portfolio data={resumeData.portfolio} />
