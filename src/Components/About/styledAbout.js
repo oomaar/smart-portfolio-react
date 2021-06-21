@@ -21,8 +21,6 @@ export const AboutImage = styled.img`
     }
 `;
 
-export const AboutData = styled.div``;
-
 export const AboutDescription = styled.p`
     text-align: center;
     margin-bottom: ${({ theme }) => theme.marginBottom.mb_2_5};

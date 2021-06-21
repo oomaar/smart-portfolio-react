@@ -3,7 +3,6 @@ import { Button, Section, SectionSubtitle, SectionTitle } from "../../GlobalStyl
 import {
     AboutContainer,
     AboutImage,
-    AboutData,
     AboutDescription,
     AboutInfo,
     InfoTitle,
@@ -11,7 +10,7 @@ import {
     AboutBtns,
 } from "./styledAbout";
 
-const About = () => {
+const About = ({ data }) => {
     return (
         <Section id="about">
             <SectionTitle>About Me</SectionTitle>
@@ -19,43 +18,39 @@ const About = () => {
 
             <AboutContainer className="container grid">
                 <AboutImage src="/img/about.jpg" alt="About Me" />
-                <AboutData>
-                    <AboutDescription>
-                        Web developer, with extensive knowledge and years of experience,
-                        working in web technologies and UI/UX design, deleivering quality
-                        work.
-                    </AboutDescription>
+                <div>
+                    <AboutDescription>{data.bio}</AboutDescription>
 
                     <AboutInfo>
                         <div>
-                            <InfoTitle>08+</InfoTitle>
+                            <InfoTitle>{data.experienceYears}+</InfoTitle>
                             <InfoName>Years <br />
                                 experience
                             </InfoName>
                         </div>
                         <div>
-                            <InfoTitle>20+</InfoTitle>
+                            <InfoTitle>{data.completedProjects}+</InfoTitle>
                             <InfoName>Completed <br />
                                 Projects
                             </InfoName>
                         </div>
                         <div>
-                            <InfoTitle>05+</InfoTitle>
+                            <InfoTitle>{data.companiesWorked}+</InfoTitle>
                             <InfoName>Companies <br />
                                 Worked
                             </InfoName>
                         </div>
                     </AboutInfo>
 
-                    <AboutBtns className="about__buttons">
+                    <AboutBtns>
                         <Button
                             download=""
-                            // href="assets/pdf/Alexa-Cv.pdf"
+                            href="/pdf/Alexa-Cv.pdf"
                             className="button--flex">
                             Download CV<UilDownloadAlt className="button__icon" />
                         </Button>
                     </AboutBtns>
-                </AboutData>
+                </div>
             </AboutContainer>
         </Section>
     );
