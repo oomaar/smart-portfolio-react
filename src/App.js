@@ -37,7 +37,7 @@ const App = () => {
       <ThemeProvider theme={toggleTheme === 'light' ? lightTheme : darkTheme}>
         <GlobalStyle />
         <Application>
-          <Header data={resumeData.header} toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
+          <Header data={resumeData.header} mainData={resumeData.main} toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
           <Home data={resumeData.main} />
           <About data={resumeData.about} />
           <Skills data={resumeData.skill} />

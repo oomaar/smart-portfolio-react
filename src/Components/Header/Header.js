@@ -1,11 +1,5 @@
-import UilEstate from "@iconscout/react-unicons/icons/uil-estate";
-import UilUser from "@iconscout/react-unicons/icons/uil-user";
-import UilFileAlt from "@iconscout/react-unicons/icons/uil-file-alt";
-import UilBriefcaseAlt from "@iconscout/react-unicons/icons/uil-briefcase-alt";
-import UilScenery from "@iconscout/react-unicons/icons/uil-scenery";
-import UilMessage from "@iconscout/react-unicons/icons/uil-message";
 import UilTimes from "@iconscout/react-unicons/icons/uil-times";
-import UilApps from "@iconscout/react-unicons/icons/uil-apps";
+import UilAlignLeft from "@iconscout/react-unicons/icons/uil-align-left";
 import UilMoon from "@iconscout/react-unicons/icons/uil-moon";
 import UilSun from "@iconscout/react-unicons/icons/uil-sun";
 import { useEffect, useState } from "react";
@@ -21,19 +15,19 @@ import {
     NavToggle,
 } from "./styledHeader";
 
-const Header = ({ toggleTheme, setToggleTheme }) => {
+const Header = ({ toggleTheme, setToggleTheme, data, mainData }) => {
     const [toggleShow, setToggleShow] = useState(false);
     const [shadow, setShadow] = useState(false);
+    const [active, setActive] = useState("");
+    console.log("🚀 ~ file: Header.js ~ line 31 ~ Header ~ active", active)
 
     const toggleHeaderOpen = () => setToggleShow(true);
-
     const toggleHeaderClose = () => setToggleShow(false);
-
     const showShadow = () => window.scrollY > 100 ? setShadow(true) : setShadow(false);
-
-    useEffect(() => {
-        window.addEventListener("scroll", showShadow);
-    }, []);
+    const activeLink = name => {
+        toggleHeaderClose();
+        setActive(name);
+    };
 
     const checkTheme = () => {
         switch (toggleTheme) {
@@ -63,64 +57,47 @@ const Header = ({ toggleTheme, setToggleTheme }) => {
         };
     });
 
+
+    useEffect(() => {
+        window.addEventListener("scroll", showShadow);
+    }, []);
+
+    const navLinks = data.map(link => {
+        return (
+            <ListItem key={link.id}>
+                <NavLink
+                    className={`${active === link.href && 'active-link'}`}
+                    href={link.href} onClick={() => activeLink(link.href)}>
+                    <i className={link.icon}></i>
+                    {link.name}
+                </NavLink>
+            </ListItem>
+        );
+    });
+
     return (
         <HeaderTag
-            className={`${shadow && 'scroll-header'}`}
+            shadow={shadow}
             id="header"
         >
             <Nav className="container">
-                <Logo href="#">Omar</Logo>
+                <Logo>{mainData.name}</Logo>
 
                 <NavMenu toggleShow={toggleShow}>
                     <NavList className="grid">
-                        <ListItem>
-                            <NavLink href="#home" className="active-link" onClick={toggleHeaderClose}>
-                                <UilEstate className="nav__icon" />
-                                Home
-                            </NavLink>
-                        </ListItem>
-                        <ListItem>
-                            <NavLink href="#about" onClick={toggleHeaderClose}>
-                                <UilUser className="nav__icon" />
-                                About
-                            </NavLink>
-                        </ListItem>
-                        <ListItem>
-                            <NavLink href="#skills" onClick={toggleHeaderClose}>
-                                <UilFileAlt className="nav__icon" />
-                                Skills
-                            </NavLink>
-                        </ListItem>
-                        <ListItem>
-                            <NavLink href="#services" onClick={toggleHeaderClose}>
-                                <UilBriefcaseAlt className="nav__icon" />
-                                Services
-                            </NavLink>
-                        </ListItem>
-                        <ListItem>
-                            <NavLink href="#portfolio" onClick={toggleHeaderClose}>
-                                <UilScenery className="nav__icon" />
-                                Portfolio
-                            </NavLink>
-                        </ListItem>
-                        <ListItem>
-                            <NavLink href="#contact" onClick={toggleHeaderClose}>
-                                <UilMessage className="nav__icon" />
-                                Contact ME
-                            </NavLink>
-                        </ListItem>
+                        {navLinks}
                     </NavList>
                     <UilTimes className="nav__close" onClick={toggleHeaderClose} />
                 </NavMenu>
 
                 <NavBtns>
                     {toggleTheme === 'light' ? (
-                        <UilMoon className="change-theme" onClick={checkTheme} id="theme-button" />
+                        <UilMoon className="change-theme" onClick={checkTheme} />
                     ) : (
-                        <UilSun className="change-theme" onClick={checkTheme} id="theme-button" />
+                        <UilSun className="change-theme" onClick={checkTheme} />
                     )}
-                    <NavToggle id="nav-toggle">
-                        <UilApps className="nav__icon" onClick={toggleHeaderOpen} />
+                    <NavToggle>
+                        <UilAlignLeft className="nav__icon" onClick={toggleHeaderOpen} />
                     </NavToggle>
                 </NavBtns>
             </Nav>
