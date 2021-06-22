@@ -1,11 +1,13 @@
 import styled from "styled-components/macro";
 
-export const QualificationContainer = styled.div``;
-
 export const QualificationTabs = styled.div`
   display: flex;
   justify-content: space-evenly;
   margin-bottom: ${({ theme }) => theme.marginBottom.mb_2};
+
+  .btn-active {
+    color: ${({ theme }) => theme.colors.firstColor};
+  }
 
   @media screen and (min-width: 768px) {
     justify-content: center;
@@ -24,8 +26,7 @@ export const QualificationButton = styled.div`
 
   .qualification__icon {
     font-size: 1.8rem;
-    margin-right: ${({ theme }) => theme.marginBottom.mb_0_25};
-    margin-left: ${({ theme }) => theme.marginBottom.mb_0_25};
+    margin: 0 ${({ theme }) => theme.marginBottom.mb_0_25} 0 ${({ theme }) => theme.marginBottom.mb_0_25};
   }
 
   @media screen and (min-width: 768px) {
@@ -79,6 +80,10 @@ export const QualificationSubtitle = styled.span`
 export const QualificationCalendar = styled.div`
   font-size: ${({ theme }) => theme.typography.smallerFontSize};
   color: ${({ theme }) => theme.colors.textColorLight};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100px;
 `;
 
 export const QualificationRounder = styled.span`

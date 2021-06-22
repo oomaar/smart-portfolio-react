@@ -3,7 +3,6 @@ import UilBriefcaseAlt from "@iconscout/react-unicons/icons/uil-briefcase-alt";
 import UilCalendarAlt from "@iconscout/react-unicons/icons/uil-calendar-alt";
 import { Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
 import {
-    QualificationContainer,
     QualificationTabs,
     QualificationButton,
     QualificationSections,
@@ -17,29 +16,124 @@ import {
 } from "./styledQualification";
 import { useState } from "react";
 
-const Qualification = () => {
+const Qualification = ({ data }) => {
     const [dataTarget, setDataTarget] = useState('education');
+    const [active, setActive] = useState(true);
+
+    const selectQualification = qualification => {
+        if (qualification === 'education') {
+            setDataTarget('education');
+            setActive(true);
+        };
+
+        if (qualification === 'work') {
+            setDataTarget('work')
+            setActive(false);
+        };
+    };
+
+    const educationLength = data.education.length - 1;
+    const workLength = data.work.length - 1;
+
+    const educationGrid = data.education.map((qualification, index) => (
+        <QualificationData key={index}>
+            {qualification.id % 2 === 0 && (
+                <>
+                    <div></div>
+
+                    <div>
+                        <QualificationRounder></QualificationRounder>
+                        {index !== educationLength && (
+                            <QualificationLine></QualificationLine>
+                        )}
+                    </div>
+                </>
+            )}
+            <div>
+                <QualificationTitle>{qualification.title}</QualificationTitle>
+                <QualificationSubtitle>{qualification.subtitle}</QualificationSubtitle>
+                <QualificationCalendar>
+                    <UilCalendarAlt className="calendar-icon" />
+                    {qualification.start} - {qualification.finish}
+                </QualificationCalendar>
+            </div>
+
+            {qualification.id % 2 === 1 && (
+                <div>
+                    <QualificationRounder></QualificationRounder>
+                    {index !== educationLength && (
+                        <QualificationLine></QualificationLine>
+                    )}
+                </div>
+            )}
+
+            {(qualification.id === educationLength && (qualification.id % 2 === 1)) && (
+                <div>
+                    <QualificationRounder></QualificationRounder>
+                </div>
+            )}
+        </QualificationData>
+    ));
+
+    const workGrid = data.work.map((qualification, index) => (
+        <QualificationData key={index}>
+            {qualification.id % 2 === 0 && (
+                <>
+                    <div></div>
+
+                    <div>
+                        <QualificationRounder></QualificationRounder>
+                        {index !== workLength && (
+                            <QualificationLine></QualificationLine>
+                        )}
+                    </div>
+                </>
+            )}
+
+            <div>
+                <QualificationTitle>{qualification.title}</QualificationTitle>
+                <QualificationSubtitle>{qualification.subtitle}</QualificationSubtitle>
+                <QualificationCalendar>
+                    <UilCalendarAlt className="calendar-icon" />
+                    {qualification.start} - {qualification.finish}
+                </QualificationCalendar>
+            </div>
+
+            {qualification.id % 2 === 1 && (
+                <div>
+                    <QualificationRounder></QualificationRounder>
+                    {index !== workLength && (
+                        <QualificationLine></QualificationLine>
+                    )}
+                </div>
+            )}
+
+            {(qualification.id === workLength && (qualification.id % 2 === 2)) && (
+                <div>
+                    <QualificationRounder></QualificationRounder>
+                </div>
+            )}
+        </QualificationData>
+    ));
 
     return (
         <Section>
             <SectionTitle>Qualification</SectionTitle>
             <SectionSubtitle>My personal journey</SectionSubtitle>
 
-            <QualificationContainer className="container">
+            <div className="container">
                 <QualificationTabs>
                     <QualificationButton
-                        onClick={() => setDataTarget('education')}
-                        className="button--flex"
-                        data-target="#education"
+                        onClick={() => selectQualification('education')}
+                        className={`button--flex ${active && 'btn-active'}`}
                     >
                         <UilGraduationCap className="qualification__icon" />
                         Education
                     </QualificationButton>
 
                     <QualificationButton
-                        onClick={() => setDataTarget('work')}
-                        className="button--flex"
-                        data-target="#work"
+                        onClick={() => selectQualification('work')}
+                        className={`button--flex ${!active && 'btn-active'}`}
                     >
                         <UilBriefcaseAlt className="qualification__icon" />
                         Work
@@ -47,145 +141,21 @@ const Qualification = () => {
                 </QualificationTabs>
 
                 <QualificationSections>
-                    {/* QUALIFICATION CONTENT 1 */}
                     <QualificationContent
-                        className={`${dataTarget === 'education' ? 'qualification__active' : ''}`}
+                        className={`${dataTarget === 'education' && 'qualification__active'}`}
                         data-content
-                        id="education"
                     >
-                        {/* QUALIFICATION 1*/}
-                        <QualificationData>
-                            <div>
-                                <QualificationTitle>Computer Enginner</QualificationTitle>
-                                <QualificationSubtitle>Peru - University</QualificationSubtitle>
-                                <QualificationCalendar>
-                                    <UilCalendarAlt />
-                                    2009 - 2014
-                                </QualificationCalendar>
-                            </div>
-
-                            <div>
-                                <QualificationRounder></QualificationRounder>
-                                <QualificationLine></QualificationLine>
-                            </div>
-                        </QualificationData>
-
-                        {/* QUALIFICATION 2*/}
-                        <QualificationData>
-                            <div></div>
-
-                            <div>
-                                <QualificationRounder></QualificationRounder>
-                                <QualificationLine></QualificationLine>
-                            </div>
-
-                            <div>
-                                <QualificationTitle>Web Design</QualificationTitle>
-                                <QualificationSubtitle>Spain - Institute</QualificationSubtitle>
-                                <QualificationCalendar>
-                                    <UilCalendarAlt />
-                                    2014 - 2017
-                                </QualificationCalendar>
-                            </div>
-                        </QualificationData>
-
-                        {/* QUALIFICATION 3*/}
-                        <QualificationData>
-                            <div>
-                                <QualificationTitle>Web Development</QualificationTitle>
-                                <QualificationSubtitle>Peru - Institute</QualificationSubtitle>
-                                <QualificationCalendar>
-                                    <UilCalendarAlt />
-                                    2017 - 2019
-                                </QualificationCalendar>
-                            </div>
-
-                            <div>
-                                <QualificationRounder></QualificationRounder>
-                                <QualificationLine></QualificationLine>
-                            </div>
-                        </QualificationData>
-
-                        {/* QUALIFICATION 4*/}
-                        <QualificationData>
-                            <div></div>
-
-                            <div>
-                                <QualificationRounder></QualificationRounder>
-                            </div>
-
-                            <div>
-                                <QualificationTitle>Master in Ui/Ux</QualificationTitle>
-                                <QualificationSubtitle>Peru - Institute</QualificationSubtitle>
-                                <QualificationCalendar>
-                                    <UilCalendarAlt />
-                                    2019 - 2021
-                                </QualificationCalendar>
-                            </div>
-                        </QualificationData>
+                        {educationGrid}
                     </QualificationContent>
 
-                    {/* QUALIFICATION CONTENT 2 */}
                     <QualificationContent
-                        className={`${dataTarget === 'work' ? 'qualification__active' : ''}`}
+                        className={`${dataTarget === 'work' && 'qualification__active'}`}
                         data-content
-                        id="work"
                     >
-                        {/* QUALIFICATION 1*/}
-                        <QualificationData>
-                            <div>
-                                <QualificationTitle>Software Enginner</QualificationTitle>
-                                <QualificationSubtitle>Microsoft - Peru</QualificationSubtitle>
-                                <QualificationCalendar>
-                                    <UilCalendarAlt />
-                                    2016 - 2018
-                                </QualificationCalendar>
-                            </div>
-
-                            <div>
-                                <QualificationRounder></QualificationRounder>
-                                <QualificationLine></QualificationLine>
-                            </div>
-                        </QualificationData>
-
-                        {/* QUALIFICATION 2*/}
-                        <QualificationData>
-                            <div></div>
-
-                            <div>
-                                <QualificationRounder></QualificationRounder>
-                                <QualificationLine></QualificationLine>
-                            </div>
-
-                            <div>
-                                <QualificationTitle>Frontend developer</QualificationTitle>
-                                <QualificationSubtitle>Apple Inc - Spain</QualificationSubtitle>
-                                <QualificationCalendar>
-                                    <UilCalendarAlt />
-                                    2018 - 2020
-                                </QualificationCalendar>
-                            </div>
-                        </QualificationData>
-
-                        {/* QUALIFICATION 3*/}
-                        <QualificationData>
-                            <div>
-                                <QualificationTitle>UI Designer</QualificationTitle>
-                                <QualificationSubtitle>Figma - Spain</QualificationSubtitle>
-                                <QualificationCalendar>
-                                    <UilCalendarAlt />
-                                    2020 - Present
-                                </QualificationCalendar>
-                            </div>
-
-                            <div>
-                                <QualificationRounder></QualificationRounder>
-                                <QualificationLine></QualificationLine>
-                            </div>
-                        </QualificationData>
+                        {workGrid}
                     </QualificationContent>
                 </QualificationSections>
-            </QualificationContainer>
+            </div>
         </Section>
     );
 };
