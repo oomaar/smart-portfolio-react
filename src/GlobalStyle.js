@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import styled from "styled-components/macro";
 
 // Favorite Color
-const hueColor = '230';
+const hueColor = '190';
 
 export const theme = {
   HeaderHeight: '3rem',
