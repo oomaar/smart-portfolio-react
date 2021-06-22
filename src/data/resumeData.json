@@ -147,6 +147,75 @@
       ]
     }
   ],
+  "qualification": {
+    "education": [
+      {
+        "id": "1",
+        "category": "education",
+        "position": "left",
+        "title": "Computer Enginner",
+        "subtitle": "Peru - University",
+        "start": "2009",
+        "finish": "2014"
+      },
+      {
+        "id": "2",
+        "category": "education",
+        "position": "left",
+        "title": "Web Development",
+        "subtitle": "Peru - Institute",
+        "start": "2017",
+        "finish": "2019"
+      },
+      {
+        "id": "3",
+        "category": "education",
+        "position": "right",
+        "title": "Web Design",
+        "subtitle": "Spain - Institute",
+        "start": "2014",
+        "finish": "2017"
+      },
+      {
+        "id": "4",
+        "category": "education",
+        "position": "right",
+        "title": "Master in Ui/Ux",
+        "subtitle": "Peru - Institute",
+        "start": "2019",
+        "finish": "2021"
+      }
+    ],
+    "work": [
+      {
+        "id": "1",
+        "category": "work",
+        "position": "right",
+        "title": "Software Enginner",
+        "subtitle": "Microsoft - Peru",
+        "start": "2016",
+        "finish": "2018"
+      },
+      {
+        "id": "2",
+        "category": "work",
+        "position": "left",
+        "title": "Frontend developer",
+        "subtitle": "Apple Inc - Spain",
+        "start": "2018 ",
+        "finish": "2020"
+      },
+      {
+        "id": "3",
+        "category": "work",
+        "position": "left",
+        "title": "UI Designer",
+        "subtitle": "Figma - Spain",
+        "start": "2020",
+        "finish": "2021"
+      }
+    ]
+  },
   "services": [
     {
       "title": "Ui/Ux",
