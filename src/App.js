@@ -49,13 +49,12 @@ const App = () => {
           <Contact />
           <ScrollUpLink
             href="#"
-            id="scroll-up"
             className={`${show && 'show-scroll'}`}
           >
             <UilArrowUp className="scrollup__icon" />
           </ScrollUpLink>
         </Application>
-        <Footer data={resumeData.main} />
+        <Footer mainData={resumeData.main} data={resumeData.main} />
       </ThemeProvider>
     </ThemeProvider>
   );
@@ -82,7 +81,7 @@ const ScrollUpLink = styled.a`
   right: 1rem;
   bottom: -20%;
   background-color: ${({ theme }) => theme.colors.firstColor};
-  z-index: ${({ theme }) => theme.zIndex.tooltip};
+  z-index: ${({ theme }) => theme.zIndex.zFixed};
   opacity: 0.8;
   padding: 0 0.3rem;
   border-radius: 0.4rem;
@@ -98,5 +97,9 @@ const ScrollUpLink = styled.a`
 
   :hover {
     background-color: ${({ theme }) => theme.colors.firstColorAlt};
+  }
+
+  @media screen and (min-width: 1200px) {
+    right: 10rem;
   }
 `;
