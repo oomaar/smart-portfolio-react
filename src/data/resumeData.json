@@ -222,30 +222,36 @@
       "profession": "Designer",
       "buttonText": "View More",
       "icon": "ui uil-web-grid",
-      "service1": "I develop the user interface.",
-      "service2": "Web page Development.",
-      "service3": "I create ux element interactions.",
-      "service4": "I position your company brand."
+      "service": [
+        "I develop the user interface.",
+        "Web page Development.",
+        "I create ux element interactions.",
+        "I position your company brand."
+      ]
     },
     {
       "title": "Frontend",
       "profession": "Developer",
       "buttonText": "View More",
       "icon": "ui uil-brackets-curly",
-      "service1": "I develop the user interface.",
-      "service2": "Web page Development.",
-      "service3": "I create ux element interactions.",
-      "service4": "I position your company brand."
+      "service": [
+        "I develop the user interface.",
+        "Web page Development.",
+        "I create ux element interactions.",
+        "I position your company brand."
+      ]
     },
     {
       "title": "Branding",
       "profession": "Designer",
       "buttonText": "View More",
       "icon": "ui uil-swatchbook",
-      "service1": "I develop the user interface.",
-      "service2": "Web page Development.",
-      "service3": "I create ux element interactions.",
-      "service4": "I position your company brand."
+      "service": [
+        "I develop the user interface.",
+        "Web page Development.",
+        "I create ux element interactions.",
+        "I position your company brand."
+      ]
     }
   ],
   "portfolio": [
