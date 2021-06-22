@@ -21,7 +21,7 @@ const Project = () => {
                         </ProjectSubtitle>
                         <Button
                             href="#contact"
-                            className="button--flex button--white project__btn">
+                            className="button--flex button--white">
                             Contact Me
                             <UilMessage className="project__icon button__icon" />
                         </Button>

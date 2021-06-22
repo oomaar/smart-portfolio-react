@@ -16,12 +16,7 @@ export const ProjectData = styled.div`
   } 
 `;
 
-export const ProjectContainer = styled.div`
-  .project__btn {
-    width: fit-content;
-    justify-self: center;
-  }
-  
+export const ProjectContainer = styled.div`  
   @media screen and (min-width: 568px) {
     grid-template-columns: repeat(2, 1fr);
   }
