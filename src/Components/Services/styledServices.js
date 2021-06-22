@@ -45,8 +45,12 @@ export const ServicesContent = styled.div`
     .services__button {
       cursor: pointer;
       font-size: ${({ theme }) => theme.typography.smallFontSize};
+
+      .button__icon {
+        margin-left: ${({ theme }) => theme.marginBottom.mb_0_5};
+      }
       
-      :hover {
+      :hover > .button__icon {
         transform: translateX(0.25rem);
       }
     }
@@ -69,7 +73,7 @@ export const ServicesTitle = styled.h3`
     font-size: ${({ theme }) => theme.typography.h3FontSize};
     margin-bottom: ${({ theme }) => theme.marginBottom.mb_1};
     font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
-    `;
+`;
 
 export const ServicesModal = styled.div`
     position: fixed;
@@ -127,6 +131,6 @@ export const ServicesModalService = styled.li`
 
   .services__modal-icon {
     color: ${({ theme }) => theme.colors.firstColor};
-    margin-right: ${({ theme }) => theme.marginBottom.mb_0_25};
+    margin-right: ${({ theme }) => theme.marginBottom.mb_0_5};
   }
 `;

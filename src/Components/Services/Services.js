@@ -1,4 +1,3 @@
-import UilWebGrid from "@iconscout/react-unicons/icons/uil-web-grid";
 import UilArrowRight from "@iconscout/react-unicons/icons/uil-arrow-right";
 import UilTimes from "@iconscout/react-unicons/icons/uil-times";
 import UilCheckCircle from "@iconscout/react-unicons/icons/uil-check-circle";
@@ -14,9 +13,8 @@ import {
     ServicesModalService,
 } from "./styledServices";
 import { useState } from "react";
-import { servicesData } from "../../data/servicesData";
 
-const Services = () => {
+const Services = ({ data }) => {
     const [active, setActive] = useState(false);
 
     const handleActive = (index) => {
@@ -33,10 +31,10 @@ const Services = () => {
             <SectionSubtitle>What I offer</SectionSubtitle>
 
             <ServicesContainer className="container grid">
-                {servicesData.map((service, index) => (
+                {data.map((service, index) => (
                     <ServicesContent key={index}>
                         <div>
-                            <UilWebGrid className="services__icon" />
+                            <i className={`services__icon ${service.icon}`}></i>
                             <ServicesTitle>
                                 {service.title} <br />
                                 {service.profession}
@@ -59,22 +57,12 @@ const Services = () => {
                                 </ServicesModalTitle>
                                 <UilTimes className="services__modal-close" onClick={() => setActive(false)} />
                                 <ServicesModalServices className="grid">
-                                    <ServicesModalService>
-                                        <UilCheckCircle className="services__modal-icon" />
-                                        <p>{service.service1}</p>
-                                    </ServicesModalService>
-                                    <ServicesModalService>
-                                        <UilCheckCircle className="services__modal-icon" />
-                                        <p>{service.service2}</p>
-                                    </ServicesModalService>
-                                    <ServicesModalService>
-                                        <UilCheckCircle className="services__modal-icon" />
-                                        <p>{service.service3}</p>
-                                    </ServicesModalService>
-                                    <ServicesModalService>
-                                        <UilCheckCircle className="services__modal-icon" />
-                                        <p>{service.service4}</p>
-                                    </ServicesModalService>
+                                    {service.service.map((item, i) => (
+                                        <ServicesModalService key={i}>
+                                            <UilCheckCircle className="services__modal-icon" />
+                                            <p>{item}</p>
+                                        </ServicesModalService>
+                                    ))}
                                 </ServicesModalServices>
                             </ServicesModalContent>
                         </ServicesModal>
