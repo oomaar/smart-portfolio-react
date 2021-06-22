@@ -3,6 +3,7 @@ import styled from "styled-components/macro";
 export const TestimonialContainer = styled.div`
   .testimonial__icon-star {
     color: ${({ theme }) => theme.colors.firstColor};
+    font-size: 1.5rem;
   }
 
   .swiper-pagination-bullet-active {

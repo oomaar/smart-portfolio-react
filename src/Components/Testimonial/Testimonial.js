@@ -1,9 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/swiper-bundle.css';
-import UilStar from "@iconscout/react-unicons/icons/uil-star";
 import { Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
-import { testimonialData } from "../../data/testimonialData";
 import {
     TestimonialContainer,
     TestimonialData,
@@ -16,7 +14,7 @@ import {
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const Testimonial = () => {
+const Testimonial = ({ data }) => {
     return (
         <Section>
             <SectionTitle>Testimonial</SectionTitle>
@@ -27,8 +25,8 @@ const Testimonial = () => {
                     loop='true'
                     pagination={{ clickable: true }}
                 >
-                    {testimonialData.map(testimonial => (
-                        <SwiperSlide>
+                    {data.map((testimonial, index) => (
+                        <SwiperSlide key={index}>
                             <TestimonialData>
                                 <TestimonialHeader>
                                     <TestimonialImage src={testimonial.src} alt={testimonial.alt} />
@@ -40,11 +38,9 @@ const Testimonial = () => {
                                 </TestimonialHeader>
 
                                 <div>
-                                    <UilStar className="testimonial__icon-star" />
-                                    <UilStar className="testimonial__icon-star" />
-                                    <UilStar className="testimonial__icon-star" />
-                                    <UilStar className="testimonial__icon-star" />
-                                    <UilStar className="testimonial__icon-star" />
+                                    {testimonial.stars.map((star, i) => (
+                                        <i key={i} className={star}></i>
+                                    ))}
                                 </div>
                             </TestimonialData>
 
