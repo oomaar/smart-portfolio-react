@@ -6,7 +6,6 @@ export const PortfolioContainer = styled.div`
 
   .swiper-container-horizontal > .swiper-pagination-bullets {
     bottom: 0;
-    /* bottom: -2.5rem; */
   }
 
   .swiper-pagination-bullet-active {

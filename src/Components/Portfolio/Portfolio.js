@@ -1,7 +1,7 @@
+import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper';
 import 'swiper/swiper-bundle.css';
-import { portfolioData } from "../../data/portfolioData";
 import UilArrowRight from "@iconscout/react-unicons/icons/uil-arrow-right";
 import UilAngleRightB from "@iconscout/react-unicons/icons/uil-angle-right-b";
 import UilAngleleftB from "@iconscout/react-unicons/icons/uil-angle-left-b";
@@ -16,11 +16,10 @@ import {
     ArrowNext,
     ArrowPrev,
 } from "./styledPortfolio";
-import { useRef } from 'react';
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Navigation, Pagination, Scrollbar]);
 
-const Portfolio = () => {
+const Portfolio = ({ data }) => {
     const navigationPrevRef = useRef(null);
     const navigationNextRef = useRef(null);
 
@@ -51,10 +50,9 @@ const Portfolio = () => {
                     }}
                     pagination={{ clickable: true }}
                 >
-                    {portfolioData.map(slide => (
+                    {data.map(slide => (
                         <SwiperSlide key={slide.id}>
                             <PortfolioContent className="grid swiper-slide">
-                                {/* <SwiperSlide className='grid' key={slide.id}> */}
                                 <PortfolioImage src={slide.src} alt={slide.alt} />
                                 <PortfolioData>
                                     <PortfolioTitle>{slide.title}</PortfolioTitle>
@@ -67,17 +65,16 @@ const Portfolio = () => {
                                         <UilArrowRight className="button__icon" />
                                     </Button>
                                 </PortfolioData>
-                                {/* </SwiperSlide> */}
                             </PortfolioContent>
                         </SwiperSlide>
                     ))}
                 </Swiper>
 
                 <ArrowNext ref={navigationNextRef} className="swiper-button-next">
-                    <UilAngleRightB className="swiper-portfolio-icon" />
+                    <UilAngleRightB className="swiper-portfolio-icon portfolio__arrow" />
                 </ArrowNext>
                 <ArrowPrev ref={navigationPrevRef} className="swiper-button-prev">
-                    <UilAngleleftB className="swiper-portfolio-icon" />
+                    <UilAngleleftB className="swiper-portfolio-icon portfolio__arrow" />
                 </ArrowPrev>
                 <div className="swiper-pagination"></div>
             </PortfolioContainer>
