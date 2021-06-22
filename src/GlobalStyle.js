@@ -5,11 +5,8 @@ import styled from "styled-components/macro";
 const hueColor = '230';
 
 export const theme = {
-  // Header Height
   HeaderHeight: '3rem',
-  // Font and typography
   typography: {
-    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
     bodyFont: `'Poppins', sans-serif`,
     bigFontSize: '2rem',
     h1FontSize: '1.5rem',
@@ -23,9 +20,7 @@ export const theme = {
       fontSemiBold: '600'
     }
   },
-  // Margin Bottoms
   marginBottom: {
-    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
     mb_0_25: '0.25rem',
     mb_0_5: '0.5rem',
     mb_0_75: '0.75rem',
@@ -35,7 +30,6 @@ export const theme = {
     mb_2_5: '2.5rem',
     mb_3: '3rem',
   },
-  // Z-index
   zIndex: {
     zToolTip: '10',
     zFixed: '100',
@@ -44,7 +38,6 @@ export const theme = {
 }
 
 export const lightTheme = {
-  // Colors
   colors: {
     firstColor: `hsl(${hueColor}, 69%, 61%)`,
     firstColorSecond: `hsl(${hueColor}, 69%, 61%)`,
@@ -100,12 +93,16 @@ export const Section = styled.section`
   @media screen and (min-width: 768px) {
     padding: 6rem 0 2rem;
   }
-  `;
+`;
 
 export const SectionTitle = styled.h1`
-  font-size: ${({ theme }) => theme.h1FontSize};
+  font-size: ${({ theme }) => theme.typography.h1FontSize};
   text-align: center;
-  `;
+
+  @media screen and (min-width: 1024px) {
+    font-size: ${({ theme }) => theme.typography.bigFontSize};
+  }
+`;
 
 export const SectionSubtitle = styled.span`
   display: block;
@@ -115,6 +112,10 @@ export const SectionSubtitle = styled.span`
 
   @media screen and (min-width: 768px) {
     margin-bottom: 4rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: ${({ theme }) => theme.typography.normalFontSize};
   }
 `;
 
@@ -193,7 +194,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.firstColor};
 
     :hover {
-      background-color: #fff;
+      background-color: #d5d5d5;
     }
   }
   
@@ -210,10 +211,10 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     background-color: transparent;
     color: ${({ theme }) => theme.colors.firstColor};
-  }
-  
-  .button--link:hover {
-    background-color: transparent;
+
+    :hover {
+      background-color: transparent;
+    }
   }
 
   /* Scroll-Bar */
