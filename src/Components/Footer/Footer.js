@@ -1,6 +1,3 @@
-import UilFacebookF from "@iconscout/react-unicons/icons/uil-facebook-f";
-import UilInstagram from "@iconscout/react-unicons/icons/uil-instagram";
-import UilTwitterAlt from "@iconscout/react-unicons/icons/uil-twitter-alt";
 import {
     FooterContainer,
     FooterBackground,
@@ -14,13 +11,21 @@ import {
     FooterSocial,
 } from "./styledFooter";
 
-const Footer = () => {
+const Footer = ({ data, mainData }) => {
+    const network = data.social.map((network) => {
+        return (
+            <FooterSocial key={network.name} href={network.url} target="_blank">
+                <i className={network.class}></i>
+            </FooterSocial>
+        )
+    });
+
     return (
         <FooterContainer>
             <FooterBackground>
                 <FooterSubContainer className="container grid">
                     <div>
-                        <FooterTitle>Omar</FooterTitle>
+                        <FooterTitle>{mainData.name}</FooterTitle>
                         <FooterSubTitle>Frontend Developer</FooterSubTitle>
                     </div>
 
@@ -37,15 +42,7 @@ const Footer = () => {
                     </FooterList>
 
                     <FooterSocials>
-                        <FooterSocial href="#">
-                            <UilFacebookF />
-                        </FooterSocial>
-                        <FooterSocial href="#">
-                            <UilInstagram />
-                        </FooterSocial>
-                        <FooterSocial href="#">
-                            <UilTwitterAlt />
-                        </FooterSocial>
+                        {network}
                     </FooterSocials>
                 </FooterSubContainer>
                 <FooterCopy>&#169; All rights reserved</FooterCopy>

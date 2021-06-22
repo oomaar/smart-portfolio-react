@@ -34,8 +34,7 @@ export const FooterTitle = styled.h1`
   color: #fff;
   font-size: ${({ theme }) => theme.typography.h1FontSize};
   margin-bottom: ${({ theme }) => theme.marginBottom.mb_0_25};
-  
-  `;
+`;
 
 export const FooterSubTitle = styled.span`
   color: #fff;
@@ -65,7 +64,7 @@ export const FooterSocials = styled.div`
   @media screen and (min-width: 768px) {
     justify-content: flex-end;
   }
-  `;
+`;
 
 export const FooterSocial = styled.a`
   font-size: 1.25rem;
@@ -75,7 +74,7 @@ export const FooterSocial = styled.a`
   :hover {
     color: ${({ theme }) => theme.colors.firstColorLighter};
   }
-  `;
+`;
 
 export const FooterCopy = styled.p`
   font-size: ${({ theme }) => theme.typography.smallerFontSize};
