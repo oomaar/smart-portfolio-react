@@ -65,8 +65,16 @@ const Header = ({ toggleTheme, setToggleTheme, data, mainData }) => {
         return (
             <ListItem key={link.id}>
                 <NavLink
-                    className={`${active === link.href && 'active-link'}`}
-                    href={link.href} onClick={() => activeLink(link.href)}>
+                    // className={`${active === link.href && 'active-link'}`}
+                    href={link.href} onClick={() => activeLink(link.href)}
+                    to={link.section}
+                    smooth={true}
+                    duration={50}
+                    spy={true}
+                    exact="true"
+                    offset={-50}
+                    activeClass="active-link"
+                >
                     <i className={link.icon}></i>
                     {link.name}
                 </NavLink>
