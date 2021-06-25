@@ -4,37 +4,43 @@
       "id": "1",
       "name": "Home",
       "icon": "ui uil-estate nav__icon",
-      "href": "#home"
+      "href": "#home",
+      "section": "home"
     },
     {
       "id": "2",
       "name": "About",
       "icon": "ui uil-user nav__icon",
-      "href": "#about"
+      "href": "#about",
+      "section": "about"
     },
     {
       "id": "3",
       "name": "Skills",
       "icon": "ui uil-file-alt nav__icon",
-      "href": "#skills"
+      "href": "#skills",
+      "section": "skills"
     },
     {
       "id": "4",
       "name": "Services",
       "icon": "ui uil-briefcase-alt nav__icon",
-      "href": "#services"
+      "href": "#services",
+      "section": "services"
     },
     {
       "id": "5",
       "name": "Portfolio",
       "icon": "ui uil-scenery nav__icon",
-      "href": "#portfolio"
+      "href": "#portfolio",
+      "section": "portfolio"
     },
     {
       "id": "6",
       "name": "Contact",
       "icon": "ui uil-message nav__icon",
-      "href": "#contact"
+      "href": "#contact",
+      "section": "contact"
     }
   ],
   "main": {
