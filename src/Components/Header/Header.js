@@ -18,14 +18,14 @@ import {
 const Header = ({ toggleTheme, setToggleTheme, data, mainData }) => {
     const [toggleShow, setToggleShow] = useState(false);
     const [shadow, setShadow] = useState(false);
-    const [active, setActive] = useState("");
+    // const [active, setActive] = useState("");
 
     const toggleHeaderOpen = () => setToggleShow(true);
     const toggleHeaderClose = () => setToggleShow(false);
     const showShadow = () => window.scrollY > 100 ? setShadow(true) : setShadow(false);
     const activeLink = name => {
         toggleHeaderClose();
-        setActive(name);
+        // setActive(name);
     };
 
     const checkTheme = () => {
@@ -66,7 +66,6 @@ const Header = ({ toggleTheme, setToggleTheme, data, mainData }) => {
             <ListItem key={link.id}>
                 <NavLink
                     // className={`${active === link.href && 'active-link'}`}
-                    className={`${active === link.href && 'active-link'}`}
                     href={link.href} onClick={() => activeLink(link.href)}
                     to={link.section}
                     smooth={true}
