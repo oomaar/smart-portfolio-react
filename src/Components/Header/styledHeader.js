@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import { Link as ScrollLink } from "react-scroll";
 
 export const HeaderTag = styled.header`
   box-shadow: ${({ shadow }) => shadow && '0 -1px 4px rgba(0, 0, 0, 0.15)'};
@@ -94,7 +95,7 @@ export const ListItem = styled.li`
     }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(ScrollLink)`
   display: flex;
   flex-direction: column;
   align-items: center;
