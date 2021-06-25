@@ -65,11 +65,8 @@ const Header = ({ toggleTheme, setToggleTheme, data, mainData }) => {
         return (
             <ListItem key={link.id}>
                 <NavLink
-<<<<<<< HEAD
                     // className={`${active === link.href && 'active-link'}`}
-=======
                     className={`${active === link.href && 'active-link'}`}
->>>>>>> 0552d5c0eaf415b0fbeaaf486eca87ba6b692c7e
                     href={link.href} onClick={() => activeLink(link.href)}
                     to={link.section}
                     smooth={true}
