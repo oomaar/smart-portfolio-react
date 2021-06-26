@@ -6,6 +6,7 @@ import { GlobalStyle, darkTheme, lightTheme, theme } from "./GlobalStyle";
 import resumeData from "./data/resumeData.json";
 import {
   About,
+  Background,
   Contact,
   Footer,
   Header,
@@ -37,7 +38,15 @@ const App = () => {
       <ThemeProvider theme={toggleTheme === 'light' ? lightTheme : darkTheme}>
         <GlobalStyle />
         <Application>
-          <Header data={resumeData.header} mainData={resumeData.main} toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
+          <Header
+            data={resumeData.header}
+            mainData={resumeData.main}
+            toggleTheme={toggleTheme}
+            setToggleTheme={setToggleTheme}
+          />
+          {toggleTheme === 'dark' && (
+            <Background />
+          )}
           <Home data={resumeData.main} />
           <About data={resumeData.about} />
           <Skill data={resumeData.skill} />
@@ -63,17 +72,19 @@ const App = () => {
 export default App;
 
 const Application = styled.main`
+  position: relative;
+
   .show-scroll {
     bottom: 5rem;
   }
 
-    @media screen and (min-width: 768px) {
-      padding: 0 1rem;
-    }
+  @media screen and (min-width: 768px) {
+    padding: 0 1rem;
+  }
 
-    @media screen and (min-width: 1024px) {
-      padding: 0;
-    }
+  @media screen and (min-width: 1024px) {
+    padding: 0;
+  }
 `;
 
 const ScrollUpLink = styled.a`
