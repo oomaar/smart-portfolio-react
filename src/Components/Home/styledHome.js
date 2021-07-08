@@ -112,23 +112,21 @@ export const HomeScroll = styled.div`
 export const ScrollButton = styled.a`
   color: ${({ theme }) => theme.colors.firstColor};
   transition: 0.3s;
+  display: ${({ flex }) => flex && "inline-flex"};
+  align-items: ${({ flex }) => flex && "center"};
   
   :hover {
     transform: translateY(0.25rem);
   }
   
-  .scroll__mouse {
-    font-size: 2rem;
-    margin: 0 0.5rem 0 0;
-  }
-  
-  .scroll__arrow {
-    font-size: 1.25rem;
-  }
-  
   @media screen and (min-width: 768px) {
     margin-left: 3rem;
   }
+`;
+
+export const ScrollMouse = styled.div`
+  font-size: 2rem;
+  margin: 0 0.5rem 0 0;
 `;
 
 export const ScrollButtonText = styled.span`
