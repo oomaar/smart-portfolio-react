@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import { ButtonIcon } from "../../GlobalStyle";
 
 export const ServicesContainer = styled.div`
     gap: 1.5rem;
@@ -46,11 +47,11 @@ export const ServicesContent = styled.div`
       cursor: pointer;
       font-size: ${({ theme }) => theme.typography.smallFontSize};
 
-      .button__icon {
+      ${ButtonIcon} {
         margin-left: ${({ theme }) => theme.marginBottom.mb_0_5};
       }
       
-      :hover > .button__icon {
+      :hover ${ButtonIcon} {
         transform: translateX(0.25rem);
       }
     }
