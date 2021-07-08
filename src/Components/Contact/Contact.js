@@ -1,4 +1,4 @@
-import { Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
+import { ButtonIcon, Container, Grid, Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
 import UilPhone from "@iconscout/react-unicons/icons/uil-phone";
 import UilEnvelope from "@iconscout/react-unicons/icons/uil-envelope";
 import UilMapMarker from "@iconscout/react-unicons/icons/uil-map-marker";
@@ -7,6 +7,7 @@ import { setHeight } from "../../utils/setTextareaHeight";
 import {
     ContactContainer,
     ContactInformarion,
+    ContactIcon,
     ContactTitle,
     ContactSubtitle,
     ContactForm,
@@ -29,66 +30,75 @@ const Contact = () => {
         <Section id="contact">
             <SectionTitle>Contact Me</SectionTitle>
             <SectionSubtitle>Get in touch</SectionSubtitle>
-            <ContactContainer className="container grid">
-                <div>
-                    <ContactInformarion>
-                        <UilPhone className="contact__icon" />
-                        <div>
-                            <ContactTitle>Call ME</ContactTitle>
-                            <ContactSubtitle>002-0111-777-2222</ContactSubtitle>
-                        </div>
-                    </ContactInformarion>
-                    <ContactInformarion>
-                        <UilEnvelope className="contact__icon" />
+            <Container>
+                <ContactContainer className="grid">
+                    <div>
+                        <ContactInformarion>
+                            <ContactIcon>
+                                <UilPhone />
+                            </ContactIcon>
+                            <div>
+                                <ContactTitle>Call ME</ContactTitle>
+                                <ContactSubtitle>002-0111-777-2222</ContactSubtitle>
+                            </div>
+                        </ContactInformarion>
+                        <ContactInformarion>
+                            <ContactIcon>
+                                <UilEnvelope />
+                            </ContactIcon>
 
-                        <div>
-                            <ContactTitle>Email</ContactTitle>
-                            <ContactSubtitle>email@email.com</ContactSubtitle>
-                        </div>
-                    </ContactInformarion>
-                    <ContactInformarion>
-                        <UilMapMarker className="contact__icon" />
+                            <div>
+                                <ContactTitle>Email</ContactTitle>
+                                <ContactSubtitle>email@email.com</ContactSubtitle>
+                            </div>
+                        </ContactInformarion>
+                        <ContactInformarion>
+                            <ContactIcon>
+                                <UilMapMarker />
+                            </ContactIcon>
 
-                        <div>
-                            <ContactTitle>Location</ContactTitle>
-                            <ContactSubtitle>
-                                Egypt - Cairo, Helipolis Ram #166
-                            </ContactSubtitle>
-                        </div>
-                    </ContactInformarion>
-                </div>
-
-                <ContactForm className="grid" action="" onSubmit={sendMessage}>
-                    <ContactInputs className="grid">
+                            <div>
+                                <ContactTitle>Location</ContactTitle>
+                                <ContactSubtitle>
+                                    Egypt - Cairo, Helipolis Ram #166
+                                </ContactSubtitle>
+                            </div>
+                        </ContactInformarion>
+                    </div>
+                    <ContactForm className="grid" action="" onSubmit={sendMessage}>
+                        <ContactInputs className="grid">
+                            <ContactInputBox>
+                                <ContactLabel>Name</ContactLabel>
+                                <ContactInput type="text" />
+                            </ContactInputBox>
+                            <ContactInputBox>
+                                <ContactLabel>Email</ContactLabel>
+                                <ContactInput type="email" />
+                            </ContactInputBox>
+                        </ContactInputs>
                         <ContactInputBox>
-                            <ContactLabel>Name</ContactLabel>
+                            <ContactLabel>Project</ContactLabel>
                             <ContactInput type="text" />
                         </ContactInputBox>
                         <ContactInputBox>
-                            <ContactLabel>Email</ContactLabel>
-                            <ContactInput type="email" />
+                            <ContactLabel>Message</ContactLabel>
+                            <ContactTextArea
+                                cols="0"
+                                rows="7"
+                                onChange={e => setHeight(e, '100px')}
+                            ></ContactTextArea>
                         </ContactInputBox>
-                    </ContactInputs>
-                    <ContactInputBox>
-                        <ContactLabel>Project</ContactLabel>
-                        <ContactInput type="text" />
-                    </ContactInputBox>
-                    <ContactInputBox>
-                        <ContactLabel>Message</ContactLabel>
-                        <ContactTextArea
-                            cols="0"
-                            rows="7"
-                            onChange={e => setHeight(e, '100px')}
-                        ></ContactTextArea>
-                    </ContactInputBox>
-                    <div>
-                        <SubmitForm type="submit" className="button--flex">
-                            Send Message
-                            <UilMessage className="button__icon" />
-                        </SubmitForm>
-                    </div>
-                </ContactForm>
-            </ContactContainer>
+                        <div>
+                            <SubmitForm type="submit" flex>
+                                Send Message
+                                <ButtonIcon>
+                                    <UilMessage />
+                                </ButtonIcon>
+                            </SubmitForm>
+                        </div>
+                    </ContactForm>
+                </ContactContainer>
+            </Container>
         </Section>
     );
 };

@@ -11,12 +11,12 @@ export const ContactContainer = styled.div`
 export const ContactInformarion = styled.div`
   display: flex;
   margin-bottom: ${({ theme }) => theme.marginBottom.mb_2};
+`;
 
-  .contact__icon {
-    font-size: 2rem;
-    color: ${({ theme }) => theme.colors.firstColor};
-    margin-right: ${({ theme }) => theme.marginBottom.mb_0_75};
-  }
+export const ContactIcon = styled.div`
+  font-size: 2rem;
+  color: ${({ theme }) => theme.colors.firstColor};
+  margin-right: ${({ theme }) => theme.marginBottom.mb_0_75};
 `;
 
 export const ContactTitle = styled.h3`
@@ -75,17 +75,19 @@ export const ContactTextArea = styled.textarea`
 `;
 
 export const SubmitForm = styled.button`
-    background-color: ${({ theme }) => theme.colors.firstColor};
-    color: #eee;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
-    cursor: pointer;
-    border: 0;
-    outline: 0;
-    margin: 20px 0;
-
-    :hover {
-       background-color: ${({ theme }) => theme.colors.firstColorAlt};
-    }
+  background-color: ${({ theme }) => theme.colors.firstColor};
+  color: #eee;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  margin: 20px 0;
+  display: ${({ flex }) => flex && "inline-flex"};
+  align-items: ${({ flex }) => flex && "center"};
+  
+  :hover {
+     background-color: ${({ theme }) => theme.colors.firstColorAlt};
+  }
 `;
