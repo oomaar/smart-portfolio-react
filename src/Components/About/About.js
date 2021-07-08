@@ -1,5 +1,5 @@
 import UilDownloadAlt from "@iconscout/react-unicons/icons/uil-download-alt";
-import { Button, Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
+import { Button, Section, SectionSubtitle, SectionTitle, ButtonIcon, Container } from "../../GlobalStyle";
 import {
     AboutContainer,
     AboutImage,
@@ -16,42 +16,48 @@ const About = ({ data }) => {
             <SectionTitle>About Me</SectionTitle>
             <SectionSubtitle>My introduction</SectionSubtitle>
 
-            <AboutContainer className="container grid">
-                <AboutImage src="/img/about.jpg" alt="About Me" />
-                <div>
-                    <AboutDescription>{data.bio}</AboutDescription>
+            <Container>
+                <AboutContainer className="grid">
+                    <AboutImage src="/img/about.jpg" alt="About Me" />
+                    <div>
+                        <AboutDescription>{data.bio}</AboutDescription>
 
-                    <AboutInfo>
-                        <div>
-                            <InfoTitle>{data.experienceYears}+</InfoTitle>
-                            <InfoName>Years <br />
-                                experience
-                            </InfoName>
-                        </div>
-                        <div>
-                            <InfoTitle>{data.completedProjects}+</InfoTitle>
-                            <InfoName>Completed <br />
-                                Projects
-                            </InfoName>
-                        </div>
-                        <div>
-                            <InfoTitle>{data.companiesWorked}+</InfoTitle>
-                            <InfoName>Companies <br />
-                                Worked
-                            </InfoName>
-                        </div>
-                    </AboutInfo>
+                        <AboutInfo>
+                            <div>
+                                <InfoTitle>{data.experienceYears}+</InfoTitle>
+                                <InfoName>Years <br />
+                                    experience
+                                </InfoName>
+                            </div>
+                            <div>
+                                <InfoTitle>{data.completedProjects}+</InfoTitle>
+                                <InfoName>Completed <br />
+                                    Projects
+                                </InfoName>
+                            </div>
+                            <div>
+                                <InfoTitle>{data.companiesWorked}+</InfoTitle>
+                                <InfoName>Companies <br />
+                                    Worked
+                                </InfoName>
+                            </div>
+                        </AboutInfo>
 
-                    <AboutBtns>
-                        <Button
-                            download=""
-                            href="/pdf/Alexa-Cv.pdf"
-                            className="button--flex">
-                            Download CV<UilDownloadAlt className="button__icon" />
-                        </Button>
-                    </AboutBtns>
-                </div>
-            </AboutContainer>
+                        <AboutBtns>
+                            <Button
+                                download=""
+                                href="/pdf/Alexa-Cv.pdf"
+                                flex
+                            >
+                                Download CV
+                                <ButtonIcon>
+                                    <UilDownloadAlt />
+                                </ButtonIcon>
+                            </Button>
+                        </AboutBtns>
+                    </div>
+                </AboutContainer>
+            </Container>
         </Section>
     );
 };
