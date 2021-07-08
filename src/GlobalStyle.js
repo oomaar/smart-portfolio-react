@@ -73,10 +73,11 @@ export const darkTheme = {
 
 /*==================== BUTTONS ====================*/
 export const Button = styled.a`
-    display: inline-block;
+    display: ${({ flex }) => flex ? "inline-flex" : "inline-block"};
+    align-items: ${({ flex }) => flex && "center"};
     background-color: ${({ theme }) => theme.colors.firstColor};
     color: #eee;
-    padding: 1rem;
+    padding: ${({ small }) => small ? "0.75rem 1rem" : "1rem"};
     border-radius: 0.5rem;
     font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
     cursor: pointer;
@@ -84,6 +85,12 @@ export const Button = styled.a`
     :hover {
        background-color: ${({ theme }) => theme.colors.firstColorAlt};
     }
+`;
+
+export const ButtonIcon = styled.div`
+  font-size: 1.25rem;
+  margin-left: ${({ theme }) => theme.marginBottom.mb_1_5};
+  transition: 0.3s;
 `;
 
 // Reusbale classes
@@ -117,6 +124,20 @@ export const SectionSubtitle = styled.span`
   @media screen and (min-width: 1024px) {
     font-size: ${({ theme }) => theme.typography.normalFontSize};
   }
+`;
+
+export const Container = styled.div`
+    max-width: 768px;
+    margin: 0 ${({ theme }) => theme.marginBottom.mb_1_5} 0 ${({ theme }) => theme.marginBottom.mb_1_5};
+    
+    @media screen and (max-width: 350px) {
+      margin: 0 ${({ theme }) => theme.marginBottom.mb_1} 0 ${({ theme }) => theme.marginBottom.mb_1};
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-right: auto;
+      margin-left: auto;
+    }
 `;
 
 export const GlobalStyle = createGlobalStyle`  
@@ -163,7 +184,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
 // Layout
-  .container {
+  /* .container {
     max-width: 768px;
     margin: 0 ${({ theme }) => theme.marginBottom.mb_1_5} 0 ${({ theme }) => theme.marginBottom.mb_1_5};
     
@@ -175,7 +196,7 @@ export const GlobalStyle = createGlobalStyle`
       margin-right: auto;
       margin-left: auto;
     }
-  }
+  } */
 
   .grid {
     display: grid;
@@ -183,12 +204,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   /* Buttons */
-  .button__icon {
-    font-size: 1.25rem;
-    margin-left: ${({ theme }) => theme.marginBottom.mb_1_5};
-    transition: 0.3s;
-  }
-  
   .button--white {
     background-color: #fff;
     color: ${({ theme }) => theme.colors.firstColor};
@@ -196,11 +211,6 @@ export const GlobalStyle = createGlobalStyle`
     :hover {
       background-color: #d5d5d5;
     }
-  }
-  
-  .button--flex {
-    display: inline-flex;
-    align-items: center;
   }
   
   .button--small {
