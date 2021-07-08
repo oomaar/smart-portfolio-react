@@ -14,6 +14,7 @@ import {
     NavBtns,
     NavToggle,
 } from "./styledHeader";
+import { Container } from "../../GlobalStyle";
 
 const Header = ({ toggleTheme, setToggleTheme, data, mainData }) => {
     const [toggleShow, setToggleShow] = useState(false);
@@ -87,27 +88,29 @@ const Header = ({ toggleTheme, setToggleTheme, data, mainData }) => {
             shadow={shadow}
             id="header"
         >
-            <Nav className="container">
-                <Logo>{mainData.name}</Logo>
+            <Container>
+                <Nav>
+                    <Logo>{mainData.name}</Logo>
 
-                <NavMenu toggleShow={toggleShow}>
-                    <NavList className="grid">
-                        {navLinks}
-                    </NavList>
-                    <UilTimes className="nav__close" onClick={toggleHeaderClose} />
-                </NavMenu>
+                    <NavMenu toggleShow={toggleShow}>
+                        <NavList className="grid">
+                            {navLinks}
+                        </NavList>
+                        <UilTimes className="nav__close" onClick={toggleHeaderClose} />
+                    </NavMenu>
 
-                <NavBtns>
-                    {toggleTheme === 'light' ? (
-                        <UilMoon className="change-theme" onClick={checkTheme} />
-                    ) : (
-                        <UilSun className="change-theme" onClick={checkTheme} />
-                    )}
-                    <NavToggle>
-                        <UilAlignLeft className="nav__icon" onClick={toggleHeaderOpen} />
-                    </NavToggle>
-                </NavBtns>
-            </Nav>
+                    <NavBtns>
+                        {toggleTheme === 'light' ? (
+                            <UilMoon className="change-theme" onClick={checkTheme} />
+                        ) : (
+                            <UilSun className="change-theme" onClick={checkTheme} />
+                        )}
+                        <NavToggle>
+                            <UilAlignLeft className="nav__icon" onClick={toggleHeaderOpen} />
+                        </NavToggle>
+                    </NavBtns>
+                </Nav>
+            </Container>
         </HeaderTag>
     );
 };
