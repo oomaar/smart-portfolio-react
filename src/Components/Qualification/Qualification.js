@@ -1,10 +1,11 @@
 import UilGraduationCap from "@iconscout/react-unicons/icons/uil-graduation-cap";
 import UilBriefcaseAlt from "@iconscout/react-unicons/icons/uil-briefcase-alt";
 import UilCalendarAlt from "@iconscout/react-unicons/icons/uil-calendar-alt";
-import { Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
+import { Container, Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
 import {
     QualificationTabs,
     QualificationButton,
+    QualificationIcon,
     QualificationSections,
     QualificationContent,
     QualificationData,
@@ -53,7 +54,7 @@ const Qualification = ({ data }) => {
                 <QualificationTitle>{qualification.title}</QualificationTitle>
                 <QualificationSubtitle>{qualification.subtitle}</QualificationSubtitle>
                 <QualificationCalendar>
-                    <UilCalendarAlt className="calendar-icon" />
+                    <UilCalendarAlt />
                     {qualification.start} - {qualification.finish}
                 </QualificationCalendar>
             </div>
@@ -94,7 +95,7 @@ const Qualification = ({ data }) => {
                 <QualificationTitle>{qualification.title}</QualificationTitle>
                 <QualificationSubtitle>{qualification.subtitle}</QualificationSubtitle>
                 <QualificationCalendar>
-                    <UilCalendarAlt className="calendar-icon" />
+                    <UilCalendarAlt />
                     {qualification.start} - {qualification.finish}
                 </QualificationCalendar>
             </div>
@@ -120,22 +121,25 @@ const Qualification = ({ data }) => {
         <Section>
             <SectionTitle>Qualification</SectionTitle>
             <SectionSubtitle>My personal journey</SectionSubtitle>
-
-            <div className="container">
+            <Container>
                 <QualificationTabs>
                     <QualificationButton
                         onClick={() => selectQualification('education')}
-                        className={`button--flex ${active && 'btn-active'}`}
+                        className={`${active && 'btn-active'}`}
                     >
-                        <UilGraduationCap className="qualification__icon" />
+                        <QualificationIcon>
+                            <UilGraduationCap />
+                        </QualificationIcon>
                         Education
                     </QualificationButton>
 
                     <QualificationButton
                         onClick={() => selectQualification('work')}
-                        className={`button--flex ${!active && 'btn-active'}`}
+                        className={`${!active && 'btn-active'}`}
                     >
-                        <UilBriefcaseAlt className="qualification__icon" />
+                        <QualificationIcon>
+                            <UilBriefcaseAlt />
+                        </QualificationIcon>
                         Work
                     </QualificationButton>
                 </QualificationTabs>
@@ -155,7 +159,7 @@ const Qualification = ({ data }) => {
                         {workGrid}
                     </QualificationContent>
                 </QualificationSections>
-            </div>
+            </Container>
         </Section>
     );
 };

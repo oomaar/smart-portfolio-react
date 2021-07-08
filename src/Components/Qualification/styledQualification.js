@@ -18,20 +18,21 @@ export const QualificationButton = styled.div`
   font-size: ${({ theme }) => theme.typography.h3FontSize};
   font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
+  align-items: center;
 
   :hover {
     color: ${({ theme }) => theme.colors.firstColor};
   }
 
-  .qualification__icon {
-    font-size: 1.8rem;
-    margin: 0 ${({ theme }) => theme.marginBottom.mb_0_25} 0 ${({ theme }) => theme.marginBottom.mb_0_25};
-  }
-
   @media screen and (min-width: 768px) {
     margin: 0 ${({ theme }) => theme.marginBottom.mb_1};
   }
+`;
+
+export const QualificationIcon = styled.div`
+    font-size: 1.8rem;
+    margin: 0 ${({ theme }) => theme.marginBottom.mb_0_25} 0 ${({ theme }) => theme.marginBottom.mb_0_25};
 `;
 
 export const QualificationSections = styled.div`
