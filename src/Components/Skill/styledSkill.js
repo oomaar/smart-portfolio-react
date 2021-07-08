@@ -18,15 +18,19 @@ export const SkillHeader = styled.div`
   cursor: pointer;
 
   .skill__arrow {
-    font-size: 2rem;
-    color: ${({ theme }) => theme.colors.firstColor};
-    margin: 0 ${({ theme }) => theme.marginBottom.mb_0_75} 0 ${({ theme }) => theme.marginBottom.mb_0_75};
-    transition: 0.3s;
+
   }
 
   .skill__arrow-open {
     transform: rotate(-180deg);
   }
+`;
+
+export const SkillArrow = styled.div`
+    font-size: 2rem;
+    color: ${({ theme }) => theme.colors.firstColor};
+    margin: 0 ${({ theme }) => theme.marginBottom.mb_0_75} 0 ${({ theme }) => theme.marginBottom.mb_0_75};
+    transition: 0.3s;
 `;
 
 export const SkillIcon = styled.div`
