@@ -1,3 +1,4 @@
+import { Container } from "../../GlobalStyle";
 import {
     FooterContainer,
     FooterBackground,
@@ -23,28 +24,30 @@ const Footer = ({ data, mainData }) => {
     return (
         <FooterContainer>
             <FooterBackground>
-                <FooterSubContainer className="container grid">
-                    <div>
-                        <FooterTitle>{mainData.name}</FooterTitle>
-                        <FooterSubTitle>Frontend Developer</FooterSubTitle>
-                    </div>
+                <Container>
+                    <FooterSubContainer className="container grid">
+                        <div>
+                            <FooterTitle>{mainData.name}</FooterTitle>
+                            <FooterSubTitle>Frontend Developer</FooterSubTitle>
+                        </div>
 
-                    <FooterList>
-                        <li>
-                            <FooterLink href="#services">Services</FooterLink>
-                        </li>
-                        <li>
-                            <FooterLink href="#portfolio">Portfolio</FooterLink>
-                        </li>
-                        <li>
-                            <FooterLink href="#contact">Contact</FooterLink>
-                        </li>
-                    </FooterList>
+                        <FooterList>
+                            <li>
+                                <FooterLink href="#services">Services</FooterLink>
+                            </li>
+                            <li>
+                                <FooterLink href="#portfolio">Portfolio</FooterLink>
+                            </li>
+                            <li>
+                                <FooterLink href="#contact">Contact</FooterLink>
+                            </li>
+                        </FooterList>
 
-                    <FooterSocials>
-                        {network}
-                    </FooterSocials>
-                </FooterSubContainer>
+                        <FooterSocials>
+                            {network}
+                        </FooterSocials>
+                    </FooterSubContainer>
+                </Container>
                 <FooterCopy>&#169; All rights reserved</FooterCopy>
             </FooterBackground>
         </FooterContainer>
