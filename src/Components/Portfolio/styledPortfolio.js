@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import { ButtonIcon } from "../../GlobalStyle";
 
 export const PortfolioContainer = styled.div`
   overflow: initial;
@@ -50,10 +51,10 @@ export const PortfolioData = styled.div`
    margin: 30px 0;
 
   .portfolio__button {
-    :hover .button__icon {
-           transform: translateX(0.25rem);
-        }
+    :hover ${ButtonIcon} {
+      transform: translateX(0.25rem);
     }
+  }
 `;
 
 export const PortfolioTitle = styled.h3`
