@@ -71,19 +71,19 @@ export const darkTheme = {
   },
 }
 
-/*==================== BUTTONS ====================*/
+// ==================== BUTTONS ====================
 export const Button = styled.a`
     display: ${({ flex }) => flex ? "inline-flex" : "inline-block"};
     align-items: ${({ flex }) => flex && "center"};
-    background-color: ${({ theme }) => theme.colors.firstColor};
-    color: #eee;
-    padding: ${({ small }) => small ? "0.75rem 1rem" : "1rem 1rem 0.7rem"};
+    background-color: ${({ theme, link }) => link ? "transparent" : theme.colors.firstColor};
+    color: ${({ theme, link }) => link ? theme.colors.firstColor : '#eee'};
+    padding: ${({ small, link }) => small ? "0.75rem 1rem" : link ? "0rem" : "1rem 1rem 0.7rem"};
     border-radius: 0.5rem;
     font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
     cursor: pointer;
 
     :hover {
-       background-color: ${({ theme }) => theme.colors.firstColorAlt};
+       background-color: ${({ theme, link }) => link ? 'transparent' : theme.colors.firstColorAlt};
     }
 `;
 
@@ -97,56 +97,41 @@ export const ButtonIcon = styled.div`
   transition: 0.3s;
 `;
 
-// Reusbale classes
+// ==================== REUSALE CLASSES ====================
 export const Section = styled.section`
   padding: 2rem 0 4rem;
-
+  
   @media screen and (min-width: 768px) {
     padding: 6rem 0 2rem;
   }
-`;
+  `;
 
 export const SectionTitle = styled.h1`
   font-size: ${({ theme }) => theme.typography.h1FontSize};
   text-align: center;
-
+  
   @media screen and (min-width: 1024px) {
     font-size: ${({ theme }) => theme.typography.bigFontSize};
   }
-`;
+  `;
 
 export const SectionSubtitle = styled.span`
   display: block;
   font-size: ${({ theme }) => theme.typography.smallFontSize};
   margin-bottom: ${({ theme }) => theme.marginBottom.mb_3};
   text-align: center;
-
+  
   @media screen and (min-width: 768px) {
     margin-bottom: 4rem;
   }
-
+  
   @media screen and (min-width: 1024px) {
     font-size: ${({ theme }) => theme.typography.normalFontSize};
   }
-`;
+  `;
 
+// ==================== LAYOUT ====================
 export const Container = styled.div`
-    max-width: 768px;
-    margin: 0 ${({ theme }) => theme.marginBottom.mb_1_5} 0 ${({ theme }) => theme.marginBottom.mb_1_5};
-    
-    @media screen and (max-width: 350px) {
-      margin: 0 ${({ theme }) => theme.marginBottom.mb_1} 0 ${({ theme }) => theme.marginBottom.mb_1};
-    }
-
-    @media screen and (min-width: 768px) {
-      margin-right: auto;
-      margin-left: auto;
-    }
-`;
-
-export const ContainerGrid = styled.div`
-    display: grid;
-    gap: 1.5rem;
     max-width: 768px;
     margin: 0 ${({ theme }) => theme.marginBottom.mb_1_5} 0 ${({ theme }) => theme.marginBottom.mb_1_5};
     
@@ -204,20 +189,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
 // Layout
-  /* .container {
-    max-width: 768px;
-    margin: 0 ${({ theme }) => theme.marginBottom.mb_1_5} 0 ${({ theme }) => theme.marginBottom.mb_1_5};
-    
-    @media screen and (max-width: 350px) {
-      margin: 0 ${({ theme }) => theme.marginBottom.mb_1} 0 ${({ theme }) => theme.marginBottom.mb_1};
-    }
-
-    @media screen and (min-width: 768px) {
-      margin-right: auto;
-      margin-left: auto;
-    }
-  } */
-
   .grid {
     display: grid;
     gap: 1.5rem;
@@ -235,16 +206,6 @@ export const GlobalStyle = createGlobalStyle`
   
   .button--small {
     padding: 0.75rem 1rem;
-  }
-  
-  .button--link {
-    padding: 0;
-    background-color: transparent;
-    color: ${({ theme }) => theme.colors.firstColor};
-
-    :hover {
-      background-color: transparent;
-    }
   }
 
   /* Scroll-Bar */

@@ -1,16 +1,20 @@
 import UilArrowRight from "@iconscout/react-unicons/icons/uil-arrow-right";
 import UilTimes from "@iconscout/react-unicons/icons/uil-times";
 import UilCheckCircle from "@iconscout/react-unicons/icons/uil-check-circle";
-import { Button, ButtonIcon, Container, Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
+import { Button, ButtonIcon, ButtonSpan, Container, Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
 import {
     ServicesContainer,
     ServicesContent,
+    ServicesIcon,
     ServicesTitle,
+    ServicesButton,
     ServicesModal,
     ServicesModalContent,
     ServicesModalTitle,
+    ServicesModalClose,
     ServicesModalServices,
     ServicesModalService,
+    ServicesModalIcon,
 } from "./styledServices";
 import { useState } from "react";
 
@@ -31,11 +35,13 @@ const Services = ({ data }) => {
             <SectionSubtitle>What I offer</SectionSubtitle>
 
             <Container>
-                <ServicesContainer className="grid">
+                <ServicesContainer>
                     {data.map((service, index) => (
                         <ServicesContent key={index}>
                             <div>
-                                <i className={`services__icon ${service.icon}`}></i>
+                                <ServicesIcon>
+                                    <i className={`${service.icon}`}></i>
+                                </ServicesIcon>
                                 <ServicesTitle>
                                     {service.title} <br />
                                     {service.profession}
@@ -44,28 +50,31 @@ const Services = ({ data }) => {
 
                             <Button
                                 onClick={() => handleActive(index)}
-                                className="button--link services__button"
-                                flex
-                                small
+                                link
                             >
-                                {service.buttonText}
-                                <ButtonIcon>
-                                    <UilArrowRight />
-                                </ButtonIcon>
-
+                                <ServicesButton>
+                                    <ButtonSpan>{service.buttonText}</ButtonSpan>
+                                    <ButtonIcon>
+                                        <UilArrowRight />
+                                    </ButtonIcon>
+                                </ServicesButton>
                             </Button>
 
-                            <ServicesModal className={`${active === index && 'active-modal'}`}>
+                            <ServicesModal active={active === index}>
                                 <ServicesModalContent>
                                     <ServicesModalTitle>
                                         {service.title} <br />
                                         {service.profession}
                                     </ServicesModalTitle>
-                                    <UilTimes className="services__modal-close" onClick={() => setActive(false)} />
-                                    <ServicesModalServices className="grid">
+                                    <ServicesModalClose>
+                                        <UilTimes onClick={() => setActive(false)} />
+                                    </ServicesModalClose>
+                                    <ServicesModalServices>
                                         {service.service.map((item, i) => (
                                             <ServicesModalService key={i}>
-                                                <UilCheckCircle className="services__modal-icon" />
+                                                <ServicesModalIcon>
+                                                    <UilCheckCircle />
+                                                </ServicesModalIcon>
                                                 <p>{item}</p>
                                             </ServicesModalService>
                                         ))}
