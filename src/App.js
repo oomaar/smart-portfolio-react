@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { ThemeProvider } from 'styled-components';
 import styled from "styled-components/macro";
-import UilArrowUp from "@iconscout/react-unicons/icons/uil-arrow-up";
 import { GlobalStyle, darkTheme, lightTheme, theme } from "./GlobalStyle";
 import resumeData from "./data/resumeData.json";
 import {
@@ -45,9 +44,7 @@ const App = () => {
             toggleTheme={toggleTheme}
             setToggleTheme={setToggleTheme}
           />
-          {toggleTheme === 'dark' && (
-            <Background />
-          )}
+          {toggleTheme === 'dark' && <Background />}
           <Home data={resumeData.main} />
           <About data={resumeData.about} />
           <Skill data={resumeData.skill} />
@@ -57,12 +54,7 @@ const App = () => {
           <Project />
           <Testimonial data={resumeData.testimonial} />
           <Contact />
-          <ScrollUpLink href="#" show={show}>
-            <ScrollupIcon>
-              <UilArrowUp />
-            </ScrollupIcon>
-          </ScrollUpLink>
-          <ScrollUp />
+          <ScrollUp show={show} />
         </Application>
         <Footer mainData={resumeData.main} data={resumeData.main} />
       </ThemeProvider>
@@ -82,32 +74,4 @@ const Application = styled.main`
   @media screen and (min-width: 1024px) {
     padding: 0;
   }
-`;
-
-const ScrollUpLink = styled.a`
-  position: fixed;
-  right: 1rem;
-  bottom: ${({ show }) => show ? '5rem' : '-20%'};
-  background-color: ${({ theme }) => theme.colors.firstColor};
-  z-index: ${({ theme }) => theme.zIndex.zFixed};
-  opacity: 0.8;
-  padding: 0 0.3rem;
-  border-radius: 0.4rem;
-  transition: 0.4s;
-  justify-content: center;
-  padding: 0.3rem;
-
-  :hover {
-    background-color: ${({ theme }) => theme.colors.firstColorAlt};
-  }
-
-  @media screen and (min-width: 1200px) {
-    right: 10rem;
-  }
-`;
-
-const ScrollupIcon = styled.div`
-  display: flex;
-  font-size: 1.5rem;
-  color: #fff;
 `;
