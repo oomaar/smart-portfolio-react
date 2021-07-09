@@ -1,5 +1,5 @@
 import UilMessage from "@iconscout/react-unicons/icons/uil-message";
-import { Button, ButtonIcon, Container, Section } from "../../GlobalStyle";
+import { Button, ButtonIcon, ButtonSpan, Container, Section } from "../../GlobalStyle";
 import {
     ProjectBackground,
     ProjectContainer,
@@ -14,7 +14,7 @@ const Project = () => {
         <Section>
             <ProjectBackground>
                 <Container>
-                    <ProjectContainer className="grid">
+                    <ProjectContainer>
                         <ProjectData>
                             <ProjectTitle>You have a new project !</ProjectTitle>
                             <ProjectSubtitle>
@@ -22,10 +22,10 @@ const Project = () => {
                             </ProjectSubtitle>
                             <Button
                                 href="#contact"
-                                className="button--white"
                                 flex
+                                white
                             >
-                                Contact Me
+                                <ButtonSpan>Contact Me</ButtonSpan>
                                 <ButtonIcon>
                                     <UilMessage />
                                 </ButtonIcon>

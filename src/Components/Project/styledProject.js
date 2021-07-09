@@ -16,7 +16,10 @@ export const ProjectData = styled.div`
   } 
 `;
 
-export const ProjectContainer = styled.div`  
+export const ProjectContainer = styled.div`
+  display: grid;
+  gap: 1.5rem;
+  
   @media screen and (min-width: 568px) {
     grid-template-columns: repeat(2, 1fr);
   }

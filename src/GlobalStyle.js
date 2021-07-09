@@ -75,15 +75,15 @@ export const darkTheme = {
 export const Button = styled.a`
     display: ${({ flex }) => flex ? "inline-flex" : "inline-block"};
     align-items: ${({ flex }) => flex && "center"};
-    background-color: ${({ theme, link }) => link ? "transparent" : theme.colors.firstColor};
-    color: ${({ theme, link }) => link ? theme.colors.firstColor : '#eee'};
+    background-color: ${({ theme, link, white }) => link ? "transparent" : white ? '#fff' : theme.colors.firstColor};
+    color: ${({ theme, link, white }) => link || white ? theme.colors.firstColor : '#eee'};
     padding: ${({ small, link }) => small ? "0.75rem 1rem" : link ? "0rem" : "1rem 1rem 0.7rem"};
     border-radius: 0.5rem;
     font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
     cursor: pointer;
 
     :hover {
-       background-color: ${({ theme, link }) => link ? 'transparent' : theme.colors.firstColorAlt};
+       background-color: ${({ theme, link, white }) => link ? 'transparent' : white ? "#d5d5d5" : theme.colors.firstColorAlt};
     }
 `;
 
@@ -192,20 +192,6 @@ export const GlobalStyle = createGlobalStyle`
   .grid {
     display: grid;
     gap: 1.5rem;
-  }
-
-  /* Buttons */
-  .button--white {
-    background-color: #fff;
-    color: ${({ theme }) => theme.colors.firstColor};
-
-    :hover {
-      background-color: #d5d5d5;
-    }
-  }
-  
-  .button--small {
-    padding: 0.75rem 1rem;
   }
 
   /* Scroll-Bar */
