@@ -77,7 +77,7 @@ export const Button = styled.a`
     align-items: ${({ flex }) => flex && "center"};
     background-color: ${({ theme }) => theme.colors.firstColor};
     color: #eee;
-    padding: ${({ small }) => small ? "0.75rem 1rem" : "1rem"};
+    padding: ${({ small }) => small ? "0.75rem 1rem" : "1rem 1rem 0.7rem"};
     border-radius: 0.5rem;
     font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
     cursor: pointer;
@@ -85,6 +85,10 @@ export const Button = styled.a`
     :hover {
        background-color: ${({ theme }) => theme.colors.firstColorAlt};
     }
+`;
+
+export const ButtonSpan = styled.span`
+  padding-bottom: 7px;
 `;
 
 export const ButtonIcon = styled.div`
@@ -127,6 +131,22 @@ export const SectionSubtitle = styled.span`
 `;
 
 export const Container = styled.div`
+    max-width: 768px;
+    margin: 0 ${({ theme }) => theme.marginBottom.mb_1_5} 0 ${({ theme }) => theme.marginBottom.mb_1_5};
+    
+    @media screen and (max-width: 350px) {
+      margin: 0 ${({ theme }) => theme.marginBottom.mb_1} 0 ${({ theme }) => theme.marginBottom.mb_1};
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+`;
+
+export const ContainerGrid = styled.div`
+    display: grid;
+    gap: 1.5rem;
     max-width: 768px;
     margin: 0 ${({ theme }) => theme.marginBottom.mb_1_5} 0 ${({ theme }) => theme.marginBottom.mb_1_5};
     

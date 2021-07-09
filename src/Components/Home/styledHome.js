@@ -1,6 +1,7 @@
 import styled from "styled-components/macro";
 
 export const HomeContaier = styled.div`
+  display: grid;
   gap: 1rem;
 
   @media screen and (min-width: 768px) {
@@ -9,6 +10,8 @@ export const HomeContaier = styled.div`
 `;
 
 export const HomeContent = styled.div`
+  display: grid;
+  gap: 1.5rem;
   grid-template-columns: 0.5fr 3fr;
   padding-top: 3.5rem;
   align-items: center;
@@ -49,7 +52,17 @@ export const SocialIcon = styled.a`
 export const HomeImage = styled.div`
   position: relative;
   
-  .home__blob {
+  .home__blob-img {
+    width: 170px;
+  }
+  
+  @media screen and (min-width: 568px) {
+    order: 1;
+    justify-self: center;
+  }
+`;
+
+export const HomeBlob = styled.svg`
     width: 200px;
     fill: ${({ theme }) => theme.colors.firstColor};
     
@@ -64,16 +77,6 @@ export const HomeImage = styled.div`
     @media screen and (min-width: 1024px) {
       width: 320px;
     }
-  }
-  
-  .home__blob-img {
-    width: 170px;
-  }
-  
-  @media screen and (min-width: 568px) {
-    order: 1;
-    justify-self: center;
-  }
 `;
 
 export const HomeData = styled.div`

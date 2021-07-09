@@ -1,13 +1,14 @@
 import UilMessage from "@iconscout/react-unicons/icons/uil-message";
 import UilMouseAlt from "@iconscout/react-unicons/icons/uil-mouse-alt";
 import UilArrowDown from "@iconscout/react-unicons/icons/uil-arrow-down";
-import { Button, ButtonIcon, Container, Section } from "../../GlobalStyle";
+import { Button, ButtonIcon, Container, Section, ButtonSpan } from "../../GlobalStyle";
 import {
     HomeContaier,
     HomeContent,
     HomeSocial,
     SocialIcon,
     HomeImage,
+    HomeBlob,
     HomeData,
     HomeTitle,
     HomeSubtitle,
@@ -30,15 +31,14 @@ const Home = ({ data }) => {
     return (
         <Section id="home">
             <Container>
-                <HomeContaier className="grid">
-                    <HomeContent className="grid">
+                <HomeContaier>
+                    <HomeContent>
                         <HomeSocial>
                             {network}
                         </HomeSocial>
 
                         <HomeImage>
-                            <svg
-                                className="home__blob"
+                            <HomeBlob
                                 viewBox="0 0 200 187"
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -65,7 +65,7 @@ const Home = ({ data }) => {
                                         y="18"
                                     />
                                 </g>
-                            </svg>
+                            </HomeBlob>
                         </HomeImage>
 
                         <HomeData>
@@ -73,7 +73,7 @@ const Home = ({ data }) => {
                             <HomeSubtitle>{data.title}</HomeSubtitle>
                             <HomeDescription>{data.description}</HomeDescription>
                             <Button href="#contact" flex>
-                                Contact Me
+                                <ButtonSpan>Contact Me</ButtonSpan>
                                 <ButtonIcon>
                                     <UilMessage />
                                 </ButtonIcon>
