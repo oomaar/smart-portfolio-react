@@ -14,6 +14,8 @@ export const FooterBackground = styled.div`
 `;
 
 export const FooterSubContainer = styled.div`
+  display: grid;
+  gap: 1.5rem;
   row-gap: 3.5rem;
 
   @media screen and (min-width: 568px) {
@@ -39,7 +41,7 @@ export const FooterTitle = styled.h1`
 export const FooterSubTitle = styled.span`
   color: #fff;
   font-size: ${({ theme }) => theme.typography.smallFontSize};
-  `;
+`;
 
 export const FooterList = styled.ul`
   display: flex;

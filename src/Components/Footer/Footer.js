@@ -25,7 +25,7 @@ const Footer = ({ data, mainData }) => {
         <FooterContainer>
             <FooterBackground>
                 <Container>
-                    <FooterSubContainer className="container grid">
+                    <FooterSubContainer>
                         <div>
                             <FooterTitle>{mainData.name}</FooterTitle>
                             <FooterSubTitle>Frontend Developer</FooterSubTitle>
