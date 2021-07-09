@@ -21,6 +21,8 @@ export const PortfolioContainer = styled.div`
 `;
 
 export const PortfolioContent = styled.div`
+  display: grid;
+  gap: 1.5rem;
   padding: 0 1.5rem;
 
   @media screen and (min-width: 568px) {
@@ -48,12 +50,14 @@ export const PortfolioImage = styled.img`
 `;
 
 export const PortfolioData = styled.div`
-   margin: 30px 0;
+  margin: 30px 0;
+`;
 
-  .portfolio__button {
-    :hover ${ButtonIcon} {
-      transform: translateX(0.25rem);
-    }
+export const PortfolioButton = styled.div`
+  display: flex;
+
+  :hover ${ButtonIcon} {
+    transform: translateX(0.25rem);
   }
 `;
 
@@ -69,16 +73,6 @@ export const PortfolioDesc = styled.p`
 export const ArrowNext = styled.div`
   right: -0.5rem;
   
-  .swiper-portfolio-icon {
-    font-size: 2rem;
-    color: ${({ theme }) => theme.colors.firstColor};
-    cursor: pointer;
-    
-    @media screen and (min-width: 1024px) {
-      font-size: 3.5rem;
-    }
-  }
-  
   ::after {
     content: '';
   }
@@ -91,21 +85,21 @@ export const ArrowNext = styled.div`
 export const ArrowPrev = styled.div`
   left: -0.5rem;
 
-  .swiper-portfolio-icon {
-    font-size: 2rem;
-    color: ${({ theme }) => theme.colors.firstColor};
-    cursor: pointer;
-
-    @media screen and (min-width: 1024px) {
-      font-size: 3.5rem;
-    }
-  }
-
   ::after {
     content: '';
   }
 
   @media screen and (min-width: 1024px) {
     left: -3.5rem;
+  }
+`;
+
+export const SwiperPortfolioIcon = styled.div`
+  font-size: 2rem;
+  color: ${({ theme }) => theme.colors.firstColor};
+  cursor: pointer;
+  
+  @media screen and (min-width: 1024px) {
+    font-size: 3.5rem;
   }
 `;

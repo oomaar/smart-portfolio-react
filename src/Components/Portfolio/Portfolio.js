@@ -3,18 +3,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import UilArrowRight from "@iconscout/react-unicons/icons/uil-arrow-right";
-import UilAngleRightB from "@iconscout/react-unicons/icons/uil-angle-right-b";
-import UilAngleleftB from "@iconscout/react-unicons/icons/uil-angle-left-b";
-import { Button, ButtonIcon, Container, Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
+import { Button, ButtonIcon, ButtonSpan, Container, Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
 import {
     PortfolioContainer,
     PortfolioContent,
     PortfolioImage,
     PortfolioData,
+    PortfolioButton,
     PortfolioTitle,
     PortfolioDesc,
     ArrowNext,
     ArrowPrev,
+    SwiperPortfolioIcon,
 } from "./styledPortfolio";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar]);
@@ -53,21 +53,22 @@ const Portfolio = ({ data }) => {
                     >
                         {data.map(slide => (
                             <SwiperSlide key={slide.id}>
-                                <PortfolioContent className="grid swiper-slide">
+                                <PortfolioContent className="swiper-slide">
                                     <PortfolioImage src={slide.src} alt={slide.alt} />
                                     <PortfolioData>
                                         <PortfolioTitle>{slide.title}</PortfolioTitle>
                                         <PortfolioDesc>{slide.description}</PortfolioDesc>
                                         <Button
                                             href="#"
-                                            className="portfolio__button"
                                             flex
                                             small
                                         >
-                                            Demo
-                                            <ButtonIcon>
-                                                <UilArrowRight />
-                                            </ButtonIcon>
+                                            <PortfolioButton>
+                                                <ButtonSpan>Demo</ButtonSpan>
+                                                <ButtonIcon>
+                                                    <UilArrowRight />
+                                                </ButtonIcon>
+                                            </PortfolioButton>
                                         </Button>
                                     </PortfolioData>
                                 </PortfolioContent>
@@ -76,10 +77,14 @@ const Portfolio = ({ data }) => {
                     </Swiper>
 
                     <ArrowNext ref={navigationNextRef} className="swiper-button-next">
-                        <UilAngleRightB className="swiper-portfolio-icon portfolio__arrow" />
+                        <SwiperPortfolioIcon>
+                            &#10095;
+                        </SwiperPortfolioIcon>
                     </ArrowNext>
                     <ArrowPrev ref={navigationPrevRef} className="swiper-button-prev">
-                        <UilAngleleftB className="swiper-portfolio-icon portfolio__arrow" />
+                        <SwiperPortfolioIcon>
+                            &#10094;
+                        </SwiperPortfolioIcon>
                     </ArrowPrev>
                     <div className="swiper-pagination"></div>
                 </PortfolioContainer>
