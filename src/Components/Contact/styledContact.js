@@ -1,6 +1,7 @@
 import styled from "styled-components/macro";
 
 export const ContactContainer = styled.div`
+  display: grid;
   row-gap: 3rem;
 
   @media screen and (min-width: 568px) {
@@ -30,12 +31,18 @@ export const ContactSubtitle = styled.span`
 `;
 
 export const ContactForm = styled.form`
-    @media screen and (min-width: 1024px) {
-      width: 460px;
-    }
+  display: grid;
+  gap: 1.5rem;
+  
+  @media screen and (min-width: 1024px) {
+    width: 460px;
+  }
 `;
 
 export const ContactInputs = styled.div`
+  display: grid;
+  gap: 1.5rem;
+
   @media screen and (min-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
   }

@@ -1,4 +1,4 @@
-import { ButtonIcon, Container, Grid, Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
+import { ButtonIcon, Container, Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
 import UilPhone from "@iconscout/react-unicons/icons/uil-phone";
 import UilEnvelope from "@iconscout/react-unicons/icons/uil-envelope";
 import UilMapMarker from "@iconscout/react-unicons/icons/uil-map-marker";
@@ -31,7 +31,7 @@ const Contact = () => {
             <SectionTitle>Contact Me</SectionTitle>
             <SectionSubtitle>Get in touch</SectionSubtitle>
             <Container>
-                <ContactContainer className="grid">
+                <ContactContainer>
                     <div>
                         <ContactInformarion>
                             <ContactIcon>
@@ -65,8 +65,8 @@ const Contact = () => {
                             </div>
                         </ContactInformarion>
                     </div>
-                    <ContactForm className="grid" action="" onSubmit={sendMessage}>
-                        <ContactInputs className="grid">
+                    <ContactForm action="" onSubmit={sendMessage}>
+                        <ContactInputs>
                             <ContactInputBox>
                                 <ContactLabel>Name</ContactLabel>
                                 <ContactInput type="text" />
