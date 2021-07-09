@@ -14,6 +14,7 @@ import {
   Portfolio,
   Project,
   Qualification,
+  ScrollUp,
   Services,
   Skill,
   Testimonial
@@ -56,12 +57,12 @@ const App = () => {
           <Project />
           <Testimonial data={resumeData.testimonial} />
           <Contact />
-          <ScrollUpLink
-            href="#"
-            className={`${show && 'show-scroll'}`}
-          >
-            <UilArrowUp className="scrollup__icon" />
+          <ScrollUpLink href="#" show={show}>
+            <ScrollupIcon>
+              <UilArrowUp />
+            </ScrollupIcon>
           </ScrollUpLink>
+          <ScrollUp />
         </Application>
         <Footer mainData={resumeData.main} data={resumeData.main} />
       </ThemeProvider>
@@ -73,10 +74,6 @@ export default App;
 
 const Application = styled.main`
   position: relative;
-
-  .show-scroll {
-    bottom: 5rem;
-  }
 
   @media screen and (min-width: 768px) {
     padding: 0 1rem;
@@ -90,21 +87,15 @@ const Application = styled.main`
 const ScrollUpLink = styled.a`
   position: fixed;
   right: 1rem;
-  bottom: -20%;
+  bottom: ${({ show }) => show ? '5rem' : '-20%'};
   background-color: ${({ theme }) => theme.colors.firstColor};
   z-index: ${({ theme }) => theme.zIndex.zFixed};
   opacity: 0.8;
   padding: 0 0.3rem;
   border-radius: 0.4rem;
   transition: 0.4s;
-  display: flex;
   justify-content: center;
   padding: 0.3rem;
-
-  .scrollup__icon {
-    font-size: 1.5rem;
-    color: #fff;
-  }
 
   :hover {
     background-color: ${({ theme }) => theme.colors.firstColorAlt};
@@ -113,4 +104,10 @@ const ScrollUpLink = styled.a`
   @media screen and (min-width: 1200px) {
     right: 10rem;
   }
+`;
+
+const ScrollupIcon = styled.div`
+  display: flex;
+  font-size: 1.5rem;
+  color: #fff;
 `;
