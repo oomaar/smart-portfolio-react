@@ -33,6 +33,7 @@ export const theme = {
   zIndex: {
     zToolTip: '10',
     zFixed: '100',
+    zHeader: '200',
     zModel: '1000'
   },
 }
@@ -97,7 +98,7 @@ export const ButtonIcon = styled.div`
   transition: 0.3s;
 `;
 
-// ==================== REUSALE CLASSES ====================
+// ==================== REUSALE-CLASSES ====================
 export const Section = styled.section`
   padding: 2rem 0 4rem;
   
@@ -188,13 +189,8 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 100%;
   }
 
-// Layout
-  .grid {
-    display: grid;
-    gap: 1.5rem;
-  }
-
-  /* Scroll-Bar */
+  /* */
+  // ==================== SCROLL-BAR  ====================
   ::-webkit-scrollbar {
     width: 0.6rem;
     background-color: ${({ theme }) => theme.colors.scrollBarColor};

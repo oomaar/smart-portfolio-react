@@ -1,33 +1,32 @@
+import { useEffect, useState } from "react";
 import UilTimes from "@iconscout/react-unicons/icons/uil-times";
 import UilAlignLeft from "@iconscout/react-unicons/icons/uil-align-left";
 import UilMoon from "@iconscout/react-unicons/icons/uil-moon";
 import UilSun from "@iconscout/react-unicons/icons/uil-sun";
-import { useEffect, useState } from "react";
+import { Container } from "../../GlobalStyle";
 import {
     HeaderTag,
     Nav,
     Logo,
     NavList,
+    NavClose,
     ListItem,
     NavLink,
+    NavIcon,
     NavMenu,
     NavBtns,
+    ChangeTheme,
     NavToggle,
 } from "./styledHeader";
-import { Container } from "../../GlobalStyle";
 
 const Header = ({ toggleTheme, setToggleTheme, data, mainData }) => {
     const [toggleShow, setToggleShow] = useState(false);
     const [shadow, setShadow] = useState(false);
-    // const [active, setActive] = useState("");
 
     const toggleHeaderOpen = () => setToggleShow(true);
     const toggleHeaderClose = () => setToggleShow(false);
     const showShadow = () => window.scrollY > 100 ? setShadow(true) : setShadow(false);
-    const activeLink = name => {
-        toggleHeaderClose();
-        // setActive(name);
-    };
+    const activeLink = () => toggleHeaderClose();
 
     const checkTheme = () => {
         switch (toggleTheme) {
@@ -45,7 +44,7 @@ const Header = ({ toggleTheme, setToggleTheme, data, mainData }) => {
                 setToggleTheme("light");
                 localStorage.setItem("toggleTheme", "light")
                 return document.documentElement.setAttribute("data-theme", "light");
-        }
+        };
     };
 
     useEffect(() => {
@@ -66,7 +65,6 @@ const Header = ({ toggleTheme, setToggleTheme, data, mainData }) => {
         return (
             <ListItem key={link.id}>
                 <NavLink
-                    // className={`${active === link.href && 'active-link'}`}
                     href={link.href} onClick={() => activeLink(link.href)}
                     to={link.section}
                     smooth={true}
@@ -76,7 +74,9 @@ const Header = ({ toggleTheme, setToggleTheme, data, mainData }) => {
                     offset={-50}
                     activeClass="active-link"
                 >
-                    <i className={link.icon}></i>
+                    <NavIcon>
+                        <i className={link.icon}></i>
+                    </NavIcon>
                     {link.name}
                 </NavLink>
             </ListItem>
@@ -93,20 +93,24 @@ const Header = ({ toggleTheme, setToggleTheme, data, mainData }) => {
                     <Logo>{mainData.name}</Logo>
 
                     <NavMenu toggleShow={toggleShow}>
-                        <NavList className="grid">
+                        <NavList>
                             {navLinks}
                         </NavList>
-                        <UilTimes className="nav__close" onClick={toggleHeaderClose} />
+                        <NavClose>
+                            <UilTimes onClick={toggleHeaderClose} />
+                        </NavClose>
                     </NavMenu>
 
                     <NavBtns>
-                        {toggleTheme === 'light' ? (
-                            <UilMoon className="change-theme" onClick={checkTheme} />
-                        ) : (
-                            <UilSun className="change-theme" onClick={checkTheme} />
-                        )}
+                        <ChangeTheme>
+                            {toggleTheme === 'light' ? (
+                                <UilMoon onClick={checkTheme} />
+                            ) : (
+                                <UilSun onClick={checkTheme} />
+                            )}
+                        </ChangeTheme>
                         <NavToggle>
-                            <UilAlignLeft className="nav__icon" onClick={toggleHeaderOpen} />
+                            <UilAlignLeft onClick={toggleHeaderOpen} />
                         </NavToggle>
                     </NavBtns>
                 </Nav>

@@ -3,42 +3,42 @@
     {
       "id": "1",
       "name": "Home",
-      "icon": "ui uil-estate nav__icon",
+      "icon": "ui uil-estate",
       "href": "#home",
       "section": "home"
     },
     {
       "id": "2",
       "name": "About",
-      "icon": "ui uil-user nav__icon",
+      "icon": "ui uil-user",
       "href": "#about",
       "section": "about"
     },
     {
       "id": "3",
       "name": "Skills",
-      "icon": "ui uil-file-alt nav__icon",
+      "icon": "ui uil-file-alt",
       "href": "#skills",
       "section": "skills"
     },
     {
       "id": "4",
       "name": "Services",
-      "icon": "ui uil-briefcase-alt nav__icon",
+      "icon": "ui uil-briefcase-alt",
       "href": "#services",
       "section": "services"
     },
     {
       "id": "5",
       "name": "Portfolio",
-      "icon": "ui uil-scenery nav__icon",
+      "icon": "ui uil-scenery",
       "href": "#portfolio",
       "section": "portfolio"
     },
     {
       "id": "6",
       "name": "Contact",
-      "icon": "ui uil-message nav__icon",
+      "icon": "ui uil-message",
       "href": "#contact",
       "section": "contact"
     }

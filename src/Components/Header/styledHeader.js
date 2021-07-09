@@ -8,7 +8,7 @@ export const HeaderTag = styled.header`
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: ${({ theme }) => theme.zIndex.zFixed};
+  z-index: ${({ theme }) => theme.zIndex.zHeader};
 
   @media screen and (min-width: 768px) {
     top: 0;
@@ -40,30 +40,16 @@ export const Logo = styled.p`
 `;
 
 export const NavMenu = styled.div`
-  .nav__close {
-    position: absolute;
-    right: 1.3rem;
-    bottom: 0.5rem;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: ${({ theme }) => theme.colors.firstColor};
-    transition: 0.3s ease;
-
-    @media screen and (min-width: 768px) {
-      display: none;
-    }
-  }
-
   @media screen and (max-width: 767px) {
-      background-color: ${({ theme }) => theme.colors.bodyColor};
-      border-radius: 1.5rem 1.5rem 0 0;
-      box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-      padding: 2rem 1.5rem 4rem;
-      position: fixed;
-      bottom: ${({ toggleShow }) => toggleShow ? '0' : '-100%'};
-      left: 0;
-      width: 100%;
-      transition: 0.3s;
+    background-color: ${({ theme }) => theme.colors.bodyColor};
+    border-radius: 1.5rem 1.5rem 0 0;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    padding: 2rem 1.5rem 4rem;
+    position: fixed;
+    bottom: ${({ toggleShow }) => toggleShow ? '0' : '-100%'};
+    left: 0;
+    width: 100%;
+    transition: 0.3s;
   }
 
   @media screen and (max-width: 350px) {
@@ -76,6 +62,7 @@ export const NavMenu = styled.div`
 `;
 
 export const NavList = styled.ul`
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 
@@ -88,6 +75,21 @@ export const NavList = styled.ul`
     column-gap: 2rem;
   }
 `;
+
+export const NavClose = styled.div`
+  position: absolute;
+  right: 1.3rem;
+  bottom: 0.5rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.firstColor};
+  transition: 0.3s ease;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
 
 export const ListItem = styled.li`
   .active-link {
@@ -103,14 +105,6 @@ export const NavLink = styled(ScrollLink)`
   color: ${({ theme }) => theme.colors.titleColor};
   font-weight: ${({ theme }) => theme.typography.fontWeight.fontMedium};
 
-  .nav__icon {
-    font-size: 1.2rem;
-
-    @media screen and (min-width: 768px) {
-      display: none;
-    }
-  }
-
   :hover {
     color: ${({ theme }) => theme.colors.firstColor};
   }
@@ -120,25 +114,35 @@ export const NavLink = styled(ScrollLink)`
   }
 `;
 
-export const NavBtns = styled.div`
-  display: flex;
+export const NavIcon = styled.div`
+  font-size: 1.2rem;
 
-  .change-theme {
-    font-size: 1.25rem;
-    color: ${({ theme }) => theme.colors.titleColor};
-    margin-right: ${({ theme }) => theme.marginBottom.mb_1};
-    cursor: pointer;
-    
-    @media screen and (min-width: 768px) {
-      margin: 0;
-      margin-left: ${({ theme }) => theme.marginBottom.mb_1};
-    }
-  }
-
-  .change-theme:hover {
-    color: ${({ theme }) => theme.colors.firstColor};
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 `;
+
+export const NavBtns = styled.div`
+  display: flex;
+`;
+
+export const ChangeTheme = styled.div`
+  display: flex;
+  font-size: 1.25rem;
+  color: ${({ theme }) => theme.colors.titleColor};
+  margin-right: ${({ theme }) => theme.marginBottom.mb_1};
+  cursor: pointer;
+
+  :hover {
+    color: ${({ theme }) => theme.colors.firstColor};
+  }
+  
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    margin-left: ${({ theme }) => theme.marginBottom.mb_1};
+  }
+`;
+
 
 export const NavToggle = styled.div`
   font-size: 1.1rem;
