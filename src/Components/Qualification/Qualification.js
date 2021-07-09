@@ -1,3 +1,4 @@
+import { useState } from "react";
 import UilGraduationCap from "@iconscout/react-unicons/icons/uil-graduation-cap";
 import UilBriefcaseAlt from "@iconscout/react-unicons/icons/uil-briefcase-alt";
 import UilCalendarAlt from "@iconscout/react-unicons/icons/uil-calendar-alt";
@@ -15,7 +16,6 @@ import {
     QualificationRounder,
     QualificationLine,
 } from "./styledQualification";
-import { useState } from "react";
 
 const Qualification = ({ data }) => {
     const [dataTarget, setDataTarget] = useState('education');
@@ -125,7 +125,7 @@ const Qualification = ({ data }) => {
                 <QualificationTabs>
                     <QualificationButton
                         onClick={() => selectQualification('education')}
-                        className={`${active && 'btn-active'}`}
+                        active={active}
                     >
                         <QualificationIcon>
                             <UilGraduationCap />
@@ -135,7 +135,7 @@ const Qualification = ({ data }) => {
 
                     <QualificationButton
                         onClick={() => selectQualification('work')}
-                        className={`${!active && 'btn-active'}`}
+                        active={!active}
                     >
                         <QualificationIcon>
                             <UilBriefcaseAlt />
@@ -145,17 +145,11 @@ const Qualification = ({ data }) => {
                 </QualificationTabs>
 
                 <QualificationSections>
-                    <QualificationContent
-                        className={`${dataTarget === 'education' && 'qualification__active'}`}
-                        data-content
-                    >
+                    <QualificationContent dataTarget={dataTarget === 'education'}>
                         {educationGrid}
                     </QualificationContent>
 
-                    <QualificationContent
-                        className={`${dataTarget === 'work' && 'qualification__active'}`}
-                        data-content
-                    >
+                    <QualificationContent dataTarget={dataTarget === 'work'}>
                         {workGrid}
                     </QualificationContent>
                 </QualificationSections>

@@ -3,15 +3,8 @@ import styled from "styled-components/macro";
 export const QualificationTabs = styled.div`
   display: flex;
   justify-content: space-evenly;
+  justify-content: center;
   margin-bottom: ${({ theme }) => theme.marginBottom.mb_2};
-
-  .btn-active {
-    color: ${({ theme }) => theme.colors.firstColor};
-  }
-
-  @media screen and (min-width: 768px) {
-    justify-content: center;
-  }
 `;
 
 export const QualificationButton = styled.div`
@@ -20,26 +13,25 @@ export const QualificationButton = styled.div`
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  color: ${({ active, theme }) => active && theme.colors.firstColor};
+  margin: 0 ${({ theme }) => theme.marginBottom.mb_1};
 
   :hover {
     color: ${({ theme }) => theme.colors.firstColor};
   }
-
-  @media screen and (min-width: 768px) {
-    margin: 0 ${({ theme }) => theme.marginBottom.mb_1};
-  }
 `;
 
 export const QualificationIcon = styled.div`
-    font-size: 1.8rem;
-    margin: 0 ${({ theme }) => theme.marginBottom.mb_0_25} 0 ${({ theme }) => theme.marginBottom.mb_0_25};
+  font-size: 1.8rem;
+  margin: 0 ${({ theme }) => theme.marginBottom.mb_0_25} 0 ${({ theme }) => theme.marginBottom.mb_0_25};
 `;
 
 export const QualificationSections = styled.div`
+  display: grid;
+  justify-content: center;
+
   @media screen and (min-width: 568px) {
-    display: grid;
     grid-template-columns: 0.6fr;
-    justify-content: center;
   }
 
   @media screen and (min-width: 768px) {
@@ -48,13 +40,7 @@ export const QualificationSections = styled.div`
 `;
 
 export const QualificationContent = styled.div`
-  &[data-content] {
-      display: none;
-  }
-
-  &.qualification__active[data-content] {
-      display: block;
-  }
+  display: ${({ dataTarget }) => dataTarget ? 'block' : 'none'};
 `;
 
 export const QualificationData = styled.div`
