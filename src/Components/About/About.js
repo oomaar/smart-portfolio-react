@@ -1,5 +1,5 @@
 import UilDownloadAlt from "@iconscout/react-unicons/icons/uil-download-alt";
-import { Button, Section, SectionSubtitle, SectionTitle, ButtonIcon, Container } from "../../GlobalStyle";
+import { Button, Section, SectionSubtitle, SectionTitle, ButtonIcon, Container, ButtonSpan } from "../../GlobalStyle";
 import {
     AboutContainer,
     AboutImage,
@@ -17,7 +17,7 @@ const About = ({ data }) => {
             <SectionSubtitle>My introduction</SectionSubtitle>
 
             <Container>
-                <AboutContainer className="grid">
+                <AboutContainer>
                     <AboutImage src="/img/about.jpg" alt="About Me" />
                     <div>
                         <AboutDescription>{data.bio}</AboutDescription>
@@ -49,7 +49,7 @@ const About = ({ data }) => {
                                 href="/pdf/Alexa-Cv.pdf"
                                 flex
                             >
-                                Download CV
+                                <ButtonSpan>Download CV</ButtonSpan>
                                 <ButtonIcon>
                                     <UilDownloadAlt />
                                 </ButtonIcon>

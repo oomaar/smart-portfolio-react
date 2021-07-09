@@ -1,6 +1,9 @@
 import styled from "styled-components/macro";
 
 export const AboutContainer = styled.div`
+  display: grid;
+  gap: 1.5rem;
+
   @media screen and (min-width: 568px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -11,23 +14,28 @@ export const AboutContainer = styled.div`
 `;
 
 export const AboutImage = styled.img`
-    width: 200px;
-    border-radius: 0.5rem;
-    justify-self: center;
-    align-self: center;
+  width: 200px;
+  border-radius: 0.5rem;
+  justify-self: center;
+  align-self: center;
+  
+  @media screen and (min-width: 568px) {
+    width: 250px;
+  }
 
-    @media screen and (min-width: 768px) {
-      width: 350px;
-    }
+  @media screen and (min-width: 768px) {
+    width: 350px;
+  }
 `;
 
 export const AboutDescription = styled.p`
-    text-align: center;
+  text-align: center;
+  margin-bottom: ${({ theme }) => theme.marginBottom.mb_1_5};
+    
+  @media screen and (min-width: 768px) {
     margin-bottom: ${({ theme }) => theme.marginBottom.mb_2_5};
-
-    @media screen and (min-width: 768px) {
-      text-align: initial;
-    }
+    text-align: initial;
+  }
 `;
 
 export const AboutInfo = styled.div`
@@ -40,11 +48,11 @@ export const AboutInfo = styled.div`
 `;
 
 export const InfoTitle = styled.span`
-    font-size: ${({ theme }) => theme.typography.h2FontSize};
-    font-weight: ${({ theme }) => theme.typography.fontWeight.fontSemiBold};
-    color: ${({ theme }) => theme.colors.titleColor};
-    display: block;
-    text-align: center;
+  font-size: ${({ theme }) => theme.typography.h2FontSize};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.fontSemiBold};
+  color: ${({ theme }) => theme.colors.titleColor};
+  display: block;
+  text-align: center;
 `;
 
 export const InfoName = styled.span`
