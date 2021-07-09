@@ -1,5 +1,7 @@
 import styled from "styled-components/macro";
+
 export const SkillContainer = styled.div`
+  display: grid;
   row-gap: 0;
 
   @media screen and (min-width: 568px) {
@@ -16,21 +18,14 @@ export const SkillHeader = styled.div`
   align-items: center;
   margin-bottom: ${({ theme }) => theme.marginBottom.mb_2_5};
   cursor: pointer;
-
-  .skill__arrow {
-
-  }
-
-  .skill__arrow-open {
-    transform: rotate(-180deg);
-  }
 `;
 
 export const SkillArrow = styled.div`
-    font-size: 2rem;
-    color: ${({ theme }) => theme.colors.firstColor};
-    margin: 0 ${({ theme }) => theme.marginBottom.mb_0_75} 0 ${({ theme }) => theme.marginBottom.mb_0_75};
-    transition: 0.3s;
+  font-size: 2rem;
+  color: ${({ theme }) => theme.colors.firstColor};
+  margin: 0 ${({ theme }) => theme.marginBottom.mb_0_75} 0 ${({ theme }) => theme.marginBottom.mb_0_75};
+  transition: 0.3s;
+  transform: ${({ toggleShow, skill }) => toggleShow === skill && 'rotate(-180deg)'};
 `;
 
 export const SkillIcon = styled.div`
@@ -53,6 +48,7 @@ export const SkillSubTitle = styled.span`
 `;
 
 export const SkillList = styled.div`
+  display: grid;
   row-gap: 1.5rem;
   padding-left: 2.7rem;
 `;

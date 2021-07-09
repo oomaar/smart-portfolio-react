@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Container, Section, SectionSubtitle, SectionTitle } from "../../GlobalStyle";
 import UilAngleDown from "@iconscout/react-unicons/icons/uil-angle-down";
 import {
@@ -15,10 +16,9 @@ import {
     SkillBar,
     SkillPercentage,
 } from "./styledSkill";
-import { useState } from "react";
 
 const Skill = ({ data }) => {
-    const [toggleShow, setToggleShow] = useState(false);
+    const [toggleShow, setToggleShow] = useState(1);
 
     const handleToggleShow = index => {
         if (toggleShow === index) {
@@ -33,7 +33,7 @@ const Skill = ({ data }) => {
             <SectionTitle>Skills</SectionTitle>
             <SectionSubtitle>My technical level</SectionSubtitle>
             <Container>
-                <SkillContainer className="grid">
+                <SkillContainer>
                     {data.map((skill, index) => (
                         <SkillContent key={skill.id}>
                             <SkillHeader
@@ -48,13 +48,11 @@ const Skill = ({ data }) => {
                                     <SkillSubTitle>{skill.subTitle}</SkillSubTitle>
                                 </div>
 
-                                <SkillArrow>
-                                    <UilAngleDown
-                                        className={`${toggleShow === skill.id && 'skill__arrow-open'}`}
-                                    />
+                                <SkillArrow toggleShow={toggleShow} skill={skill.id}>
+                                    <UilAngleDown />
                                 </SkillArrow>
                             </SkillHeader>
-                            <SkillList className="grid">
+                            <SkillList>
                                 {toggleShow === skill.id ? (
                                     data[index].skills.map(item => (
                                         <SkillData key={item.id}>
