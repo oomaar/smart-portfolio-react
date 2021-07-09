@@ -1,11 +1,6 @@
 import styled from "styled-components/macro";
 
 export const TestimonialContainer = styled.div`
-  .testimonial__icon-star {
-    color: ${({ theme }) => theme.colors.firstColor};
-    font-size: 1.5rem;
-  }
-
   .swiper-pagination-bullet-active {
     background-color: ${({ theme }) => theme.colors.firstColor};
   }
@@ -30,6 +25,11 @@ export const TestimonialHeader = styled.div`
     flex-direction: column;
     align-items: center;
   }
+`;
+
+export const TestimonialIconStar = styled.div`
+  color: ${({ theme }) => theme.colors.firstColor};
+  font-size: 1.5rem;
 `;
 
 export const TestimonialImage = styled.img`

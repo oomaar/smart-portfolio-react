@@ -9,6 +9,7 @@ import {
     TestimonialImage,
     TestimonialName,
     TestimonialClient,
+    TestimonialIconStar,
     TestimonialDesc,
 } from "./styledTestimonial";
 
@@ -39,9 +40,11 @@ const Testimonial = ({ data }) => {
                                     </TestimonialHeader>
 
                                     <div>
-                                        {testimonial.stars.map((star, i) => (
-                                            <i key={i} className={star}></i>
-                                        ))}
+                                        <TestimonialIconStar>
+                                            {testimonial.stars.map((star, i) => (
+                                                <i key={i} className={star}></i>
+                                            ))}
+                                        </TestimonialIconStar>
                                     </div>
                                 </TestimonialData>
 

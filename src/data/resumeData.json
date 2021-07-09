@@ -289,11 +289,11 @@
       "alt": "testimonial-1",
       "name": "Sara Smith",
       "stars": [
-        "ui uil-star testimonial__icon-star",
-        "ui uil-star testimonial__icon-star",
-        "ui uil-star testimonial__icon-star",
-        "ui uil-star testimonial__icon-star",
-        "ui uil-star testimonial__icon-star"
+        "ui uil-star",
+        "ui uil-star",
+        "ui uil-star",
+        "ui uil-star",
+        "ui uil-star"
       ],
       "client": "Client",
       "description": "I get a good impression, I carry out my project with all the possible and attention and support 24 hours a day."
@@ -303,11 +303,11 @@
       "alt": "testimonial-2",
       "name": "Matt Robinson",
       "stars": [
-        "ui uil-star testimonial__icon-star",
-        "ui uil-star testimonial__icon-star",
-        "ui uil-star testimonial__icon-star",
-        "ui uil-star testimonial__icon-star",
-        "ui uil-star testimonial__icon-star"
+        "ui uil-star",
+        "ui uil-star",
+        "ui uil-star",
+        "ui uil-star",
+        "ui uil-star"
       ],
       "client": "Client",
       "description": "I get a good impression, I carry out my project with all the possible and attention and support 24 hours a day."
@@ -317,11 +317,11 @@
       "alt": "testimonial-3",
       "name": "Raul Harris",
       "stars": [
-        "ui uil-star testimonial__icon-star",
-        "ui uil-star testimonial__icon-star",
-        "ui uil-star testimonial__icon-star",
-        "ui uil-star testimonial__icon-star",
-        "ui uil-star testimonial__icon-star"
+        "ui uil-star",
+        "ui uil-star",
+        "ui uil-star",
+        "ui uil-star",
+        "ui uil-star"
       ],
       "client": "Client",
       "description": "I get a good impression, I carry out my project with all the possible and attention and support 24 hours a day."
