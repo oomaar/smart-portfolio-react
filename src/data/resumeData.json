@@ -47,30 +47,31 @@
     "name": "Omar",
     "title": "Frontend developer",
     "description": "High level experience in web design and development knowledge, producing quality work.",
-    "image": "/img/perfil.png",
+    "image": "/img/me.png",
     "social": [
       {
         "class": "ui uil-linkedin-alt",
         "name": "Linked In",
-        "url": "https://www.linkedin.com"
+        "url": "https://www.linkedin.com/in/omar-hassan-8b1869137"
       },
       {
         "class": "ui uil-github-alt",
         "name": "Github",
-        "url": "https://github.com"
+        "url": "https://github.com/oomaar"
       },
       {
         "class": "ui uil-facebook-f",
         "name": "facebook",
-        "url": "https://www.facebook.com"
+        "url": "https://www.facebook.com/omarhassan16694"
       }
     ]
   },
   "about": {
-    "bio": "Web developer, with extensive knowledge and years of experience, working in web technologies and UI/UX design, deleivering quality work.",
-    "experienceYears": "08",
+    "bio": "I'm a Web developer, In love with programming and new technologies, I have extensive knowledge and years of experience, working in web technologies and Frontend designs, deleivering quality work and create beautiful user interfaces.",
+    "experienceYears": "03",
     "completedProjects": "20",
-    "companiesWorked": "05"
+    "companiesWorked": "02",
+    "image": "/img/me-badla.jpg"
   },
   "skill": [
     {
@@ -95,9 +96,14 @@
           "width": "80"
         },
         {
-          "name": "React",
+          "name": "ReactJS",
           "number": "85%",
           "width": "85"
+        },
+        {
+          "name": "NextJS",
+          "number": "75%",
+          "width": "75"
         }
       ]
     },
@@ -137,18 +143,13 @@
       "skills": [
         {
           "name": "Photoshop",
-          "number": "90%",
+          "number": "80%",
           "width": "90"
         },
         {
-          "name": "Sketch",
+          "name": "Illustrator",
           "number": "60%",
           "width": "60"
-        },
-        {
-          "name": "Figma",
-          "number": "70%",
-          "width": "70"
         }
       ]
     }
@@ -159,37 +160,37 @@
         "id": "1",
         "category": "education",
         "position": "left",
-        "title": "Computer Enginner",
-        "subtitle": "Peru - University",
-        "start": "2009",
-        "finish": "2014"
+        "title": "Computer Science",
+        "subtitle": "Cairo - Future University in Egypt (FUE)",
+        "start": "2012",
+        "finish": "2017"
       },
       {
         "id": "2",
         "category": "education",
         "position": "left",
-        "title": "Web Development",
-        "subtitle": "Peru - Institute",
+        "title": "Graphic Design",
+        "subtitle": "Cairo - Russian Cultural Center",
         "start": "2017",
-        "finish": "2019"
+        "finish": "2018"
       },
       {
         "id": "3",
         "category": "education",
         "position": "right",
-        "title": "Web Design",
-        "subtitle": "Spain - Institute",
-        "start": "2014",
-        "finish": "2017"
+        "title": "Web Development Course ",
+        "subtitle": "Cairo - Future University in Egypt (FUE)",
+        "start": "2018",
+        "finish": "2019"
       },
       {
         "id": "4",
         "category": "education",
         "position": "right",
-        "title": "Master in Ui/Ux",
-        "subtitle": "Peru - Institute",
+        "title": "Full-Stack",
+        "subtitle": "UK - App Brewery",
         "start": "2019",
-        "finish": "2021"
+        "finish": "2020"
       }
     ],
     "work": [
@@ -198,7 +199,7 @@
         "category": "work",
         "position": "right",
         "title": "Software Enginner",
-        "subtitle": "Microsoft - Peru",
+        "subtitle": "PAS - Cairo",
         "start": "2016",
         "finish": "2018"
       },
@@ -206,81 +207,122 @@
         "id": "2",
         "category": "work",
         "position": "left",
-        "title": "Frontend developer",
-        "subtitle": "Apple Inc - Spain",
-        "start": "2018 ",
-        "finish": "2020"
+        "title": "Graphic Designer",
+        "subtitle": "Up for Cairo - Cairo",
+        "start": "2018",
+        "finish": "2019"
       },
       {
         "id": "3",
         "category": "work",
         "position": "left",
-        "title": "UI Designer",
-        "subtitle": "Figma - Spain",
-        "start": "2020",
-        "finish": "2021"
+        "title": "Freelance",
+        "subtitle": "Home - Egypt",
+        "start": "2019",
+        "finish": "Now"
       }
     ]
   },
   "services": [
-    {
-      "title": "Ui/Ux",
-      "profession": "Designer",
-      "buttonText": "View More",
-      "icon": "ui uil-web-grid",
-      "service": [
-        "I develop the user interface.",
-        "Web page Development.",
-        "I create ux element interactions.",
-        "I position your company brand."
-      ]
-    },
     {
       "title": "Frontend",
       "profession": "Developer",
       "buttonText": "View More",
       "icon": "ui uil-brackets-curly",
       "service": [
-        "I develop the user interface.",
-        "Web page Development.",
-        "I create ux element interactions.",
-        "I position your company brand."
+        "Develop the user interface.",
+        "Web application Development.",
+        "Modern web design."
       ]
     },
     {
-      "title": "Branding",
+      "title": "Backend",
+      "profession": "Developer",
+      "buttonText": "View More",
+      "icon": "ui uil-server-network",
+      "service": [
+        "Develop NodeJS server.",
+        "Manage database.",
+        "Deploy and choose the right domain name"
+      ]
+    },
+    {
+      "title": "Ui/Ux",
       "profession": "Designer",
       "buttonText": "View More",
-      "icon": "ui uil-swatchbook",
+      "icon": "ui uil-web-grid",
       "service": [
-        "I develop the user interface.",
-        "Web page Development.",
-        "I create ux element interactions.",
-        "I position your company brand."
+        "Sketch the user interface.",
+        "Pick beautiful colors.",
+        "Edit or correct pictures.",
+        "Position your company brand."
       ]
     }
   ],
   "portfolio": [
     {
       "id": 1,
-      "src": "/img/portfolio1.jpg",
-      "alt": "Portfolio1",
-      "title": "Portfolio1",
-      "description": "Website adaptable to all devices, with ui components andanimated interactions."
+      "src": "/img/portfolio/covid-tracker.jpg",
+      "alt": "Covid-19 Tracker",
+      "title": "Covid-19 Tracker (ReactJS)",
+      "description": "Fully Responsive covid-19 Tracker using ReactJS and Styled Components.",
+      "url": "https://covid-19-tracker-16970.web.app/"
     },
     {
       "id": 2,
-      "src": "/img/portfolio2.jpg",
-      "alt": "Portfolio2",
-      "title": "Portfolio2",
-      "description": "Website adaptable to all devices, with ui components andanimated interactions."
+      "src": "/img/portfolio/geforce.jpg",
+      "alt": "Geforce Clone",
+      "title": "Geforce Clone (NextJS)",
+      "description": "Fully Responsive using NextJS and Styled Components.",
+      "url": "https://geforce-clone-oomaar.vercel.app/"
     },
     {
       "id": 3,
-      "src": "/img/portfolio3.jpg",
-      "alt": "Portfolio3",
-      "title": "Portfolio3",
-      "description": "Website adaptable to all devices, with ui components andanimated interactions."
+      "src": "/img/portfolio/netflix.jpg",
+      "alt": "Netflix Clone",
+      "title": "Netflix Clone (ReactJS)",
+      "description": "Developed using ReactJS, Styled-components, Compound Components and Firebase.",
+      "url": "https://dreamy-meninsky-4d3cd3.netlify.app/"
+    },
+    {
+      "id": 4,
+      "src": "/img/portfolio/twitter.jpg",
+      "alt": "Twitter Clone",
+      "title": "Twitter Clone (ReactJS)",
+      "description": "Fully Responsive Twitter Clone developed with ReactJS, Styled-components and Firebase.",
+      "url": "https://twitter-4e819.web.app/"
+    },
+    {
+      "id": 5,
+      "src": "/img/portfolio/google.jpg",
+      "alt": "Google Clone",
+      "title": "Google Clone (NextJS)",
+      "description": "Devloped my own search engine (The Google Clone) with NextJS and Tailwind-CSS.",
+      "url": "https://google-clone-tailwind-delta.vercel.app/"
+    },
+    {
+      "id": 6,
+      "src": "/img/portfolio/hulu.png",
+      "alt": "Hulu Clone",
+      "title": "Hulu Clone (NextJS)",
+      "description": "Developed the fully responsive Hulu Home page clone with NextJS and Tailwind-CSS.",
+      "url": "https://hulu-clone-xi-wheat.vercel.app/"
+    },
+    {
+      "id": 7,
+      "src": "/img/portfolio/whatsapp.jpg",
+      "alt": "Whatsapp Clone",
+      "title": "Whatsapp Clone (NextJS)",
+      "description": "Developed using NextJS, Tailwind-CSS and Firebase.",
+      "url": "https://whatsapp-clone-oomaar.vercel.app/"
+    },
+    {
+      "id": 8,
+      "src": "/img/portfolio/makeup.jpg",
+      "alt": "Makeup Store Demo",
+      "title": "Makeup Store Demo (ReactJS)",
+      "description": "Developed Fully Responsive with ReactJS and Styled-components.",
+      "url": "https://serene-spence-a7962f.netlify.app/"
     }
   ],
   "testimonial": [

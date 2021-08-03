@@ -31,7 +31,7 @@ const Project = () => {
                                 </ButtonIcon>
                             </Button>
                         </ProjectData>
-                        <ProjectImage src="/img/project.png" alt="Project img" />
+                        <ProjectImage src="/img/project-2.png" alt="Project img" />
                     </ProjectContainer>
                 </Container>
             </ProjectBackground>

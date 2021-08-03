@@ -18,7 +18,7 @@ const About = ({ data }) => {
 
             <Container>
                 <AboutContainer>
-                    <AboutImage src="/img/about.jpg" alt="About Me" />
+                    <AboutImage src={data.image} alt="About Me" />
                     <div>
                         <AboutDescription>{data.bio}</AboutDescription>
 

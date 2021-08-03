@@ -59,7 +59,7 @@ const Portfolio = ({ data }) => {
                                         <PortfolioTitle>{slide.title}</PortfolioTitle>
                                         <PortfolioDesc>{slide.description}</PortfolioDesc>
                                         <Button
-                                            href="#"
+                                            href={slide.url}
                                             flex
                                             small
                                         >

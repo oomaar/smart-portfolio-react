@@ -47,6 +47,7 @@ export const ProjectSubtitle = styled.p`
 export const ProjectImage = styled.img`
   width: 232px;
   justify-self: center;
+  margin-bottom: 1rem;
 
   @media screen and (max-width: 350px) {
     width: 200px;

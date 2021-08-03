@@ -16,7 +16,7 @@ import {
   ScrollUp,
   Services,
   Skill,
-  Testimonial
+  // Testimonial
 } from "./Components";
 
 const App = () => {
@@ -52,7 +52,7 @@ const App = () => {
           <Services data={resumeData.services} />
           <Portfolio data={resumeData.portfolio} />
           <Project />
-          <Testimonial data={resumeData.testimonial} />
+          {/* <Testimonial data={resumeData.testimonial} /> */}
           <Contact />
           <ScrollUp show={show} />
         </Application>
