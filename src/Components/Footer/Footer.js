@@ -48,7 +48,7 @@ const Footer = ({ data, mainData }) => {
                         </FooterSocials>
                     </FooterSubContainer>
                 </Container>
-                <FooterCopy>&#169; All rights reserved</FooterCopy>
+                <FooterCopy>&#169; Created by <span>Omar</span></FooterCopy>
             </FooterBackground>
         </FooterContainer>
     );

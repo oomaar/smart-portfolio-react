@@ -54,6 +54,7 @@ export const lightTheme = {
     containerColor: '#eee',
     scrollBarColor: `hsl(${hueColor}, 12%, 90%)`,
     scrollThumbColor: `hsl(${hueColor}, 12%, 80%)`,
+    copyColor: `#a30908`
   },
 };
 
@@ -71,6 +72,7 @@ export const darkTheme = {
     containerColor: `hsl(${hueColor}, 29%, 16%)`,
     scrollBarColor: `hsl(${hueColor}, 12%, 48%)`,
     scrollThumbColor: `hsl(${hueColor}, 12%, 36%)`,
+    copyColor: `#318ce7`
   },
 };
 

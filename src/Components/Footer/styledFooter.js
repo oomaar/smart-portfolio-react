@@ -83,6 +83,10 @@ export const FooterCopy = styled.p`
   text-align: center;
   color: ${({ theme }) => theme.colors.textColorLight};
   margin-top: ${({ theme }) => theme.marginBottom.mb_3};
+
+  span {
+    color: #fff;
+  }
   
   @media screen and (min-width: 768px) {
     margin-top: 4.5rem;
