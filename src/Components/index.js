@@ -11,3 +11,4 @@ export { default as Contact } from "./Contact/Contact";
 export { default as Footer } from "./Footer/Footer";
 export { default as Background } from "./Background/Background";
 export { default as ScrollUp } from "./ScrollUp/ScrollUp";
+export { default as BackgroundAnimation } from "./BackgrooundAnimation/BackgroundAnimation";
