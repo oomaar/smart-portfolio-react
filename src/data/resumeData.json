@@ -46,7 +46,7 @@
   "main": {
     "name": "Omar",
     "title": "Frontend developer",
-    "description": "High level experience in web design and development knowledge, producing quality work.",
+    "description": "I’m also a front-end developer with a keen eye for creating beautiful UIs, producing quality work.",
     "image": "/img/me.png",
     "social": [
       {
@@ -67,10 +67,10 @@
     ]
   },
   "about": {
-    "bio": "I'm a Web developer, In love with programming and new technologies, I have extensive knowledge and years of experience, working in web technologies and Frontend designs, deleivering quality work and create beautiful user interfaces.",
-    "experienceYears": "03",
-    "completedProjects": "20",
-    "companiesWorked": "02",
+    "bio": "I am a creative Frontend Engineer and a Self-Learner. I have always been passionate about everything related to technology and programming, especially the web professions, which I made my career by always giving the best I can as a Web Developer. I always find coding a very engaging hobby, bringing a Code up to life & taking shape step-by-step is a blast. Besides coding, I like to travel to new places and discover new ideas.",
+    "experienceYears": "0",
+    "completedProjects": "0",
+    "companiesWorked": "0",
     "image": "/img/me-badla.jpg"
   },
   "skill": [
@@ -81,12 +81,7 @@
       "icon": "ui uil-brackets-curly",
       "skills": [
         {
-          "name": "HTML",
-          "number": "90%",
-          "width": "90"
-        },
-        {
-          "name": "CSS",
+          "name": "HTML & CSS",
           "number": "90%",
           "width": "90"
         },
@@ -97,11 +92,16 @@
         },
         {
           "name": "ReactJS",
-          "number": "85%",
-          "width": "85"
+          "number": "80%",
+          "width": "80"
         },
         {
           "name": "NextJS",
+          "number": "70%",
+          "width": "70"
+        },
+        {
+          "name": "Styled-Components",
           "number": "75%",
           "width": "75"
         }
@@ -115,21 +115,21 @@
       "skills": [
         {
           "name": "NodeJS",
-          "number": "80%",
-          "width": "80"
-        },
-        {
-          "name": "MongoDB",
           "number": "70%",
           "width": "70"
         },
         {
-          "name": "Firebase",
-          "number": "75%",
-          "width": "75"
+          "name": "MongoDB",
+          "number": "60%",
+          "width": "60"
         },
         {
-          "name": "Heroku",
+          "name": "Firebase",
+          "number": "65%",
+          "width": "65"
+        },
+        {
+          "name": "Devops",
           "number": "65%",
           "width": "65"
         }
@@ -230,9 +230,11 @@
       "buttonText": "View More",
       "icon": "ui uil-brackets-curly",
       "service": [
-        "Develop the user interface.",
-        "Web application Development.",
-        "Modern web design."
+        "Responsive Web Designing.",
+        "Create Next-App.",
+        "Convert Xd, PSD & JPG files into a responsive and pixel perfect website.",
+        "Convert HTML, CSS & Javascript into React App.",
+        "Build complex Frontends with Animations."
       ]
     },
     {
@@ -241,13 +243,14 @@
       "buttonText": "View More",
       "icon": "ui uil-server-network",
       "service": [
-        "Develop NodeJS server.",
-        "Manage database.",
-        "Deploy and choose the right domain name"
+        "Build A Secure and Authenticated Server.",
+        "Handle Private Secure Routes.",
+        "Build Firebase App.",
+        "Deploy a Web App on Vercel, Firebase or Netlify."
       ]
     },
     {
-      "title": "Ui/Ux",
+      "title": "Graphic",
       "profession": "Designer",
       "buttonText": "View More",
       "icon": "ui uil-web-grid",
@@ -255,13 +258,22 @@
         "Sketch the user interface.",
         "Pick beautiful colors.",
         "Edit or correct pictures.",
-        "Position your company brand."
+        "Photo Editing.",
+        "Convert HTML to PSD, Xd."
       ]
     }
   ],
   "portfolio": [
     {
       "id": 1,
+      "src": "/img/portfolio/beats-circle.jpg",
+      "alt": "Beats shop",
+      "title": "Beats Shop",
+      "description": "Fully Responsive covid-19 Tracker using ReactJS and Styled Components.",
+      "url": "https://beats-shop.vercel.app/"
+    },
+    {
+      "id": 2,
       "src": "/img/portfolio/covid-tracker.jpg",
       "alt": "Covid-19 Tracker",
       "title": "Covid-19 Tracker (ReactJS)",
@@ -269,15 +281,15 @@
       "url": "https://covid-19-tracker-16970.web.app/"
     },
     {
-      "id": 2,
-      "src": "/img/portfolio/geforce.jpg",
-      "alt": "Geforce Clone",
-      "title": "Geforce Clone (NextJS)",
-      "description": "Fully Responsive using NextJS and Styled Components.",
-      "url": "https://geforce-clone-oomaar.vercel.app/"
+      "id": 3,
+      "src": "/img/portfolio/makeup.jpg",
+      "alt": "Makeup Store Demo",
+      "title": "Makeup Store Demo (ReactJS)",
+      "description": "Developed Fully Responsive with ReactJS and Styled-components.",
+      "url": "https://serene-spence-a7962f.netlify.app/"
     },
     {
-      "id": 3,
+      "id": 4,
       "src": "/img/portfolio/netflix.jpg",
       "alt": "Netflix Clone",
       "title": "Netflix Clone (ReactJS)",
@@ -285,44 +297,20 @@
       "url": "https://dreamy-meninsky-4d3cd3.netlify.app/"
     },
     {
-      "id": 4,
+      "id": 5,
+      "src": "/img/portfolio/geforce.jpg",
+      "alt": "Geforce Clone",
+      "title": "Geforce Clone (NextJS)",
+      "description": "Fully Responsive using NextJS and Styled Components.",
+      "url": "https://geforce-clone-oomaar.vercel.app/"
+    },
+    {
+      "id": 6,
       "src": "/img/portfolio/twitter.jpg",
       "alt": "Twitter Clone",
       "title": "Twitter Clone (ReactJS)",
       "description": "Fully Responsive Twitter Clone developed with ReactJS, Styled-components and Firebase.",
       "url": "https://twitter-4e819.web.app/"
-    },
-    {
-      "id": 5,
-      "src": "/img/portfolio/google.jpg",
-      "alt": "Google Clone",
-      "title": "Google Clone (NextJS)",
-      "description": "Devloped my own search engine (The Google Clone) with NextJS and Tailwind-CSS.",
-      "url": "https://google-clone-tailwind-delta.vercel.app/"
-    },
-    {
-      "id": 6,
-      "src": "/img/portfolio/hulu.png",
-      "alt": "Hulu Clone",
-      "title": "Hulu Clone (NextJS)",
-      "description": "Developed the fully responsive Hulu Home page clone with NextJS and Tailwind-CSS.",
-      "url": "https://hulu-clone-xi-wheat.vercel.app/"
-    },
-    {
-      "id": 7,
-      "src": "/img/portfolio/whatsapp.jpg",
-      "alt": "Whatsapp Clone",
-      "title": "Whatsapp Clone (NextJS)",
-      "description": "Developed using NextJS, Tailwind-CSS and Firebase.",
-      "url": "https://whatsapp-clone-oomaar.vercel.app/"
-    },
-    {
-      "id": 8,
-      "src": "/img/portfolio/makeup.jpg",
-      "alt": "Makeup Store Demo",
-      "title": "Makeup Store Demo (ReactJS)",
-      "description": "Developed Fully Responsive with ReactJS and Styled-components.",
-      "url": "https://serene-spence-a7962f.netlify.app/"
     }
   ],
   "testimonial": [

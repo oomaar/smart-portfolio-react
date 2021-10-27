@@ -18,7 +18,7 @@ const Project = () => {
                         <ProjectData>
                             <ProjectTitle>You have a new project !</ProjectTitle>
                             <ProjectSubtitle>
-                                Contact me now and get a 30% discount on your new project.
+                                Let's do it now.
                             </ProjectSubtitle>
                             <Button
                                 href="#contact"
