@@ -2,6 +2,7 @@ import UilMessage from "@iconscout/react-unicons/icons/uil-message";
 import UilMouseAlt from "@iconscout/react-unicons/icons/uil-mouse-alt";
 import UilArrowDown from "@iconscout/react-unicons/icons/uil-arrow-down";
 import { Button, ButtonIcon, Container, Section, ButtonSpan } from "../../GlobalStyle";
+import { BackgroundAnimation } from "..";
 import {
     HomeContaier,
     HomeContent,
@@ -37,7 +38,7 @@ const Home = ({ data }) => {
                             {network}
                         </HomeSocial>
 
-                        <HomeImage>
+                        {/* <HomeImage>
                             <HomeBlob
                                 viewBox="0 0 200 187"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +67,7 @@ const Home = ({ data }) => {
                                     />
                                 </g>
                             </HomeBlob>
-                        </HomeImage>
+                        </HomeImage> */}
 
                         <HomeData>
                             <HomeTitle>Hi, I'm {data.name}</HomeTitle>
@@ -79,6 +80,10 @@ const Home = ({ data }) => {
                                 </ButtonIcon>
                             </Button>
                         </HomeData>
+
+                        <div>
+                            <BackgroundAnimation />
+                        </div>
                     </HomeContent>
 
                     <HomeScroll>

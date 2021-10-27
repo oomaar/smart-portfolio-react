@@ -22,7 +22,7 @@ const About = ({ data }) => {
                     <div>
                         <AboutDescription>{data.bio}</AboutDescription>
 
-                        <AboutInfo>
+                        {/* <AboutInfo>
                             <div>
                                 <InfoTitle>{data.experienceYears}+</InfoTitle>
                                 <InfoName>Years <br />
@@ -41,7 +41,7 @@ const About = ({ data }) => {
                                     Worked
                                 </InfoName>
                             </div>
-                        </AboutInfo>
+                        </AboutInfo> */}
 
                         <AboutBtns>
                             <Button
